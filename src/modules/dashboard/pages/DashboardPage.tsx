@@ -1,13 +1,7 @@
 import * as React from 'react';
-import { Dashboard } from '../../../components/index';
-import {
-  IIntegration,
-  IIntegrationsMetricsTopIntegration,
-  IMonitoredIntegration,
-  WithConnections,
-  WithIntegrationsMetrics,
-  WithMonitoredIntegrations
-} from '../../../containers/index';
+import { Dashboard } from '../../../components';
+import { IIntegration, IIntegrationsMetricsTopIntegration, IMonitoredIntegration, } from '../../../containers';
+import { useConnections, useIntegrationsMetrics, useMonitoredIntegrations, usePolling } from '../../../hooks';
 
 
 export interface IIntegrationCountsByState {
@@ -70,35 +64,29 @@ export function getTopIntegrations(integrations: IMonitoredIntegration[], topInt
     .slice(0, 5);
 }
 
-export default () => (
-  <WithMonitoredIntegrations>
-    {({data: integrationsData, hasData: hasIntegrations}) =>
-      <WithIntegrationsMetrics>
-        {({data: metricsData, hasData: hasMetrics}) =>
-          <WithConnections>
-            {({data: connectionsData, hasData: hasConnections}) => {
-              const integrationStatesCount = getIntegrationsCountsByState(integrationsData.items);
-              return (
-                <Dashboard
-                  integrationsLoaded={hasIntegrations}
-                  connectionsLoaded={hasConnections}
-                  metricsLoaded={hasMetrics}
-                  integrationsCount={integrationsData.totalCount}
-                  integrationsErrorCount={integrationStatesCount.Error}
-                  connections={connectionsData.items}
-                  connectionsCount={connectionsData.totalCount}
-                  metrics={metricsData}
-                  runningIntegrations={integrationStatesCount.Published}
-                  stoppedIntegrations={integrationStatesCount.Unpublished}
-                  pendingIntegrations={integrationStatesCount.Pending}
-                  recentlyUpdatedIntegrations={getRecentlyUpdatedIntegrations(integrationsData.items)}
-                  topIntegrations={getTopIntegrations(integrationsData.items, metricsData.topIntegrations)}
-                />
-              );
-            }}
-          </WithConnections>
-        }
-      </WithIntegrationsMetrics>
-    }
-  </WithMonitoredIntegrations>
-);
+export default () => {
+  const {data: integrationsData, hasData: hasIntegrations, read: readIntegrations} = useMonitoredIntegrations();
+  const {data: connectionsData, hasData: hasConnections, read: readConnections} = useConnections();
+  const {data: metricsData, hasData: hasMetrics, read: readMetrics} = useIntegrationsMetrics();
+  const integrationStatesCount = getIntegrationsCountsByState(integrationsData.items);
+
+  usePolling([readIntegrations, readConnections, readMetrics], 5000);
+
+  return (
+    <Dashboard
+      integrationsLoaded={hasIntegrations}
+      connectionsLoaded={hasConnections}
+      metricsLoaded={hasMetrics}
+      integrationsCount={integrationsData.totalCount}
+      integrationsErrorCount={integrationStatesCount.Error}
+      connections={connectionsData.items}
+      connectionsCount={connectionsData.totalCount}
+      metrics={metricsData}
+      runningIntegrations={integrationStatesCount.Published}
+      stoppedIntegrations={integrationStatesCount.Unpublished}
+      pendingIntegrations={integrationStatesCount.Pending}
+      recentlyUpdatedIntegrations={getRecentlyUpdatedIntegrations(integrationsData.items)}
+      topIntegrations={getTopIntegrations(integrationsData.items, metricsData.topIntegrations)}
+    />
+  );
+}
