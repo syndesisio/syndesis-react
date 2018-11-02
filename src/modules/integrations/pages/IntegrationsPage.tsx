@@ -31,7 +31,7 @@ function getFilteredAndSortedIntegrations(integrations: IMonitoredIntegration[],
                     .filter(s => s.connection)
                     .map(s => s.connection.name.toLowerCase())
                 ],
-              []
+              [] as string[]
             );
           return connectionNames.reduce((found, n) => found || n.includes(valueToLower), false);
         }

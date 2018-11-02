@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Loadable from 'react-loadable';
+import Loadable from 'react-loadable';
 import { Route, Switch } from 'react-router';
 import { ModuleLoader } from '../../components/ui';
 import { WithRouter } from '../../containers';

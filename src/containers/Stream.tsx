@@ -1,7 +1,7 @@
 import { callFetch, IRestProps, Rest } from './Rest';
 
 export class Stream extends Rest<string[]> {
-  protected reader: ReadableStreamReader;
+  protected reader: ReadableStreamReader | undefined;
 
   public async componentDidUpdate(prevProps: IRestProps<string[]>) {
     if (prevProps.url !== this.props.url) {
@@ -44,7 +44,7 @@ export class Stream extends Rest<string[]> {
                 data: [...(this.state.data || []), textDecoder.decode(value)]
               });
 
-              this.reader
+              this.reader!
                 .read()
                 .then(pushData);
             }

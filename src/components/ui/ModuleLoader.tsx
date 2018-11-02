@@ -1,9 +1,9 @@
 import { Spinner } from 'patternfly-react';
 import * as React from 'react';
+import { LoadingComponentProps } from 'react-loadable';
 
 import './ModuleLoader.css';
 import { UnrecoverableError } from './UnrecoverableError';
-import LoadingComponentProps = LoadableExport.LoadingComponentProps;
 
 export class ModuleLoader extends React.Component<LoadingComponentProps> {
   public render() {

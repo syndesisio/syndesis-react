@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as equal from 'react-fast-compare';
+import equal from 'react-fast-compare';
 
 export interface IHeader {
   [s: string]: string;
