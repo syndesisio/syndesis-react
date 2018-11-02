@@ -28,13 +28,19 @@ export class Stream extends Rest<string[]> {
         contentType: this.props.contentType,
         headers: this.props.headers,
         method: 'GET',
-        url: `${this.props.baseUrl}${this.props.url}`,
+        url: `${this.props.baseUrl}${this.props.url}`
       })
         .then(response => response.body)
-        .then((body) => {
+        .then(body => {
           this.reader = body!.getReader();
           const textDecoder = new TextDecoder('utf-8');
-          const pushData = ({done, value}: { done: boolean; value: Uint8Array }) => {
+          const pushData = ({
+            done,
+            value
+          }: {
+            done: boolean;
+            value: Uint8Array;
+          }) => {
             if (done) {
               this.setState({
                 loading: false
@@ -44,26 +50,22 @@ export class Stream extends Rest<string[]> {
                 data: [...(this.state.data || []), textDecoder.decode(value)]
               });
 
-              this.reader!
-                .read()
-                .then(pushData);
+              this.reader!.read().then(pushData);
             }
           };
 
-          this.reader
-            .read()
-            .then(pushData)
+          this.reader.read().then(pushData);
         });
     } catch (e) {
       this.setState({
         error: true,
         errorMessage: e.message,
-        loading: false,
+        loading: false
       });
     }
   };
 
   public onSave = async () => {
     throw new Error(`Can't save from a stream`);
-  }
+  };
 }

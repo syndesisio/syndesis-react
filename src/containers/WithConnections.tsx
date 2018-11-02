@@ -18,11 +18,11 @@ export class WithConnections extends React.Component<IWithConnectionsProps> {
         poll={5000}
         defaultValue={{
           items: [],
-          totalCount: 0,
+          totalCount: 0
         }}
       >
         {response => this.props.children(response)}
       </SyndesisRest>
-    )
+    );
   }
 }

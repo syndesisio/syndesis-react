@@ -5,7 +5,9 @@ export interface IWithIntegrationsMetricsProps {
   children(props: IRestState<IIntegrationsMetrics>): any;
 }
 
-export class WithIntegrationsMetrics extends React.Component<IWithIntegrationsMetricsProps> {
+export class WithIntegrationsMetrics extends React.Component<
+  IWithIntegrationsMetricsProps
+> {
   public render() {
     return (
       <SyndesisRest<IIntegrationsMetrics>
@@ -17,11 +19,11 @@ export class WithIntegrationsMetrics extends React.Component<IWithIntegrationsMe
           messages: 0,
           metricsProvider: '',
           start: 0,
-          topIntegrations: {},
+          topIntegrations: {}
         }}
       >
-        {(response) => this.props.children(response)}
+        {response => this.props.children(response)}
       </SyndesisRest>
-    )
+    );
   }
 }

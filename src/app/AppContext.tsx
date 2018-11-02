@@ -19,4 +19,6 @@ export const AppContextDefaultValue = {
   firstSetup: true
 } as IAppContext;
 
-export const AppContext = React.createContext<IAppContext>(AppContextDefaultValue);
+export const AppContext = React.createContext<IAppContext>(
+  AppContextDefaultValue
+);

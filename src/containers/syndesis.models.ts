@@ -8,12 +8,12 @@ export interface IIntegration {
   createdAt: number;
   currentState: 'Published' | 'Unpublished' | 'Pending' | 'Error';
   deploymentVersion: number;
-  deployments: any[]
+  deployments: any[];
   flows: IIntegrationFlow[];
   id: string;
   isDraft: boolean;
   name: string;
-  resources: IResource[]
+  resources: IResource[];
   tags: string[];
   targetState: string;
   updatedAt: number;
@@ -24,7 +24,7 @@ export interface IIntegration {
 export interface IIntegrationFlow {
   id: string;
   name: string;
-  steps: IIntegrationFlowStep[]
+  steps: IIntegrationFlowStep[];
 }
 
 export interface IIntegrationFlowStep {
@@ -40,7 +40,7 @@ export interface IIntegrationBoard {
   createdAt: number;
   errors: number;
   id: string;
-  metadata: { [id: string]: number; };
+  metadata: { [id: string]: number };
   notices: number;
   targetResourceId: string;
   updatedAt: number;
@@ -71,7 +71,7 @@ export interface IIntegrationMonitoring {
     value: string;
     currentStep: number;
     totalSteps: number;
-  }
+  };
   value: string;
   id: string;
   integrationId: string;
@@ -85,7 +85,7 @@ export interface IConnection {
     createdAt: number;
     updatedAt: number;
   };
-  configuredProperties?: { [key: string]: any; };
+  configuredProperties?: { [key: string]: any };
   connector: IConnector;
   connectorId: string;
   description: string;

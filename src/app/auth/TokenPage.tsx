@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 export interface ITokenPageProps {
   to: string;
 
-  onToken(token: string | null): void
+  onToken(token: string | null): void;
 }
 
 export class TokenPage extends React.Component<ITokenPageProps> {
@@ -12,14 +12,10 @@ export class TokenPage extends React.Component<ITokenPageProps> {
     // // eslint-disable-next-line
     const hash = document.location!.hash;
     const searchParams = new URLSearchParams(hash.substring(1));
-    this.props.onToken(
-      searchParams.get('access_token')
-    );
+    this.props.onToken(searchParams.get('access_token'));
   }
 
   public render() {
-    return (
-      <Redirect to={this.props.to}/>
-    )
+    return <Redirect to={this.props.to} />;
   }
 }

@@ -19,7 +19,9 @@ declare namespace LoadableExport {
     retry: () => void;
   }
 
-  type Options<Props, Exports extends object> = OptionsWithoutRender<Props> | OptionsWithRender<Props, Exports>;
+  type Options<Props, Exports extends object> =
+    | OptionsWithoutRender<Props>
+    | OptionsWithRender<Props, Exports>;
 
   interface CommonOptions {
     /**
@@ -75,10 +77,13 @@ declare namespace LoadableExport {
      *
      * Resulting React component receives all the props passed to the generated component.
      */
-    loader(): Promise<React.ComponentType<Props> | { default: React.ComponentType<Props> }>;
+    loader(): Promise<
+      React.ComponentType<Props> | { default: React.ComponentType<Props> }
+    >;
   }
 
-  interface OptionsWithRender<Props, Exports extends object> extends CommonOptions {
+  interface OptionsWithRender<Props, Exports extends object>
+    extends CommonOptions {
     /**
      * Function returning a promise which returns an object to be passed to `render` on success.
      */
@@ -107,13 +112,12 @@ declare namespace LoadableExport {
     // that has a component as its `default` export.
   }
 
-  interface OptionsWithMap<Props, Exports extends { [key: string]: any }> extends CommonOptions {
+  interface OptionsWithMap<Props, Exports extends { [key: string]: any }>
+    extends CommonOptions {
     /**
      * An object containing functions which return promises, which resolve to an object to be passed to `render` on success.
      */
-    loader: {
-      [P in keyof Exports]: () => Promise<Exports[P]>
-    };
+    loader: { [P in keyof Exports]: () => Promise<Exports[P]> };
 
     /**
      * If you want to customize what gets rendered from your loader you can also pass `render`.
@@ -153,9 +157,13 @@ declare namespace LoadableExport {
   }
 
   interface Loadable {
-    <Props, Exports extends object>(options: Options<Props, Exports>): React.ComponentType<Props> & LoadableComponent;
+    <Props, Exports extends object>(
+      options: Options<Props, Exports>
+    ): React.ComponentType<Props> & LoadableComponent;
 
-    Map<Props, Exports extends { [key: string]: any }>(options: OptionsWithMap<Props, Exports>): React.ComponentType<Props> & LoadableComponent;
+    Map<Props, Exports extends { [key: string]: any }>(
+      options: OptionsWithMap<Props, Exports>
+    ): React.ComponentType<Props> & LoadableComponent;
 
     /**
      * This will call all of the LoadableComponent.preload methods recursively until they are all

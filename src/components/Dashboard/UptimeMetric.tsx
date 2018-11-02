@@ -1,4 +1,4 @@
-import { Card, } from 'patternfly-react';
+import { Card } from 'patternfly-react';
 import * as React from 'react';
 
 export interface IUptimeMetricProps {
@@ -15,9 +15,7 @@ export class UptimeMetric extends React.PureComponent<IUptimeMetricProps> {
           <small className={'pull-right'}>since {startAsHuman}</small>
           <div>Uptime</div>
         </Card.Title>
-        <Card.Body>
-          TODO
-        </Card.Body>
+        <Card.Body>TODO</Card.Body>
       </Card>
     );
   }

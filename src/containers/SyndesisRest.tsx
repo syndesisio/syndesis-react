@@ -4,7 +4,6 @@ import { AuthContext } from '../app/auth';
 import { IRestState, Rest } from './Rest';
 import { Stream } from './Stream';
 
-
 export interface ISyndesisRestProps<T> {
   autoload?: boolean;
   contentType?: string;
@@ -18,15 +17,15 @@ export interface ISyndesisRestProps<T> {
 
 export class SyndesisRest<T> extends React.Component<ISyndesisRestProps<T>> {
   public render() {
-    const {url, stream, ...props} = this.props;
+    const { url, stream, ...props } = this.props;
 
     const RestOrStream = stream ? Stream : Rest;
 
     return (
       <AppContext.Consumer>
-        {({apiUri}) =>
+        {({ apiUri }) => (
           <AuthContext.Consumer>
-            {({token}) => (
+            {({ token }) => (
               <RestOrStream
                 baseUrl={apiUri}
                 url={url}
@@ -39,8 +38,8 @@ export class SyndesisRest<T> extends React.Component<ISyndesisRestProps<T>> {
               />
             )}
           </AuthContext.Consumer>
-        }
+        )}
       </AppContext.Consumer>
-    )
+    );
   }
 }

@@ -5,7 +5,8 @@ import { ModuleLoader } from '../../components/ui';
 import { WithRouter } from '../../containers';
 
 const LoadableDashboardPage = Loadable({
-  loader: () => import(/* webpackChunkName: "DashboardPageChunk" */'./pages/DashboardPage'),
+  loader: () =>
+    import(/* webpackChunkName: "DashboardPageChunk" */ './pages/DashboardPage'),
   loading: ModuleLoader
 });
 
@@ -13,12 +14,16 @@ export class DashboardModule extends React.Component {
   public render() {
     return (
       <WithRouter>
-        {({match}) =>
+        {({ match }) => (
           <Switch>
-            <Route path={match.url} exact={true} component={LoadableDashboardPage}/>
+            <Route
+              path={match.url}
+              exact={true}
+              component={LoadableDashboardPage}
+            />
           </Switch>
-        }
+        )}
       </WithRouter>
-    )
+    );
   }
 }

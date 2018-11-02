@@ -1,7 +1,6 @@
 import { Filter, FormControl, Sort, Toolbar } from 'patternfly-react';
 import * as React from 'react';
 
-
 export interface IFilterValue {
   id: string;
   title: string;
@@ -45,7 +44,7 @@ export interface IListViewToolbarProps {
 
   onSelectFilterType(filterType: IFilterType): void;
 
-  onFilterValueSelected(filterValue: { id: string, title: string }): void;
+  onFilterValueSelected(filterValue: { id: string; title: string }): void;
 
   onRemoveFilter(filter: IActiveFilter): void;
 
@@ -80,34 +79,36 @@ export class ListViewToolbar extends React.Component<IListViewToolbarProps> {
             onClick={this.props.onToggleCurrentSortDirection}
           />
         </Sort>
-        <Toolbar.RightContent>
-          {this.props.children}
-        </Toolbar.RightContent>
+        <Toolbar.RightContent>{this.props.children}</Toolbar.RightContent>
         <Toolbar.Results>
           <h5>{this.props.resultsCount} Results</h5>
           {this.props.activeFilters &&
-          this.props.activeFilters.length > 0 && (
-            <>
-              <Filter.ActiveLabel>Active Filters:</Filter.ActiveLabel>
-              <Filter.List>
-                {this.props.activeFilters.map((item: IActiveFilter, index) => (
-                  <Filter.Item key={index} onRemove={this.props.onRemoveFilter} filterData={item}>
-                    {item.title}={item.value}
-                  </Filter.Item>
-                ))}
-              </Filter.List>
-              <a onClick={this.props.onClearFilters}>
-                Clear All Filters
-              </a>
-            </>
-          )}
+            this.props.activeFilters.length > 0 && (
+              <>
+                <Filter.ActiveLabel>Active Filters:</Filter.ActiveLabel>
+                <Filter.List>
+                  {this.props.activeFilters.map(
+                    (item: IActiveFilter, index) => (
+                      <Filter.Item
+                        key={index}
+                        onRemove={this.props.onRemoveFilter}
+                        filterData={item}
+                      >
+                        {item.title}={item.value}
+                      </Filter.Item>
+                    )
+                  )}
+                </Filter.List>
+                <a onClick={this.props.onClearFilters}>Clear All Filters</a>
+              </>
+            )}
         </Toolbar.Results>
       </Toolbar>
     );
   }
 
   public renderInput = () => {
-    const {currentFilterType, currentValue} = this.props;
+    const { currentFilterType, currentValue } = this.props;
     if (!currentFilterType) {
       return null;
     }

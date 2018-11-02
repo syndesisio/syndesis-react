@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
+import {
+  Route,
+  RouteComponentProps,
+  Switch,
+  withRouter
+} from 'react-router-dom';
 import { PfVerticalNavItem } from '../components/ui/patternfly';
 import { ConnectionsModule } from '../modules/connections';
 import { DashboardModule } from '../modules/dashboard';
@@ -7,22 +12,27 @@ import { IntegrationsModule } from '../modules/integrations';
 import { SettingsPage } from '../settings';
 import './App.css';
 import { AppContext, IAppContext, IAppSettings } from './AppContext';
-import { AuthContext, AuthenticatedRoute, IAuthContext, LoginPage, Logout, TokenPage } from './auth';
+import {
+  AuthContext,
+  AuthenticatedRoute,
+  IAuthContext,
+  LoginPage,
+  Logout,
+  TokenPage
+} from './auth';
 import { Layout } from './layout';
 
 const PrivateRoutes = () => (
   <Switch>
-    <Route path='/' exact={true} component={DashboardModule}/>
-    <Route path='/integrations' component={IntegrationsModule}/>
-    <Route path='/connections' component={ConnectionsModule}/>
+    <Route path="/" exact={true} component={DashboardModule} />
+    <Route path="/integrations" component={IntegrationsModule} />
+    <Route path="/connections" component={ConnectionsModule} />
   </Switch>
 );
 
 const WiredLogout = () => (
   <AppContext.Consumer>
-    {({logout}) => (
-      <Logout logout={logout}/>
-    )}
+    {({ logout }) => <Logout logout={logout} />}
   </AppContext.Consumer>
 );
 
@@ -51,9 +61,7 @@ class AppBase extends React.Component<RouteComponentProps, IAppState> {
       token
     } as IAppState;
 
-    this.TokenWithState = () => (
-      <TokenPage to='/' onToken={this.updateToken}/>
-    );
+    this.TokenWithState = () => <TokenPage to="/" onToken={this.updateToken} />;
 
     if (this.state.firstSetup) {
       this.props.history.replace('/settings');
@@ -68,11 +76,11 @@ class AppBase extends React.Component<RouteComponentProps, IAppState> {
             <Layout navbar={this.renderNavbar()}>
               <React.Fragment>
                 <Switch>
-                  <Route path='/token' render={this.TokenWithState}/>
-                  <Route path='/login' component={LoginPage}/>
-                  <Route path='/logout' component={WiredLogout}/>
-                  <Route path='/settings' component={SettingsPage}/>
-                  <AuthenticatedRoute path='/' component={PrivateRoutes}/>
+                  <Route path="/token" render={this.TokenWithState} />
+                  <Route path="/login" component={LoginPage} />
+                  <Route path="/logout" component={WiredLogout} />
+                  <Route path="/settings" component={SettingsPage} />
+                  <AuthenticatedRoute path="/" component={PrivateRoutes} />
                 </Switch>
               </React.Fragment>
             </Layout>
@@ -114,7 +122,7 @@ class AppBase extends React.Component<RouteComponentProps, IAppState> {
         to={'/settings'}
         label={'Settings'}
         key={5}
-      />,
+      />
     ];
   }
 
@@ -154,7 +162,7 @@ class AppBase extends React.Component<RouteComponentProps, IAppState> {
       token: null
     });
     this.props.history.replace('/');
-  }
+  };
 }
 
 export const App = withRouter(AppBase);

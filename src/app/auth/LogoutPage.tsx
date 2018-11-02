@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface ILogoutProps {
-  logout(): void
+  logout(): void;
 }
 
 export class Logout extends React.Component<ILogoutProps> {
@@ -10,8 +10,6 @@ export class Logout extends React.Component<ILogoutProps> {
   }
 
   public render() {
-    return (
-      <p>Logging out...</p>
-    )
+    return <p>Logging out...</p>;
   }
 }

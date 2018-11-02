@@ -10,7 +10,9 @@ export interface IConnectionsListViewProps extends IListViewToolbarProps {
   connections: IConnection[];
 }
 
-export class ConnectionsListView extends React.Component<IConnectionsListViewProps> {
+export class ConnectionsListView extends React.Component<
+  IConnectionsListViewProps
+> {
   public render() {
     return (
       <>
@@ -33,5 +35,4 @@ export class ConnectionsListView extends React.Component<IConnectionsListViewPro
       </>
     );
   }
-
 }

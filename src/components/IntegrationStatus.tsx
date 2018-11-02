@@ -6,11 +6,13 @@ export interface IIntegrationStatusProps {
   integration: IIntegration;
 }
 
-
-export class IntegrationStatus extends React.Component<IIntegrationStatusProps> {
+export class IntegrationStatus extends React.Component<
+  IIntegrationStatusProps
+> {
   public render() {
     const labelType =
-      this.props.integration.currentState === 'Published' || this.props.integration.currentState === 'Pending'
+      this.props.integration.currentState === 'Published' ||
+      this.props.integration.currentState === 'Pending'
         ? 'primary'
         : 'default';
     let label = 'Pending';
@@ -22,8 +24,6 @@ export class IntegrationStatus extends React.Component<IIntegrationStatusProps> 
         label = 'Unpublished';
         break;
     }
-    return (
-      <Label type={labelType}>{label}</Label>
-    );
+    return <Label type={labelType}>{label}</Label>;
   }
 }

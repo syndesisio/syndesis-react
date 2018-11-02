@@ -1,13 +1,26 @@
 import * as React from 'react';
 import { ConnectionsListView } from '../../../components/index';
-import { IActiveFilter, IFilterType, ISortType } from '../../../components/ListViewToolbar';
-import { IConnection, WithConnections, WithRouter } from '../../../containers/index';
+import {
+  IActiveFilter,
+  IFilterType,
+  ISortType
+} from '../../../components/ListViewToolbar';
+import {
+  IConnection,
+  WithConnections,
+  WithRouter
+} from '../../../containers/index';
 import {
   IListViewToolbarAbstractComponent,
   ListViewToolbarAbstractComponent
 } from '../../../containers/ListViewToolbarAbstractComponent';
 
-function getFilteredAndSortedConnections(connections: IConnection[], activeFilters: IActiveFilter[], currentSortType: string, isSortAscending: boolean) {
+function getFilteredAndSortedConnections(
+  connections: IConnection[],
+  activeFilters: IActiveFilter[],
+  currentSortType: string,
+  isSortAscending: boolean
+) {
   let filteredAndSortedConnections = connections;
   activeFilters.forEach((filter: IActiveFilter) => {
     const valueToLower = filter.value.toLowerCase();
@@ -21,7 +34,8 @@ function getFilteredAndSortedConnections(connections: IConnection[], activeFilte
       const left = isSortAscending ? miA : miB;
       const right = isSortAscending ? miB : miA;
       return left.name.localeCompare(right.name);
-    });
+    }
+  );
 
   return filteredAndSortedConnections;
 }
@@ -30,7 +44,7 @@ const filterByName = {
   filterType: 'text',
   id: 'name',
   placeholder: 'Filter by Name',
-  title: 'Name',
+  title: 'Name'
 } as IFilterType;
 
 const filterTypes = [filterByName];
@@ -38,27 +52,30 @@ const filterTypes = [filterByName];
 const sortByName = {
   id: 'name',
   isNumeric: false,
-  title: 'Name',
+  title: 'Name'
 } as ISortType;
 
 const sortTypes: ISortType[] = [sortByName];
 
-export default class ConnectionsPage extends ListViewToolbarAbstractComponent<{}, IListViewToolbarAbstractComponent> {
+export default class ConnectionsPage extends ListViewToolbarAbstractComponent<
+  {},
+  IListViewToolbarAbstractComponent
+> {
   public state = {
     activeFilters: [] as IActiveFilter[],
     currentFilterType: filterByName,
     currentSortType: sortByName.title,
     currentValue: '',
     filterCategory: null,
-    isSortAscending: true,
+    isSortAscending: true
   };
 
   public render() {
     return (
       <WithConnections>
-        {({data, loading, hasData}) =>
+        {({ data, loading, hasData }) => (
           <WithRouter>
-            {({match}) => {
+            {({ match }) => {
               const filteredAndSortedConnections = getFilteredAndSortedConnections(
                 data.items,
                 this.state.activeFilters,
@@ -81,13 +98,15 @@ export default class ConnectionsPage extends ListViewToolbarAbstractComponent<{}
                   onFilterValueSelected={this.onFilterValueSelected}
                   onRemoveFilter={this.onRemoveFilter}
                   onClearFilters={this.onClearFilters}
-                  onToggleCurrentSortDirection={this.onToggleCurrentSortDirection}
+                  onToggleCurrentSortDirection={
+                    this.onToggleCurrentSortDirection
+                  }
                   onUpdateCurrentSortType={this.onUpdateCurrentSortType}
                 />
               );
             }}
           </WithRouter>
-        }
+        )}
       </WithConnections>
     );
   }

@@ -20,4 +20,6 @@ export const AuthContextDefaultValue = {
   token: null
 } as IAuthContext;
 
-export const AuthContext = React.createContext<IAuthContext>(AuthContextDefaultValue);
+export const AuthContext = React.createContext<IAuthContext>(
+  AuthContextDefaultValue
+);

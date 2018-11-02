@@ -7,18 +7,20 @@ export interface IIntegrationBoardProps {
   stoppedIntegrations: number;
 }
 
-export class IntegrationBoard extends React.PureComponent<IIntegrationBoardProps> {
+export class IntegrationBoard extends React.PureComponent<
+  IIntegrationBoardProps
+> {
   public render() {
     const data = {
       colors: {
         Pending: patternfly.pfPaletteColors.black200,
         Published: patternfly.pfPaletteColors.blue400,
-        Stopped: patternfly.pfPaletteColors.black300,
+        Stopped: patternfly.pfPaletteColors.black300
       },
       columns: [
         ['Running', this.props.runningIntegrations],
         ['Stopped', this.props.stoppedIntegrations],
-        ['Pending', this.props.pendingIntegrations],
+        ['Pending', this.props.pendingIntegrations]
       ],
       type: 'donut'
     };
@@ -26,18 +28,19 @@ export class IntegrationBoard extends React.PureComponent<IIntegrationBoardProps
     return (
       <Card>
         <Card.Heading>
-          <Card.Title>
-            Integration Board
-          </Card.Title>
+          <Card.Title>Integration Board</Card.Title>
         </Card.Heading>
         <Card.Body>
           <DonutChart
             id="integration-board"
-            size={{height: 120}}
+            size={{ height: 120 }}
             data={data}
-            tooltip={{show: true, contents: patternfly.pfDonutTooltipContents}}
-            title={{type: 'total', secondary: 'Integrations'}}
-            legend={{show: true, position: 'right'}}
+            tooltip={{
+              show: true,
+              contents: patternfly.pfDonutTooltipContents
+            }}
+            title={{ type: 'total', secondary: 'Integrations' }}
+            legend={{ show: true, position: 'right' }}
           />
         </Card.Body>
       </Card>

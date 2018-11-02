@@ -23,6 +23,6 @@ export class WithIntegrations extends React.Component<IWithIntegrationsProps> {
       >
         {response => this.props.children(response)}
       </SyndesisRest>
-    )
+    );
   }
 }

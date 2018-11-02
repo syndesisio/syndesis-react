@@ -11,7 +11,9 @@ export interface IIntegrationsListViewProps extends IListViewToolbarProps {
   monitoredIntegrations: IMonitoredIntegration[];
 }
 
-export class IntegrationsListView extends React.Component<IIntegrationsListViewProps> {
+export class IntegrationsListView extends React.Component<
+  IIntegrationsListViewProps
+> {
   public render() {
     return (
       <>
@@ -32,19 +34,21 @@ export class IntegrationsListView extends React.Component<IIntegrationsListViewP
           </div>
         </ListViewToolbar>
         <div className={'container-fluid'}>
-          {this.props.loading
-            ? <IntegrationsListSkeleton
+          {this.props.loading ? (
+            <IntegrationsListSkeleton
               width={800}
               style={{
                 backgroundColor: '#FFF',
                 marginTop: 30
               }}
             />
-            : <IntegrationsList monitoredIntegrations={this.props.monitoredIntegrations}/>
-          }
+          ) : (
+            <IntegrationsList
+              monitoredIntegrations={this.props.monitoredIntegrations}
+            />
+          )}
         </div>
       </>
     );
   }
-
 }

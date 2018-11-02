@@ -15,17 +15,16 @@ export class ConnectionsGrid extends React.Component<IConnectionsGridProps> {
       <CardGrid fluid={true} matchHeight={true}>
         <CardGrid.Row>
           {this.props.loading
-            ? (new Array(5).fill(0)).map((_, index) =>
-              <CardGrid.Col sm={6} md={3} key={index}>
-                <ConnectionSkeleton key={index}/>
-              </CardGrid.Col>
-            )
-            : this.props.connections.map((c, index) =>
-              <CardGrid.Col sm={6} md={3} key={index}>
-                <Connection connection={c}/>
-              </CardGrid.Col>
-            )
-          }
+            ? new Array(5).fill(0).map((_, index) => (
+                <CardGrid.Col sm={6} md={3} key={index}>
+                  <ConnectionSkeleton key={index} />
+                </CardGrid.Col>
+              ))
+            : this.props.connections.map((c, index) => (
+                <CardGrid.Col sm={6} md={3} key={index}>
+                  <Connection connection={c} />
+                </CardGrid.Col>
+              ))}
         </CardGrid.Row>
       </CardGrid>
     );

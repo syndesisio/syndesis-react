@@ -1,6 +1,12 @@
 import { Col, Row, Switch } from 'patternfly-react';
 import * as React from 'react';
-import { AutoSizer, CellMeasurer, CellMeasurerCache, List, ListRowRenderer } from 'react-virtualized';
+import {
+  AutoSizer,
+  CellMeasurer,
+  CellMeasurerCache,
+  List,
+  ListRowRenderer
+} from 'react-virtualized';
 import './LogViewer.css';
 
 export interface ILogViewerProps {
@@ -15,17 +21,23 @@ export interface ILogViewerState {
   previousCount: number;
 }
 
-export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState> {
+export class LogViewer extends React.Component<
+  ILogViewerProps,
+  ILogViewerState
+> {
   public static defaultProps = {
-    height: 300,
+    height: 300
   };
 
-  public static getDerivedStateFromProps({data}: ILogViewerProps, state: ILogViewerState) {
+  public static getDerivedStateFromProps(
+    { data }: ILogViewerProps,
+    state: ILogViewerState
+  ) {
     return {
       ...state,
       count: data.length,
       previousCount: state.followScroll ? state.count : state.previousCount
-    }
+    };
   }
 
   public state = {
@@ -33,7 +45,6 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
     followScroll: true,
     previousCount: 0
   };
-
 
   public cellMeasurerCache: CellMeasurerCache;
 
@@ -54,7 +65,7 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
               disableHeight={!!this.props.height}
               disableWidth={!!this.props.width}
             >
-              {({width, height}) => (
+              {({ width, height }) => (
                 <List
                   deferredMeasurementCache={this.cellMeasurerCache}
                   height={this.props.height || height}
@@ -62,7 +73,9 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
                   rowHeight={this.cellMeasurerCache.rowHeight}
                   rowRenderer={this.renderRow}
                   scrollToLine={this.state.count}
-                  scrollToIndex={this.state.followScroll ? this.state.count - 1 : -1}
+                  scrollToIndex={
+                    this.state.followScroll ? this.state.count - 1 : -1
+                  }
                   width={this.props.width || width}
                 />
               )}
@@ -80,10 +93,10 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
           </Col>
         </Row>
       </React.Fragment>
-    )
+    );
   }
 
-  public renderRow: ListRowRenderer = ({index, style, parent}) => (
+  public renderRow: ListRowRenderer = ({ index, style, parent }) => (
     <CellMeasurer
       cache={this.cellMeasurerCache}
       columnIndex={0}
@@ -91,14 +104,9 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
       rowIndex={index}
       parent={parent}
     >
-      <div
-        className={'LogViewerRow'}
-        style={style}
-      >
+      <div className={'LogViewerRow'} style={style}>
         <span className="LogViewerRow_number">{index + 1}</span>
-        <span className="LogViewerRow_content">
-          {this.props.data[index]}
-        </span>
+        <span className="LogViewerRow_content">{this.props.data[index]}</span>
       </div>
     </CellMeasurer>
   );
@@ -107,5 +115,5 @@ export class LogViewer extends React.Component<ILogViewerProps, ILogViewerState>
     this.setState({
       followScroll: !this.state.followScroll
     });
-  }
+  };
 }

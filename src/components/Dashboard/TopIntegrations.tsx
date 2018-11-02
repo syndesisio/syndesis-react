@@ -8,7 +8,7 @@ import './TopIntegrations.css';
 
 export interface ITopIntegrationsProps {
   loading: boolean;
-  topIntegrations: IMonitoredIntegration[]
+  topIntegrations: IMonitoredIntegration[];
 }
 
 export class TopIntegrations extends React.Component<ITopIntegrationsProps> {
@@ -16,26 +16,23 @@ export class TopIntegrations extends React.Component<ITopIntegrationsProps> {
     return (
       <Card accented={false} className={'TopIntegrations'}>
         <Card.Heading>
-          <Card.DropdownButton id='cardDropdownButton1' title='Last 30 Days'>
-            <MenuItem eventKey='1' active={true}>
+          <Card.DropdownButton id="cardDropdownButton1" title="Last 30 Days">
+            <MenuItem eventKey="1" active={true}>
               Last 30 Days
             </MenuItem>
-            <MenuItem eventKey='2'>
-              Last 60 Days
-            </MenuItem>
-            <MenuItem eventKey='3'>
-              Last 90 Days
-            </MenuItem>
+            <MenuItem eventKey="2">Last 60 Days</MenuItem>
+            <MenuItem eventKey="3">Last 90 Days</MenuItem>
           </Card.DropdownButton>
-          <Card.Title>
-            Top 5 Integrations
-          </Card.Title>
+          <Card.Title>Top 5 Integrations</Card.Title>
         </Card.Heading>
         <Card.Body>
-          {this.props.loading
-            ? <IntegrationsListSkeleton width={500}/>
-            : <IntegrationsList monitoredIntegrations={this.props.topIntegrations}/>
-          }
+          {this.props.loading ? (
+            <IntegrationsListSkeleton width={500} />
+          ) : (
+            <IntegrationsList
+              monitoredIntegrations={this.props.topIntegrations}
+            />
+          )}
         </Card.Body>
       </Card>
     );

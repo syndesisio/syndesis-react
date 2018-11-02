@@ -13,24 +13,23 @@ export interface IAggregatedMetricProps {
   error: number;
 }
 
-export class AggregatedMetric extends React.PureComponent<IAggregatedMetricProps> {
+export class AggregatedMetric extends React.PureComponent<
+  IAggregatedMetricProps
+> {
   public render() {
     return (
       <Card accented={true} aggregated={true} matchHeight={true}>
         <Card.Title>
-          <AggregateStatusCount>
-            {this.props.title}
-          </AggregateStatusCount>
+          <AggregateStatusCount>{this.props.title}</AggregateStatusCount>
         </Card.Title>
         <Card.Body>
           <AggregateStatusNotifications>
             <AggregateStatusNotification>
-              <Icon type="pf" name="ok"/>
-              {this.props.ok}
-              {' '}
+              <Icon type="pf" name="ok" />
+              {this.props.ok}{' '}
             </AggregateStatusNotification>
             <AggregateStatusNotification>
-              <Icon type="pf" name="error-circle-o"/>
+              <Icon type="pf" name="error-circle-o" />
               {this.props.error}
             </AggregateStatusNotification>
           </AggregateStatusNotifications>
