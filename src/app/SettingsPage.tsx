@@ -81,7 +81,11 @@ class SettingsPageBase extends React.Component<
             <Row style={{ paddingTop: '10px', paddingBottom: '10px' }}>
               <Col>
                 <span>
-                  <Button className={'btn btn-primary'} onClick={this.onSave}>
+                  <Button
+                    type="submit"
+                    className={'btn btn-primary'}
+                    onClick={this.onSave}
+                  >
                     Save
                   </Button>
                 </span>
