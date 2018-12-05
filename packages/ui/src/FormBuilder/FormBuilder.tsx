@@ -4,20 +4,22 @@ import {
   getFormControl,
   getNormalizedControlType,
 } from '../../src/FormBuilder/FormUtils';
+import { FormControlHelp } from '../../src/FormBuilder/FormControlHelp.component';
 
 // formControl renders the actual labels and form controls
 const formControl = ({ formControlProperty, properties }: any): JSX.Element => {
-  let controlId = `${formControlProperty}-control-id`;
+  let id = `${formControlProperty}-control-id`;
   let type = getNormalizedControlType(properties.type);
 
   return (
     <div>
-      <label htmlFor={controlId} className="control-label col-sm-3">
+      <label htmlFor={id} className="control-label col-sm-3">
         {properties.displayName}
+        {properties.labelHint && <FormControlHelp />}
       </label>
 
       <div className="col-sm-9">
-        {getFormControl(type, controlId, properties)}
+        {getFormControl({ type, id, properties })}
         <p className="help-block">{properties.description}</p>
       </div>
     </div>
@@ -43,32 +45,6 @@ export const formBuilder = (properties: object): JSX.Element => {
       })
     );
   }
-
-  // formGroups.push(
-  //   formGroup({
-  //     formControlProperty: 'host',
-  //     children: formControl({
-  //       formControlProperty: 'host',
-  //       properties: {
-  //         componentProperty: true,
-  //         defaultValue: 'https://us.api.concursolutions.com',
-  //         deprecated: false,
-  //         description:
-  //           'API Endpoint used to access Concur instance in the form of https://hostname:port. This value depends on the geolocation received from Concur upon registration.',
-  //         displayName: 'API Endpoint',
-  //         group: 'producer',
-  //         javaType: 'java.lang.String',
-  //         kind: 'property',
-  //         label: 'producer',
-  //         required: true,
-  //         secret: false,
-  //         type: 'string',
-  //         tags: ['host'],
-  //         order: 10,
-  //       }
-  //     })
-  //   })
-  // );
 
   return <Form horizontal>{formGroups}</Form>;
 };

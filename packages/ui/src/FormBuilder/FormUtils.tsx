@@ -63,45 +63,37 @@ export const getNormalizedControlType = (type: string = ''): string => {
   return fieldType;
 };
 
-export const getFormControl = (
-  type: string,
-  controlId: string,
-  properties: ISynFormControl
-): JSX.Element => {
+export const getFormControl = ({ type, id, properties }: any): JSX.Element => {
   let formField;
   switch (type) {
-    case 'select': {
-      formField = createSelect(controlId);
-      break;
-    }
+    // case 'select': {
+    //   formField = createSelect(id);
+    //   break;
+    // }
+    // case 'checkbox': {
+    //   formField = createCheckbox(id);
+    //   break;
+    // }
+    // case 'radio': {
+    //   formField = createRadio(id, controlId);
+    //   break;
+    // }
+    // case 'duration': {
+    //   formField = createDuration(id);
+    //   break;
+    // }
     case 'textarea': {
-      formField = createTextArea(controlId);
-      break;
-    }
-    case 'checkbox': {
-      formField = createCheckbox(controlId);
-      break;
-    }
-    case 'radio': {
-      formField = createRadio(controlId, controlId);
-      break;
-    }
-    case 'duration': {
-      formField = createDuration(controlId);
+      formField = createTextArea({ id });
       break;
     }
     default: {
-      formField = createInput(type, controlId, properties);
+      formField = createInput({ type, id, properties });
     }
   }
   return formField;
 };
 
-export const createInput = (
-  type: string,
-  id: string,
-  properties: ISynFormControl
-): JSX.Element => {
+export const createInput = ({ type, id, properties }: any): JSX.Element => {
   return (
     <input
       id={id}
@@ -112,30 +104,30 @@ export const createInput = (
   );
 };
 
-export const createSelect = (id: string): JSX.Element => {
-  return (
-    <select id={id} className="form-control">
-      <option disabled>Type specification not required</option>
-      <option>JSON Schema</option>
-      <option>JSON Instance</option>
-      <option>XML Schema</option>
-      <option>XML Instance</option>
-    </select>
-  );
-};
-
-export const createTextArea = (id: string): JSX.Element => {
+export const createTextArea = ({ id }: any): JSX.Element => {
   return <textarea id={id} className="form-control" />;
 };
 
-export const createCheckbox = (id: string): JSX.Element => {
-  return <input id={id} type="checkbox" className="form-control" />;
-};
+// export const createSelect = (id: string): JSX.Element => {
+//   return (
+//     <select id={id} className="form-control">
+//       <option disabled>Type specification not required</option>
+//       <option>JSON Schema</option>
+//       <option>JSON Instance</option>
+//       <option>XML Schema</option>
+//       <option>XML Instance</option>
+//     </select>
+//   );
+// };
 
-export const createRadio = (id: string, name: string): JSX.Element => {
-  return <input id={id} type="radio" name={name} className="form-control" />;
-};
+// export const createCheckbox = (id: string): JSX.Element => {
+//   return <input id={id} type="checkbox" className="form-control" />;
+// };
 
-export const createDuration = (id: string): JSX.Element => {
-  return <input id={id} type="duration" className="form-control" />;
-};
+// export const createRadio = (id: string, name: string): JSX.Element => {
+//   return <input id={id} type="radio" name={name} className="form-control" />;
+// };
+
+// export const createDuration = (id: string): JSX.Element => {
+//   return <input id={id} type="duration" className="form-control" />;
+// };

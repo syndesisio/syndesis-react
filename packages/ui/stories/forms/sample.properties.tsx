@@ -41,6 +41,8 @@ export const FormData = {
         description:
           'Scopes required as a list of space-delimited, case-sensitive strings. Scopes limit access and do not grant any additional permission beyond that which the user already has. Consult the Concur API documentation on the available Scopes.',
         displayName: 'Scopes',
+        labelHint:
+          'Defines what the access token can do and what resources it can access.',
         group: 'producer',
         javaType: 'java.lang.String',
         kind: 'property',
