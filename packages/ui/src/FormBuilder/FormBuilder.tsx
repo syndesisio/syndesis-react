@@ -1,31 +1,12 @@
-import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import { Form, FormGroup } from 'patternfly-react';
-import { StoryHelper } from '../.storybook/StoryHelper';
-import { formData } from './FormGenerator.data';
-import { getFormControl } from './FormUtils';
+import {
+  getFormControl,
+  ISynFormControl,
+} from '../../src/FormBuilder/FormUtils';
 
-const stories = storiesOf('Components', module);
-
-interface IFormControl {
-  componentProperty: boolean;
-  defaultValue: string | number | string[] | undefined;
-  deprecated: boolean;
-  description: string;
-  displayName: string;
-  group: string;
-  javaType: string;
-  kind: string;
-  label: string;
-  required: boolean;
-  secret: boolean;
-  type: string;
-  tags: string[];
-  order: number;
-}
-
-const getNormalizedControlType = type => {
-  let fieldType = (type || '').toLowerCase();
+const getNormalizedControlType = (type: string = ''): string => {
+  let fieldType: string = type.toLowerCase();
 
   switch (fieldType) {
     // native input field types
@@ -33,13 +14,13 @@ const getNormalizedControlType = type => {
     case 'color':
     case 'date':
     case 'datetime-local':
-    case 'duration':
     case 'email':
     case 'file':
     case 'hidden':
     case 'month':
     case 'number':
     case 'password':
+    case 'radio':
     case 'range':
     case 'tel':
     case 'url':
@@ -49,10 +30,12 @@ const getNormalizedControlType = type => {
     case 'textarea':
     case 'time':
       break;
+    // account for some aliases the back end may supply
     case 'boolean': {
       fieldType = 'checkbox';
       break;
     }
+    case 'duration':
     case 'int':
     case 'integer': {
       fieldType = 'number';
@@ -66,7 +49,11 @@ const getNormalizedControlType = type => {
   return fieldType;
 };
 
-const formControl = (properties: IFormControl, controlKey: string) => {
+// formControl renders the actual labels and form controls
+const formControl = (
+  properties: ISynFormControl,
+  controlKey: string
+): JSX.Element => {
   let controlId = `${controlKey}-control-id`;
   let type = getNormalizedControlType(properties.type);
 
@@ -77,7 +64,6 @@ const formControl = (properties: IFormControl, controlKey: string) => {
       </label>
 
       <div className="col-sm-9">
-        {/* <input id={controlId} type={type} value={value} className="form-control" /> */}
         {getFormControl(type, controlId, properties)}
         <p className="help-block">{properties.description}</p>
       </div>
@@ -86,22 +72,18 @@ const formControl = (properties: IFormControl, controlKey: string) => {
 };
 
 // formGroup renders a group of related form elements
-const formGroup = (children: JSX.Element) => {
-  return <FormGroup>{children}</FormGroup>;
+const formGroup = (children: JSX.Element, property: string): JSX.Element => {
+  return <FormGroup key={property}>{children}</FormGroup>;
 };
 
 // formBuilder takes a properties object and dynamically builds a patternfly react form
-const formBuilder = (properties: Object) => {
+export const formBuilder = (properties: object): JSX.Element => {
   let formFields: any = [];
-  for (const key in properties) {
+  for (const property in properties) {
     // formFields.push(formGroup(formControl({ controlKey: key, properties: properties[key] })));
-    formFields.push(formGroup(formControl(properties[key], key)));
+    formFields.push(
+      formGroup(formControl(properties[property], property), property)
+    );
   }
   return <Form horizontal>{formFields}</Form>;
 };
-
-stories
-  .addDecorator(story => <StoryHelper>{story()}</StoryHelper>)
-  .add('FormGenerator', () => (
-    <React.Fragment>{formBuilder(formData.properties)}</React.Fragment>
-  ));
