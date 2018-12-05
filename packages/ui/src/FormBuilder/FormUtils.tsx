@@ -1,3 +1,4 @@
+import { Form } from 'patternfly-react';
 import * as React from 'react';
 
 export interface ISynFormControl {
@@ -95,11 +96,10 @@ export const getFormControl = ({ type, id, properties }: any): JSX.Element => {
 
 export const createInput = ({ type, id, properties }: any): JSX.Element => {
   return (
-    <input
-      id={id}
+    <Form.FormControl
       type={type}
       defaultValue={properties.defaultValue}
-      className="form-control"
+      id={id}
     />
   );
 };
