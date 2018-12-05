@@ -33,55 +33,6 @@ export const FormData = {
         tags: ['oauth-authorization-url'],
         order: 6,
       },
-      clientId: {
-        componentProperty: true,
-        deprecated: false,
-        description: 'Client ID received from Concur upon registration.',
-        displayName: 'Client ID',
-        group: 'producer',
-        javaType: 'java.lang.String',
-        kind: 'property',
-        label: 'producer',
-        required: true,
-        secret: false,
-        type: 'string',
-        tags: ['oauth-client-id'],
-        order: 2,
-      },
-      host: {
-        componentProperty: true,
-        defaultValue: 'https://us.api.concursolutions.com',
-        deprecated: false,
-        description:
-          'API Endpoint used to access Concur instance in the form of https://hostname:port. This value depends on the geolocation received from Concur upon registration.',
-        displayName: 'API Endpoint',
-        group: 'producer',
-        javaType: 'java.lang.String',
-        kind: 'property',
-        label: 'producer',
-        required: true,
-        secret: false,
-        type: 'string',
-        tags: ['host'],
-        order: 10,
-      },
-      tokenEndpoint: {
-        componentProperty: true,
-        defaultValue: 'https://us.api.concursolutions.com/oauth2/v0/token',
-        deprecated: false,
-        description:
-          'Token URL consists of base URL and ends with <code>/token</code>. Base URL differs based on geolocation and should be received from Concur upon registration.',
-        displayName: 'Token URL',
-        group: 'producer',
-        javaType: 'java.lang.String',
-        kind: 'property',
-        label: 'producer',
-        required: true,
-        secret: false,
-        type: 'string',
-        tags: ['oauth-access-token-url'],
-        order: 7,
-      },
       oauthScopes: {
         componentProperty: true,
         defaultValue:
@@ -100,135 +51,132 @@ export const FormData = {
         tags: ['oauth-scope'],
         order: 8,
       },
-      brokerCertificate: {
-        type: 'string',
-        displayName: 'Broker URL',
-        description:
-          'for example, failover://ssl://{BROKER-HOST}:{BROKER-PORT}',
-      },
-      checkCertificates: {
-        type: 'boolean',
-        displayName: 'Check Certificates',
-        controlHint: 'Enable/Disable Certificate Checks',
-      },
-      int: {
-        type: 'int',
-        displayName: 'Port',
-        labelHint: 'FTP Port',
-      },
-      connectTimeout: {
-        type: 'integer',
-        displayName: 'Connect Timeout',
-        defaultValue: 10000,
-        labelHint: 'This is a integer input',
-      },
-      deliveryPersistent: {
-        type: 'boolean',
-        displayName: 'Persistent',
-        // tooltip: 'Message delivery is guaranteed when Persistent is selected.'
-      },
-      uploadApiFile: {
-        type: 'radio',
-        displayName: 'Upload an OpenAPI file',
-      },
+      // checkCertificates: {
+      //   type: 'boolean',
+      //   displayName: 'Check Certificates',
+      //   controlHint: 'Enable/Disable Certificate Checks',
+      // },
+      // int: {
+      //   type: 'int',
+      //   displayName: 'Port',
+      //   labelHint: 'FTP Port',
+      // },
+      // connectTimeout: {
+      //   type: 'integer',
+      //   displayName: 'Connect Timeout',
+      //   defaultValue: 10000,
+      //   labelHint: 'This is a integer input',
+      // },
+      // deliveryPersistent: {
+      //   type: 'checkbox',
+      //   displayName: 'Persistent',
+      //   // tooltip: 'Message delivery is guaranteed when Persistent is selected.'
+      // },
+      // uploadApiFile: {
+      //   type: 'radio',
+      //   displayName: 'Upload an OpenAPI file',
+      // }
     },
   },
-  CustomControls: {
-    properties: {
-      foobar: {
-        type: 'duration',
-        displayName: 'Duration',
-        description: 'This is a duration input',
-      },
-    },
-  },
+  // CustomControls: {
+  //   properties: {
+  //     duration: {
+  //       type: 'duration',
+  //       displayName: 'Duration',
+  //       description: 'This is a duration input',
+  //     }
+  //   },
+  // },
   NativeControls: {
     properties: {
-      checkbox: {
-        type: 'checkbox',
-        displayName: 'Checkbox',
-        description: 'This is a checkbox input',
-      },
-      color: {
-        type: 'color',
-        displayName: 'Color',
-        description: 'This is a color input',
-      },
-      date: {
-        type: 'date',
-        displayName: 'Date',
-        description: 'This is a date input',
-      },
-      dateTimeLocal: {
-        type: 'datetime-local',
-        displayName: 'DateTime-Local',
-        description: 'This is a datetime-local input',
-      },
-      email: {
-        type: 'email',
-        displayName: 'Email',
-        description: 'This is an email input',
-      },
-      file: {
-        type: 'file',
-        displayName: 'File',
-        description: 'This is a file input',
-      },
+      // checkbox: {
+      //   type: 'checkbox',
+      //   displayName: 'Checkbox',
+      //   description: 'This is a checkbox input',
+      // },
+      // color: {
+      //   type: 'color',
+      //   displayName: 'Color',
+      //   description: 'This is a color input',
+      // },
+      // date: {
+      //   type: 'date',
+      //   displayName: 'Date',
+      //   description: 'This is a date input',
+      // },
+      // dateTimeLocal: {
+      //   type: 'datetime-local',
+      //   displayName: 'DateTime-Local',
+      //   description: 'This is a datetime-local input',
+      // },
+      // email: {
+      //   type: 'email',
+      //   displayName: 'Email',
+      //   description: 'This is an email input',
+      // },
+      // file: {
+      //   type: 'file',
+      //   displayName: 'File',
+      //   description: 'This is a file input',
+      // },
       hidden: {
         type: 'hidden',
         displayName: 'Hidden',
         description: 'This is a hidden input',
+        defaultValue: 'a hidden token',
       },
-      month: {
-        type: 'month',
-        displayName: 'Month',
-        description: 'This is a month input',
-      },
+      // month: {
+      //   type: 'month',
+      //   displayName: 'Month',
+      //   description: 'This is a month input',
+      // },
       password: {
         type: 'password',
         displayName: 'Password',
         description: 'This is a password input',
+        defaultValue: 'admin',
       },
-      range: {
-        type: 'range',
-        displayName: 'Range',
-        description: 'This is a range input',
-      },
-      select: {
-        type: 'select',
-        displayName: 'Select',
-        description: 'This is a select input',
-      },
-      tel: {
-        type: 'tel',
-        displayName: 'Tel',
-        description: 'This is a tel input',
-      },
-      url: {
-        type: 'url',
-        displayName: 'URL',
-        description: 'This is a url input',
-      },
-      week: {
-        type: 'week',
-        displayName: 'Week',
-        description: 'This is a week input',
-      },
-      search: {
-        type: 'search',
-        displayName: 'Search',
-        description: 'This is a search input',
-      },
+      // range: {
+      //   type: 'range',
+      //   displayName: 'Range',
+      //   description: 'This is a range input',
+      // },
+      // select: {
+      //   type: 'select',
+      //   displayName: 'Select',
+      //   description: 'This is a select input',
+      // },
+      // tel: {
+      //   type: 'tel',
+      //   displayName: 'Tel',
+      //   description: 'This is a tel input',
+      // },
+      // url: {
+      //   type: 'url',
+      //   displayName: 'URL',
+      //   description: 'This is a url input',
+      // },
+      // week: {
+      //   type: 'week',
+      //   displayName: 'Week',
+      //   description: 'This is a week input',
+      // },
+      // search: {
+      //   type: 'search',
+      //   displayName: 'Search',
+      //   description: 'This is a search input',
+      // },
       textarea: {
         type: 'textarea',
         displayName: 'Textarea',
         description: 'This is a textarea input',
+        placeholder: 'Have your say',
       },
-      time: {
-        type: 'time',
-        displayName: 'Time',
-        description: 'This is a time input',
-      },
+      // time: {
+      //   type: 'time',
+      //   displayName: 'Time',
+      //   description: 'This is a time input',
+      // }
     },
   },
 };

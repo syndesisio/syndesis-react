@@ -19,6 +19,50 @@ export interface ISynFormControl {
   order?: number;
 }
 
+export const getNormalizedControlType = (type: string = ''): string => {
+  let fieldType: string = type.toLowerCase();
+
+  switch (fieldType) {
+    // native input field types
+    case 'checkbox':
+    case 'color':
+    case 'date':
+    case 'datetime-local':
+    case 'email':
+    case 'file':
+    case 'hidden':
+    case 'month':
+    case 'number':
+    case 'password':
+    case 'radio':
+    case 'range':
+    case 'tel':
+    case 'url':
+    case 'week':
+    case 'search':
+    case 'select':
+    case 'textarea':
+    case 'time':
+      break;
+    // account for some aliases the back end may supply
+    case 'boolean': {
+      fieldType = 'checkbox';
+      break;
+    }
+    case 'duration':
+    case 'int':
+    case 'integer': {
+      fieldType = 'number';
+      break;
+    }
+    default: {
+      fieldType = 'text';
+    }
+  }
+
+  return fieldType;
+};
+
 export const getFormControl = (
   type: string,
   controlId: string,

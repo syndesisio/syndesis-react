@@ -2,63 +2,16 @@ import * as React from 'react';
 import { Form, FormGroup } from 'patternfly-react';
 import {
   getFormControl,
-  ISynFormControl,
+  getNormalizedControlType,
 } from '../../src/FormBuilder/FormUtils';
 
-const getNormalizedControlType = (type: string = ''): string => {
-  let fieldType: string = type.toLowerCase();
-
-  switch (fieldType) {
-    // native input field types
-    case 'checkbox':
-    case 'color':
-    case 'date':
-    case 'datetime-local':
-    case 'email':
-    case 'file':
-    case 'hidden':
-    case 'month':
-    case 'number':
-    case 'password':
-    case 'radio':
-    case 'range':
-    case 'tel':
-    case 'url':
-    case 'week':
-    case 'search':
-    case 'select':
-    case 'textarea':
-    case 'time':
-      break;
-    // account for some aliases the back end may supply
-    case 'boolean': {
-      fieldType = 'checkbox';
-      break;
-    }
-    case 'duration':
-    case 'int':
-    case 'integer': {
-      fieldType = 'number';
-      break;
-    }
-    default: {
-      fieldType = 'text';
-    }
-  }
-
-  return fieldType;
-};
-
 // formControl renders the actual labels and form controls
-const formControl = (
-  properties: ISynFormControl,
-  controlKey: string
-): JSX.Element => {
-  let controlId = `${controlKey}-control-id`;
+const formControl = ({ formControlProperty, properties }: any): JSX.Element => {
+  let controlId = `${formControlProperty}-control-id`;
   let type = getNormalizedControlType(properties.type);
 
   return (
-    <React.Fragment>
+    <div>
       <label htmlFor={controlId} className="control-label col-sm-3">
         {properties.displayName}
       </label>
@@ -67,23 +20,55 @@ const formControl = (
         {getFormControl(type, controlId, properties)}
         <p className="help-block">{properties.description}</p>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
 // formGroup renders a group of related form elements
-const formGroup = (children: JSX.Element, property: string): JSX.Element => {
-  return <FormGroup key={property}>{children}</FormGroup>;
+const formGroup = ({ formControlProperty, children }: any): JSX.Element => {
+  return <FormGroup key={formControlProperty}>{children}</FormGroup>;
 };
 
 // formBuilder takes a properties object and dynamically builds a patternfly react form
 export const formBuilder = (properties: object): JSX.Element => {
-  let formFields: any = [];
-  for (const property in properties) {
-    // formFields.push(formGroup(formControl({ controlKey: key, properties: properties[key] })));
-    formFields.push(
-      formGroup(formControl(properties[property], property), property)
+  let formGroups: any = [];
+  for (const propertyName in properties) {
+    formGroups.push(
+      formGroup({
+        formControlProperty: propertyName,
+        children: formControl({
+          formControlProperty: propertyName,
+          properties: properties[propertyName],
+        }),
+      })
     );
   }
-  return <Form horizontal>{formFields}</Form>;
+
+  // formGroups.push(
+  //   formGroup({
+  //     formControlProperty: 'host',
+  //     children: formControl({
+  //       formControlProperty: 'host',
+  //       properties: {
+  //         componentProperty: true,
+  //         defaultValue: 'https://us.api.concursolutions.com',
+  //         deprecated: false,
+  //         description:
+  //           'API Endpoint used to access Concur instance in the form of https://hostname:port. This value depends on the geolocation received from Concur upon registration.',
+  //         displayName: 'API Endpoint',
+  //         group: 'producer',
+  //         javaType: 'java.lang.String',
+  //         kind: 'property',
+  //         label: 'producer',
+  //         required: true,
+  //         secret: false,
+  //         type: 'string',
+  //         tags: ['host'],
+  //         order: 10,
+  //       }
+  //     })
+  //   })
+  // );
+
+  return <Form horizontal>{formGroups}</Form>;
 };

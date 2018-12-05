@@ -14,7 +14,7 @@ stories
       {formBuilder(FormData.BasicForm.properties)}
       <h2>Native Form Controls Example</h2>
       {formBuilder(FormData.NativeControls.properties)}
-      <h2>Custom Form Controls Example</h2>
-      {formBuilder(FormData.CustomControls.properties)}
+      {/* <h2>Custom Form Controls Example</h2> */}
+      {/* {formBuilder(FormData.CustomControls.properties)} */}
     </div>
   ));
