@@ -4,6 +4,7 @@ import { FormControlHelp } from '../../src/FormBuilder/FormControlHelp.component
 import {
   getFormControl,
   getNormalizedControlType,
+  IFormProperties,
 } from '../../src/FormBuilder/FormUtils';
 
 // formControl renders the actual labels and form controls
@@ -30,7 +31,7 @@ const formGroup = ({ formControlProperty, children }: any): JSX.Element => {
 };
 
 // formBuilder takes a properties object and dynamically builds a patternfly react form
-export const formBuilder = (properties: object): JSX.Element => {
+export const formBuilder = (properties: IFormProperties): JSX.Element => {
   const formGroups: any = [];
   for (const propertyName in properties) {
     if (!properties.hasOwnProperty(propertyName)) {

@@ -15,9 +15,13 @@ export interface ISynFormControl {
   controlHint?: string;
   required?: boolean;
   secret?: boolean;
-  type?: string;
+  type: string;
   tags?: string[];
   order?: number;
+}
+
+export interface IFormProperties {
+  [name: string]: ISynFormControl;
 }
 
 export const getNormalizedControlType = (type: string = ''): string => {

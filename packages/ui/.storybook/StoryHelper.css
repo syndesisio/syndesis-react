@@ -13,5 +13,7 @@ body,
 }
 
 .test-area {
+  align-items: center;
+  display: flex;
   height: 100%;
 }
