@@ -60,7 +60,7 @@ export class CustomizationsApiConnectorListItem extends React.Component<
         leftContent={
           this.props.apiConnectorIcon ? <ListViewIcon name={'gear'} /> : null
         }
-        stacked={false}
+        stacked={true}
       />
     );
   }

@@ -73,7 +73,7 @@ export class CustomizationsExtensionListItem extends React.Component<
             </div>
           ) : null
         }
-        stacked={false}
+        stacked={true}
       />
     );
   }
