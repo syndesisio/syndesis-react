@@ -3,11 +3,15 @@ import { withNotes } from '@storybook/addon-notes';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import { StoryHelper } from '../../.storybook/StoryHelper';
-import { Extension } from '@syndesis/models';
-import { OptionalIntUtils } from '@syndesis/utils';
 import { CustomizationsExtensionDetail } from '../../src';
+import {
+  ExtensionType,
+  IAction,
+  IExtension,
+  IIntegration,
+} from '../../src/Customization/models';
 
-export const extensionDetailStory = 'used by integrations';
+export const extensionDetailStory = 'step extension in use';
 
 const stories = storiesOf(
   'Customization/CustomizationsExtensionDetail',
@@ -17,32 +21,52 @@ const stories = storiesOf(
 const integrations = [
   {
     description: "This is Integration 1's description",
-    id: 'integration-1',
     name: 'Integration 1',
-  },
+  } as IIntegration,
   {
-    description: "This is Integration 2's description",
-    id: 'integration-2',
-    name: 'Integration 2',
-  },
+    name: 'integration-2',
+  } as IIntegration,
 ];
 
 const extension = {
-  schemaVersion: '1.0',
   name: 'Loop',
   description: 'Add a loop',
   extensionId: 'io.syndesis.extensions:syndesis-extension-loop',
   actions: [
-    { name: 'Action 1', description: "This is Action 1's description" },
-    { name: 'Action 2', description: "This is Action 2's description" },
-    { name: 'Action 3', description: "This is Action 3's description" },
-    { name: 'Action 4', description: "This is Action 4's description" },
-    { name: 'Action 5', description: "This is Action 5's description" },
+    {
+      name: 'Action 1',
+      description: "This is Action 1's description",
+    } as IAction,
+    {
+      name: 'Action 2',
+      description: "This is Action 2's description",
+    } as IAction,
+    {
+      name: 'Action 3',
+      description: "This is Action 3's description",
+    } as IAction,
+    {
+      name: 'Action 4',
+      description: "This is Action 4's description",
+    } as IAction,
+    {
+      name: 'Action 5',
+      description: "This is Action 5's description",
+    } as IAction,
   ],
-  extensionType: 'Steps',
-  uses: OptionalIntUtils.create(integrations.length),
-} as Extension;
-const notUsedExtension = { ...extension, uses: 0 } as Extension;
+  extensionType: ExtensionType.Steps,
+  uses: integrations.length,
+} as IExtension;
+const notUsedExtension = {
+  ...extension,
+  description: undefined,
+  extensionType: ExtensionType.Connectors,
+  uses: 0,
+} as IExtension;
+const libraryExtension = {
+  ...extension,
+  extensionType: ExtensionType.Libraries,
+} as IExtension;
 
 const deleteText = 'Delete';
 const deleteActionText = deleteText + ' ' + extension.name;
@@ -54,19 +78,19 @@ const lastUpdateDate = 'Dec 10, 2018, 10:32:28 AM';
 const nameText = 'Name';
 const notUsedByIntegrationsMsg = 'Not used by any integrations';
 const overviewText = 'Overview';
-const propDescription = 'description';
-const propName = 'name';
 const selectIntegrationText = 'selected integration is ';
 const supportedConnectorsText = 'Supported Connectors';
+const supportedLibrariesText = 'Supported Libraries';
 const supportedStepsText = 'Supported Steps';
-const typeMessage = 'Step Extension';
+const stepTypeMessage = 'Step Extension';
+const connectorTypeMessage = 'Connector Extension';
+const libraryTypeMessage = 'Library Extension';
 const typeText = 'Type';
 const updateText = 'Update';
 const updateActionText = updateText + ' ' + extension.name;
 const updateTip = 'Update this extension';
 const usageText = 'Usage';
-const usedByIntegrationsMsg =
-  'Used by ' + OptionalIntUtils.getValue(extension.uses) + ' integrations';
+const usedByIntegrationsMsg = 'Used by ' + extension.uses + ' integrations';
 
 const inUseTestNotes =
   '- Verify the header section has the extension name of "' +
@@ -111,7 +135,7 @@ const inUseTestNotes =
   typeText +
   '"\n' +
   '- Verify the extension type is "' +
-  typeMessage +
+  stepTypeMessage +
   '"\n' +
   '- Verify the overview section has a last update label with a title of "' +
   lastUpdateText +
@@ -136,11 +160,19 @@ const inUseTestNotes =
   '- Verify the second column heading is "' +
   descriptionText +
   '"\n' +
-  '- Verify the table has 2 rows of data and the integration names and descriptions are appropriate\n' +
+  '- Verify the table has 2 rows of integration names and 1 description\n' +
   '- Verify the integration names show as links\n' +
   '- Verify clicking on the name of the integration prints "' +
   selectIntegrationText +
   '" and then the integration ID';
+
+const libraryTypeTestNotes =
+  '- Verify the extension type is "' +
+  libraryTypeMessage +
+  '"\n' +
+  '- Verify the supported steps section has a title of "' +
+  supportedLibrariesText +
+  '"';
 
 const notUsedTestNotes =
   '- Verify the header section has the extension name of "' +
@@ -183,14 +215,12 @@ const notUsedTestNotes =
   '- Verify the overview section has a description label with a title of "' +
   descriptionText +
   '"\n' +
-  '- Verify the extension description is "' +
-  extension.description +
-  '"\n' +
+  '- Verify the extension description is empty\n' +
   '- Verify the overview section has a type label with a title of "' +
   typeText +
   '"\n' +
   '- Verify the extension type is "' +
-  typeMessage +
+  connectorTypeMessage +
   '"\n' +
   '- Verify the overview section has a last update label with a title of "' +
   lastUpdateText +
@@ -199,7 +229,7 @@ const notUsedTestNotes =
   lastUpdateDate +
   '"\n' +
   '- Verify the supported steps section has a title of "' +
-  supportedStepsText +
+  supportedConnectorsText +
   '"\n' +
   '- Verify the supported steps section has 5 actions with the appropriate names and descriptions\n' +
   '- Verify the usage section has a title of "' +
@@ -225,9 +255,10 @@ stories
         i18nName={nameText}
         i18nOverview={overviewText}
         i18nSupportedConnectors={supportedConnectorsText}
+        i18nSupportedLibraries={supportedLibrariesText}
         i18nSupportedSteps={supportedStepsText}
         i18nType={typeText}
-        i18nTypeMessage={typeMessage}
+        i18nTypeMessage={stepTypeMessage}
         i18nUpdate={updateText}
         i18nUpdateTip={updateTip}
         i18nUsage={usageText}
@@ -235,14 +266,12 @@ stories
         onDelete={action(deleteActionText)}
         onSelectIntegration={action(selectIntegrationText)}
         onUpdate={action(updateActionText)}
-        propName={propName}
-        propDescription={propDescription}
         usedByIntegrations={integrations}
       />
     ))
   )
   .add(
-    'not used by any integrations',
+    'connector extension not in use',
     withNotes(notUsedTestNotes)(() => (
       <CustomizationsExtensionDetail
         extension={notUsedExtension}
@@ -255,17 +284,44 @@ stories
         i18nName={nameText}
         i18nOverview={overviewText}
         i18nSupportedConnectors={supportedConnectorsText}
+        i18nSupportedLibraries={supportedLibrariesText}
         i18nSupportedSteps={supportedStepsText}
         i18nType={typeText}
-        i18nTypeMessage={typeMessage}
+        i18nTypeMessage={connectorTypeMessage}
         i18nUpdate={updateText}
         i18nUsage={usageText}
         i18nUsageMessage={notUsedByIntegrationsMsg}
         onDelete={action(deleteActionText)}
         onSelectIntegration={action(selectIntegrationText)}
         onUpdate={action(updateActionText)}
-        propName={propName}
-        propDescription={propDescription}
+      />
+    ))
+  )
+  .add(
+    'library extension in use',
+    withNotes(libraryTypeTestNotes)(() => (
+      <CustomizationsExtensionDetail
+        extension={libraryExtension}
+        i18nDelete={deleteText}
+        i18nDescription={descriptionText}
+        i18nIdMessage={idMsg}
+        i18nLastUpdate={lastUpdateText}
+        i18nLastUpdateDate={lastUpdateDate}
+        i18nName={nameText}
+        i18nOverview={overviewText}
+        i18nSupportedConnectors={supportedConnectorsText}
+        i18nSupportedLibraries={supportedLibrariesText}
+        i18nSupportedSteps={supportedStepsText}
+        i18nType={typeText}
+        i18nTypeMessage={libraryTypeMessage}
+        i18nUpdate={updateText}
+        i18nUpdateTip={updateTip}
+        i18nUsage={usageText}
+        i18nUsageMessage={usedByIntegrationsMsg}
+        onDelete={action(deleteActionText)}
+        onSelectIntegration={action(selectIntegrationText)}
+        onUpdate={action(updateActionText)}
+        usedByIntegrations={integrations}
       />
     ))
   );

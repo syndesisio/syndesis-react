@@ -1,5 +1,3 @@
-import { Extension, Integration } from '@syndesis/models';
-import { OptionalIntUtils } from '@syndesis/utils';
 import {
   Button,
   Card,
@@ -13,9 +11,10 @@ import {
 } from 'patternfly-react';
 import * as React from 'react';
 import './CustomizationsExtensionDetail.css';
+import { ExtensionType, IExtension, IIntegration } from './models';
 
 export interface IExtensionDetailProps {
-  extension: Extension;
+  extension: IExtension;
   i18nDelete: string;
   i18nDeleteTip?: string;
   i18nDescription: string;
@@ -25,6 +24,7 @@ export interface IExtensionDetailProps {
   i18nName: string;
   i18nOverview: string;
   i18nSupportedConnectors: string;
+  i18nSupportedLibraries: string;
   i18nSupportedSteps: string;
   i18nType: string;
   i18nTypeMessage: string;
@@ -35,9 +35,7 @@ export interface IExtensionDetailProps {
   onDelete: (extensionName: string) => void;
   onSelectIntegration: (integrationId: string) => void;
   onUpdate: (extensionName: string) => void;
-  propDescription: string;
-  propName: string;
-  usedByIntegrations?: Integration[];
+  usedByIntegrations?: IIntegration[];
 }
 
 export class CustomizationsExtensionDetail extends React.Component<
@@ -78,9 +76,7 @@ export class CustomizationsExtensionDetail extends React.Component<
             <OverlayTrigger overlay={this.getDeleteTooltip()} placement="top">
               <Button
                 bsStyle="default"
-                disabled={
-                  OptionalIntUtils.getValue(this.props.extension.uses) !== 0
-                }
+                disabled={this.props.extension.uses !== 0}
                 onClick={this.onDelete}
               >
                 {this.props.i18nDelete}
@@ -115,13 +111,17 @@ export class CustomizationsExtensionDetail extends React.Component<
   }
 
   public createSupportsSection() {
-    let supportedMsg;
-
-    if (this.props.extension.extensionType === 'Steps') {
-      supportedMsg = this.props.i18nSupportedSteps;
-    } else if (this.props.extension.extensionType === 'Connectors') {
-      supportedMsg = this.props.i18nSupportedConnectors;
-    }
+    const msgForType = (extType: ExtensionType) => {
+      switch (extType) {
+        case ExtensionType.Steps:
+          return this.props.i18nSupportedSteps;
+        case ExtensionType.Connectors:
+          return this.props.i18nSupportedConnectors;
+        case ExtensionType.Libraries:
+          return this.props.i18nSupportedLibraries;
+      }
+    };
+    const supportedMsg = msgForType(this.props.extension.extensionType);
 
     return (
       <div className="extension-group">
@@ -154,7 +154,10 @@ export class CustomizationsExtensionDetail extends React.Component<
                 columns={this.getColumns()}
               >
                 <Table.Header />
-                <Table.Body rows={this.props.usedByIntegrations} rowKey="id" />
+                <Table.Body
+                  rows={this.props.usedByIntegrations}
+                  rowKey="name"
+                />
               </Table.PfProvider>
             ) : null}
           </div>
@@ -172,7 +175,8 @@ export class CustomizationsExtensionDetail extends React.Component<
       value: string,
       { rowData }: { rowData: any }
     ) => {
-      const onClick = () => this.onIntegrationSelected(rowData.id);
+      // rowData is an Integration type so 'name' property is what makes the integration unique
+      const onClick = () => this.onIntegrationSelected(rowData.name);
       return (
         <Table.Cell>
           <a href="javascript:void(0)" onClick={onClick}>
@@ -182,6 +186,9 @@ export class CustomizationsExtensionDetail extends React.Component<
       );
     };
 
+    // Creates 2 columns:
+    // 1. first column is integration name
+    // 2. second column is optional integration description.
     return [
       {
         cell: {
@@ -191,7 +198,7 @@ export class CustomizationsExtensionDetail extends React.Component<
           formatters: [headerFormat],
           label: this.props.i18nName,
         },
-        property: this.props.propName,
+        property: 'name', // must match the name of the Integration.name property
       },
       {
         cell: {
@@ -201,7 +208,7 @@ export class CustomizationsExtensionDetail extends React.Component<
           formatters: [headerFormat],
           label: this.props.i18nDescription,
         },
-        property: this.props.propDescription,
+        property: 'description', // must match the name of the Integration.description property
       },
     ];
   }
