@@ -1,4 +1,5 @@
 export * from './IntegrationActionSelectorCard';
+export * from './IntegrationDetail';
 export * from './IntegrationDetailHistoryListView';
 export * from './IntegrationDetailHistoryListViewItem';
 export * from './IntegrationDetailTab';
