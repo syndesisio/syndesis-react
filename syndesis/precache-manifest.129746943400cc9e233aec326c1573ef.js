@@ -106,10 +106,6 @@ self.__precacheManifest = [
     "url": "static/media/spinner-xs.42f71e5a.gif"
   },
   {
-    "revision": "3b3cbaef084e27f7fa05d9fe31afb287",
-    "url": "static/media/OpenSans-Light-webfont.3b3cbaef.woff"
-  },
-  {
     "revision": "60bdb28dc8230486c5b0e868c82fb5dc",
     "url": "static/media/OpenSans-Regular-webfont.60bdb28d.woff"
   },
@@ -132,6 +128,10 @@ self.__precacheManifest = [
   {
     "revision": "ca4e3b468e0d24ae948b162e83fc225d",
     "url": "static/media/OpenSans-SemiboldItalic-webfont.ca4e3b46.eot"
+  },
+  {
+    "revision": "3b3cbaef084e27f7fa05d9fe31afb287",
+    "url": "static/media/OpenSans-Light-webfont.3b3cbaef.woff"
   },
   {
     "revision": "cc62fb5c139ff4ec74ef7b3474dcc7f2",
@@ -193,12 +193,12 @@ self.__precacheManifest = [
     "url": "static/media/fontawesome-webfont.af7ae505.woff2"
   },
   {
-    "revision": "509099586a079ea1b54d46291c31c5a9",
-    "url": "static/media/PatternFlyIcons-webfont.50909958.eot"
-  },
-  {
     "revision": "b646968142468fa97e019c606703d731",
     "url": "static/media/PatternFlyIcons-webfont.b6469681.ttf"
+  },
+  {
+    "revision": "509099586a079ea1b54d46291c31c5a9",
+    "url": "static/media/PatternFlyIcons-webfont.50909958.eot"
   },
   {
     "revision": "ffbe377ef337bc40ea7ead376d677f5c",
@@ -273,24 +273,20 @@ self.__precacheManifest = [
     "url": "static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "41ef8e5d0ac53654511397e6f165eb0f",
-    "url": "static/media/OpenSans-Light-webfont.41ef8e5d.svg"
-  },
-  {
     "revision": "d9bee607e42329e3ae452342fd8500fb",
     "url": "static/media/OpenSans-Regular-webfont.d9bee607.svg"
-  },
-  {
-    "revision": "b348357e35677da79b5ca21270e2633d",
-    "url": "static/media/OpenSans-LightItalic-webfont.b348357e.svg"
   },
   {
     "revision": "3e2b2e91221492e315c4e7970065a287",
     "url": "static/media/OpenSans-Italic-webfont.3e2b2e91.svg"
   },
   {
-    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
-    "url": "static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
+    "revision": "b348357e35677da79b5ca21270e2633d",
+    "url": "static/media/OpenSans-LightItalic-webfont.b348357e.svg"
+  },
+  {
+    "revision": "41ef8e5d0ac53654511397e6f165eb0f",
+    "url": "static/media/OpenSans-Light-webfont.41ef8e5d.svg"
   },
   {
     "revision": "7350876ed9eaf44d9555c8d5674d2790",
@@ -301,16 +297,20 @@ self.__precacheManifest = [
     "url": "static/media/OpenSans-Semibold-webfont.400ab808.svg"
   },
   {
-    "revision": "99c9f24dd717e50a36d02452c1b33c56",
-    "url": "static/media/OpenSans-Bold-webfont.99c9f24d.svg"
-  },
-  {
     "revision": "6be75e80b3b60ec7e673921a73771514",
     "url": "static/media/OpenSans-ExtraBoldItalic-webfont.6be75e80.svg"
   },
   {
+    "revision": "99c9f24dd717e50a36d02452c1b33c56",
+    "url": "static/media/OpenSans-Bold-webfont.99c9f24d.svg"
+  },
+  {
     "revision": "c13d9e6d9d5e10ed78910f16eb619c61",
     "url": "static/media/OpenSans-ExtraBold-webfont.c13d9e6d.svg"
+  },
+  {
+    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
+    "url": "static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
   },
   {
     "revision": "d8ac96b27b3e3cd408ff77e9d5fada7e",
