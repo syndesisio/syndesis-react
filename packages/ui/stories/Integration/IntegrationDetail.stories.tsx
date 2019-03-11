@@ -5,7 +5,7 @@ import * as React from 'react';
 
 import { IntegrationDetailTab } from '../../src';
 
-const stories = storiesOf('Integration/IntegrationDetailTab', module);
+const stories = storiesOf('Integration/IntegrationDetail', module);
 
 const i18nTextBtnEdit = 'Edit';
 const i18nTextBtnPublish = 'Publish';
