@@ -18,12 +18,12 @@ self.__precacheManifest = [
     "url": "vendors~main.edf412a110eb99d6fd72.bundle.js"
   },
   {
-    "revision": "448c34a56d699c29117adc64c43affeb",
-    "url": "static/media/glyphicons-halflings-regular.448c34a5.woff2"
-  },
-  {
     "revision": "fa2772327f55d8198301fdb8bcfc8158",
     "url": "static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  {
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "f4769f9bdb7466be65088239c12046d1",
@@ -114,12 +114,12 @@ self.__precacheManifest = [
     "url": "static/media/OpenSans-Regular-webfont.60bdb28d.woff"
   },
   {
-    "revision": "9c9017a313819aa54e959ffe8e7d27ea",
-    "url": "static/media/OpenSans-LightItalic-webfont.9c9017a3.woff"
-  },
-  {
     "revision": "9a599f54797d2ae5a61a3243b4e816fb",
     "url": "static/media/OpenSans-LightItalic-webfont.9a599f54.eot"
+  },
+  {
+    "revision": "9c9017a313819aa54e959ffe8e7d27ea",
+    "url": "static/media/OpenSans-LightItalic-webfont.9c9017a3.woff"
   },
   {
     "revision": "b07fc5b16bb5ecf336f31a8e993c9865",
@@ -173,12 +173,12 @@ self.__precacheManifest = [
     "url": "static/media/OpenSans-Semibold-webfont.2418db91.woff"
   },
   {
-    "revision": "0d8fa9d9810a6543e922ee3d90abac25",
-    "url": "static/media/OpenSans-Bold-webfont.0d8fa9d9.woff"
-  },
-  {
     "revision": "60449ee63020f7a26f19a5454ee34c47",
     "url": "static/media/OpenSans-Bold-webfont.60449ee6.eot"
+  },
+  {
+    "revision": "0d8fa9d9810a6543e922ee3d90abac25",
+    "url": "static/media/OpenSans-Bold-webfont.0d8fa9d9.woff"
   },
   {
     "revision": "2291980bac6d45447c902cfa41da6314",
@@ -233,12 +233,12 @@ self.__precacheManifest = [
     "url": "static/media/OpenSans-SemiboldItalic-webfont.73f7301a.ttf"
   },
   {
-    "revision": "6943fb6fd4200f3d073469325c6acdc9",
-    "url": "static/media/OpenSans-LightItalic-webfont.6943fb6f.ttf"
-  },
-  {
     "revision": "629a55a7e793da068dc580d184cc0e31",
     "url": "static/media/OpenSans-Regular-webfont.629a55a7.ttf"
+  },
+  {
+    "revision": "6943fb6fd4200f3d073469325c6acdc9",
+    "url": "static/media/OpenSans-LightItalic-webfont.6943fb6f.ttf"
   },
   {
     "revision": "78b08a68d05d5fabb0b8effd51bf6ade",
@@ -273,10 +273,6 @@ self.__precacheManifest = [
     "url": "static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "b348357e35677da79b5ca21270e2633d",
-    "url": "static/media/OpenSans-LightItalic-webfont.b348357e.svg"
-  },
-  {
     "revision": "41ef8e5d0ac53654511397e6f165eb0f",
     "url": "static/media/OpenSans-Light-webfont.41ef8e5d.svg"
   },
@@ -285,32 +281,36 @@ self.__precacheManifest = [
     "url": "static/media/OpenSans-Regular-webfont.d9bee607.svg"
   },
   {
-    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
-    "url": "static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
-  },
-  {
-    "revision": "99c9f24dd717e50a36d02452c1b33c56",
-    "url": "static/media/OpenSans-Bold-webfont.99c9f24d.svg"
-  },
-  {
-    "revision": "400ab808e8b3ba053d41d8dc72ea3aff",
-    "url": "static/media/OpenSans-Semibold-webfont.400ab808.svg"
-  },
-  {
-    "revision": "c13d9e6d9d5e10ed78910f16eb619c61",
-    "url": "static/media/OpenSans-ExtraBold-webfont.c13d9e6d.svg"
+    "revision": "b348357e35677da79b5ca21270e2633d",
+    "url": "static/media/OpenSans-LightItalic-webfont.b348357e.svg"
   },
   {
     "revision": "3e2b2e91221492e315c4e7970065a287",
     "url": "static/media/OpenSans-Italic-webfont.3e2b2e91.svg"
   },
   {
+    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
+    "url": "static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
+  },
+  {
     "revision": "7350876ed9eaf44d9555c8d5674d2790",
     "url": "static/media/OpenSans-SemiboldItalic-webfont.7350876e.svg"
   },
   {
+    "revision": "400ab808e8b3ba053d41d8dc72ea3aff",
+    "url": "static/media/OpenSans-Semibold-webfont.400ab808.svg"
+  },
+  {
+    "revision": "99c9f24dd717e50a36d02452c1b33c56",
+    "url": "static/media/OpenSans-Bold-webfont.99c9f24d.svg"
+  },
+  {
     "revision": "6be75e80b3b60ec7e673921a73771514",
     "url": "static/media/OpenSans-ExtraBoldItalic-webfont.6be75e80.svg"
+  },
+  {
+    "revision": "c13d9e6d9d5e10ed78910f16eb619c61",
+    "url": "static/media/OpenSans-ExtraBold-webfont.c13d9e6d.svg"
   },
   {
     "revision": "d8ac96b27b3e3cd408ff77e9d5fada7e",
