@@ -2,6 +2,10 @@
 @import url('~patternfly/dist/css/patternfly-additions.css');
 @import url('~patternfly-react/dist/css/patternfly-react.css');
 
+@import url('~@patternfly/patternfly/patternfly-variables.css');
+@import url('~@patternfly/patternfly/patternfly-shield-noninheritable.css');
+@import url('~@patternfly/patternfly/patternfly-common.css');
+
 html,
 body {
   height: 100%;

@@ -1,9 +1,5 @@
-import {
-  Grid,
-  Icon,
-  TimedToastNotification,
-  ToastNotificationList,
-} from 'patternfly-react';
+import { Grid, Icon, TimedToastNotification } from 'patternfly-react';
+import { AlertGroup } from '@patternfly/react-core';
 import * as React from 'react';
 import Dropzone from 'react-dropzone';
 import { Container } from '../Layout/Container';
@@ -235,7 +231,10 @@ export class DndFileChooser extends React.Component<
       >
         {({ getRootProps, getInputProps }) => (
           <Container>
-            <ToastNotificationList className="dnd-file-chooser__notificationList">
+            <AlertGroup
+              toast
+              className="dnd-file-chooser__notificationList list-unstyled"
+            >
               {this.state.notifications.map(notification => (
                 <TimedToastNotification
                   key={notification.key}
@@ -254,7 +253,7 @@ export class DndFileChooser extends React.Component<
                   />
                 </TimedToastNotification>
               ))}
-            </ToastNotificationList>
+            </AlertGroup>
             <Grid
               disabled={this.props.disableDropzone}
               fluid={true}
