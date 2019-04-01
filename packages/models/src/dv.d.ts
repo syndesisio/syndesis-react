@@ -23,3 +23,18 @@ export interface RestDataService {
   serviceViewModel: string;
   tko__description: string;
 }
+
+export interface QueryResults {
+  columns: ColumnData[];
+  rows: RowData[];
+}
+
+export interface ColumnData {
+  name: string;
+  label: string;
+  type: string;
+}
+
+export interface RowData {
+  row: string[];
+}

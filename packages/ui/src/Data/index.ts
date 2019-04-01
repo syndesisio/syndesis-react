@@ -1,4 +1,5 @@
 export * from './Views/ViewListItem';
+export * from './Views/QueryResultsTable';
 export * from './Views/ViewList';
 export * from './Views/ViewListSkeleton';
 export * from './Virtualizations/VirtualizationListItem';
