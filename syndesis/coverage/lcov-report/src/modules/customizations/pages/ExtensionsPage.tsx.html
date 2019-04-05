@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/customizations/pages/ExtensionsPage.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/modules/customizations/pages</a> ExtensionsPage.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { WithExtensionHelpers, WithExtensions } from '@syndesis/api';</span>
+import { Extension } from '@syndesis/models';
+<span class="cstat-no" title="statement not covered" >import {</span>
+  ExtensionListItem,
+  ExtensionListSkeleton,
+  ExtensionListView,
+  IActiveFilter,
+  IFilterType,
+  ISortType,
+} from '@syndesis/ui';
+<span class="cstat-no" title="statement not covered" >import { WithListViewToolbarHelpers, WithLoader } from '@syndesis/utils';</span>
+<span class="cstat-no" title="statement not covered" >import * as React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import { Translation } from 'react-i18next';</span>
+<span class="cstat-no" title="statement not covered" >import i18n from '../../../i18n';</span>
+<span class="cstat-no" title="statement not covered" >import { getExtensionTypeName } from '../customizationsUtils';</span>
+<span class="cstat-no" title="statement not covered" >import resolvers from '../resolvers';</span>
+<span class="cstat-no" title="statement not covered" >import CustomizationsNavBar from '../shared/CustomizationsNavBar';</span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getFilteredAndSortedExtensions(</span>
+  extensions: Extension[],
+  activeFilters: IActiveFilter[],
+  currentSortType: string,
+  isSortAscending: boolean
+) {
+  let filteredAndSorted = <span class="cstat-no" title="statement not covered" >extensions;</span>
+<span class="cstat-no" title="statement not covered" >  activeFilters.forEach((<span class="fstat-no" title="function not covered" >filter: IActiveFilter) =&gt; {</span></span>
+    const valueToLower = <span class="cstat-no" title="statement not covered" >filter.value.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >    filteredAndSorted = filteredAndSorted.filter((<span class="fstat-no" title="function not covered" >extension: Extension) =&gt;</span></span>
+<span class="cstat-no" title="statement not covered" >      extension.name.toLowerCase().includes(valueToLower)</span>
+    );
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  filteredAndSorted = filteredAndSorted.sort(<span class="fstat-no" title="function not covered" >(t</span>hisExtension, thatExtension) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (isSortAscending) {</span>
+<span class="cstat-no" title="statement not covered" >      return thisExtension.name.localeCompare(thatExtension.name);</span>
+    }
+&nbsp;
+    // sort descending
+<span class="cstat-no" title="statement not covered" >    return thatExtension.name.localeCompare(thisExtension.name);</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return filteredAndSorted;</span>
+}
+&nbsp;
+const filterByName = <span class="cstat-no" title="statement not covered" >{</span>
+  filterType: 'text',
+  id: 'name',
+  placeholder: i18n.t('shared:filterByNamePlaceholder'),
+  title: i18n.t('shared:Name'),
+} as IFilterType;
+&nbsp;
+const filterTypes: IFilterType[] = <span class="cstat-no" title="statement not covered" >[filterByName];</span>
+&nbsp;
+const sortByName = <span class="cstat-no" title="statement not covered" >{</span>
+  id: 'name',
+  isNumeric: false,
+  title: i18n.t('shared:Name'),
+} as ISortType;
+&nbsp;
+const sortTypes: ISortType[] = <span class="cstat-no" title="statement not covered" >[sortByName];</span>
+&nbsp;
+export default class ExtensionsPage extends React.Component {
+  public <span class="fstat-no" title="function not covered" >filterUndefinedId(extension: Extension): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return extension.id !== undefined;</span>
+  }
+&nbsp;
+  public <span class="fstat-no" title="function not covered" >getUsedByMessage(extension: Extension): string {</span>
+    // TODO: Schema is currently wrong as it has 'uses` as an OptionalInt. Remove cast when schema is fixed.
+    const numUsedBy = <span class="cstat-no" title="statement not covered" >extension.uses as number;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (numUsedBy === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      return i18n.t('customizations:usedByOne');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return i18n.t('customizations:usedByMulti', { count: numUsedBy });</span>
+  }
+&nbsp;
+  public <span class="fstat-no" title="function not covered" >handleUpdate(extensionId: string) {</span>
+    // TODO: implement handleUpdate
+    // alert('Update extension ' + extensionId);
+  }
+&nbsp;
+  public <span class="fstat-no" title="function not covered" >render() {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;WithExtensionHelpers&gt;
+        {<span class="fstat-no" title="function not covered" >({</span> deleteExtension }) =&gt; {
+          const handleDelete = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (</span>extensionId: string) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            await deleteExtension(extensionId);</span>
+            // TODO: post toast notification
+          };
+<span class="cstat-no" title="statement not covered" >          return (</span>
+            &lt;WithExtensions&gt;
+              {<span class="fstat-no" title="function not covered" >({</span> data, hasData, error }) =&gt; (
+<span class="cstat-no" title="statement not covered" >                &lt;WithListViewToolbarHelpers</span>
+                  defaultFilterType={filterByName}
+                  defaultSortType={sortByName}
+                &gt;
+                  {<span class="fstat-no" title="function not covered" >helpers</span> =&gt; {
+                    const filteredAndSorted = <span class="cstat-no" title="statement not covered" >getFilteredAndSortedExtensions(</span>
+                      data.items,
+                      helpers.activeFilters,
+                      helpers.currentSortType,
+                      helpers.isSortAscending
+                    );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    return (</span>
+                      &lt;Translation ns={['customizations', 'shared']}&gt;
+                        {<span class="fstat-no" title="function not covered" >t </span>=&gt; (
+<span class="cstat-no" title="statement not covered" >                          &lt;&gt;</span>
+                            &lt;CustomizationsNavBar /&gt;
+                            &lt;ExtensionListView
+                              filterTypes={filterTypes}
+                              sortTypes={sortTypes}
+                              linkImportExtension={resolvers.extensions.import()}
+                              resultsCount={filteredAndSorted.length}
+                              {...helpers}
+                              i18nDescription={t(
+                                'extension.extensionsPageDescription'
+                              )}
+                              i18nEmptyStateInfo={t(
+                                'extension.emptyStateInfoMessage'
+                              )}
+                              i18nEmptyStateTitle={t(
+                                'extension.emptyStateTitle'
+                              )}
+                              i18nLinkImportExtension={t(
+                                'extension.ImportExtension'
+                              )}
+                              i18nLinkImportExtensionTip={t(
+                                'extension.importExtensionTip'
+                              )}
+                              i18nName={t('shared:Name')}
+                              i18nNameFilterPlaceholder={t(
+                                'shared:nameFilterPlaceholder'
+                              )}
+                              i18nResultsCount={t('shared:resultsCount', {
+                                count: filteredAndSorted.length,
+                              })}
+                              i18nTitle={t('extension.extensionsPageTitle')}
+                            &gt;
+                              &lt;WithLoader
+                                error={error}
+                                loading={!hasData}
+                                loaderChildren={
+                                  &lt;ExtensionListSkeleton
+                                    width={800}
+                                    style={{
+                                      backgroundColor: '#FFF',
+                                      marginTop: 30,
+                                    }}
+                                  /&gt;
+                                }
+                                errorChildren={&lt;div&gt;TODO&lt;/div&gt;}
+                              &gt;
+                                {<span class="fstat-no" title="function not covered" >() =&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                  filteredAndSorted</span>
+                                    .filter((<span class="fstat-no" title="function not covered" >extension: Extension) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >                                      this.filterUndefinedId(extension)</span>
+                                    )
+                                    .map(
+<span class="fstat-no" title="function not covered" >                                      (e</span>xtension: Extension, index: number) =&gt; (
+<span class="cstat-no" title="statement not covered" >                                        &lt;ExtensionListItem</span>
+                                          key={index}
+                                          detailsPageLink={resolvers.extensions.extension(
+                                            { extension }
+                                          )}
+                                          extensionDescription={
+                                            extension.description
+                                          }
+                                          extensionIcon={extension.icon}
+                                          extensionId={extension.id!}
+                                          extensionName={extension.name}
+                                          i18nCancelText={t('shared:Cancel')}
+                                          i18nDelete={t('shared:Delete')}
+                                          i18nDeleteModalMessage={t(
+                                            'extension.deleteModalMessage',
+                                            { name: extension.name }
+                                          )}
+                                          i18nDeleteModalTitle={t(
+                                            'extension.deleteModalTitle'
+                                          )}
+                                          i18nDeleteTip={t(
+                                            'extension.deleteExtensionTip'
+                                          )}
+                                          i18nDetails={t('shared:Details')}
+                                          i18nDetailsTip={t(
+                                            'extension.detailsExtensionTip'
+                                          )}
+                                          i18nExtensionType={getExtensionTypeName(
+                                            extension
+                                          )}
+                                          i18nUpdate={t('shared:Update')}
+                                          i18nUpdateTip={t(
+                                            'extension.updateExtensionTip'
+                                          )}
+                                          i18nUsedByMessage={this.getUsedByMessage(
+                                            extension
+                                          )}
+                                          onDelete={handleDelete}
+                                          onUpdate={this.handleUpdate}
+                                          usedBy={
+                                            // TODO: Schema is currently wrong as it has 'uses` as an OptionalInt. Remove cast when schema is fixed.
+                                            extension.uses as number
+                                          }
+                                        /&gt;
+                                      )
+                                    )
+                                }
+                              &lt;/WithLoader&gt;
+                            &lt;/ExtensionListView&gt;
+                          &lt;/&gt;
+                        )}
+                      &lt;/Translation&gt;
+                    );
+                  }}
+                &lt;/WithListViewToolbarHelpers&gt;
+              )}
+            &lt;/WithExtensions&gt;
+          );
+        }}
+      &lt;/WithExtensionHelpers&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

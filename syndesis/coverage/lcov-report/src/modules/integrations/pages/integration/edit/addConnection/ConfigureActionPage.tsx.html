@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/integrations/pages/integration/edit/addConnection/ConfigureActionPage.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../index.html">All files</a> / <a href="index.html">src/modules/integrations/pages/integration/edit/addConnection</a> ConfigureActionPage.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { WithIntegrationHelpers } from '@syndesis/api';</span>
+import { ConnectionOverview, Integration } from '@syndesis/models';
+<span class="cstat-no" title="statement not covered" >import { IntegrationEditorLayout } from '@syndesis/ui';</span>
+<span class="cstat-no" title="statement not covered" >import { WithRouteData } from '@syndesis/utils';</span>
+<span class="cstat-no" title="statement not covered" >import * as React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import { PageTitle } from '../../../../../../shared';</span>
+<span class="cstat-no" title="statement not covered" >import {</span>
+  IntegrationEditorBreadcrumbs,
+  IntegrationEditorSidebar,
+} from '../../../../components';
+<span class="cstat-no" title="statement not covered" >import resolvers from '../../../../resolvers';</span>
+<span class="cstat-no" title="statement not covered" >import {</span>
+  IOnUpdatedIntegrationProps,
+  WithConfigurationForm,
+} from '../../../../shared';
+&nbsp;
+/**
+ * @param actionId - the ID of the action selected in the previous step.
+ * @param position - the zero-based position for the new step in the integration
+ * flow.
+ * @param step - the configuration step when configuring a multi-page connection.
+ */
+export interface IConfigureActionRouteParams {
+  position: string;
+  actionId: string;
+  step?: string;
+}
+&nbsp;
+/**
+ * @param integration - the integration object, used to render the IVP.
+ * @param connection - the connection object selected in the previous step. Needed
+ * to render the IVP.
+ * @param updatedIntegration - when creating a link to this page, this should
+ * never be set. It is used by the page itself to pass the partially configured
+ * step when configuring a multi-page connection.
+ */
+export interface IConfigureActionRouteState {
+  connection: ConnectionOverview;
+  integration: Integration;
+  updatedIntegration?: Integration;
+}
+&nbsp;
+/**
+ * This page shows the configuration form for a given action.
+ *
+ * Submitting the form will update the integration object adding a *new* step in
+ * the [position specified in the params]{@link IConfigureActionRouteParams#position}
+ * of the first flow, set up as specified by the form values.
+ *
+ * This component expects some [url params]{@link IConfigureActionRouteParams}
+ * and [state]{@link IConfigureActionRouteState} to be properly set in
+ * the route object.
+ *
+ * **Warning:** this component will throw an exception if the route state is
+ * undefined.
+ *
+ * @todo DRY the connection icon code
+ */
+export class ConfigureActionPage extends React.Component {
+  public <span class="fstat-no" title="function not covered" >render() {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;WithIntegrationHelpers&gt;
+        {<span class="fstat-no" title="function not covered" >({</span> addConnection, getStep, getSteps, updateConnection }) =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;WithRouteData&lt;</span>
+            IConfigureActionRouteParams,
+            IConfigureActionRouteState
+          &gt;&gt;
+            {<span class="fstat-no" title="function not covered" >(</span>
+              { actionId, step = <span class="branch-0 cbranch-no" title="branch not covered" >'0', position },</span>
+              { connection, integration, updatedIntegration },
+              { history }
+            ) =&gt; {
+              const stepAsNumber = <span class="cstat-no" title="statement not covered" >parseInt(step, 10);</span>
+              const positionAsNumber = <span class="cstat-no" title="statement not covered" >parseInt(position, 10);</span>
+              const stepObject = <span class="cstat-no" title="statement not covered" >getStep(integration, 0, positionAsNumber);</span>
+              const onUpdatedIntegration = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (</span>{</span>
+                action,
+                moreConfigurationSteps,
+                values,
+              }: IOnUpdatedIntegrationProps) =&gt; {
+<span class="cstat-no" title="statement not covered" >                updatedIntegration = await (stepAsNumber === 0</span>
+                  ? addConnection
+                  : updateConnection)(
+                  updatedIntegration || integration,
+                  connection,
+                  action,
+                  0,
+                  positionAsNumber,
+                  values
+                );
+<span class="cstat-no" title="statement not covered" >                if (moreConfigurationSteps) {</span>
+<span class="cstat-no" title="statement not covered" >                  history.push(</span>
+                    resolvers.integration.edit.addConnection.configureAction({
+                      actionId,
+                      connection,
+                      integration,
+                      position,
+                      step: stepAsNumber + 1,
+                      updatedIntegration,
+                    })
+                  );
+                } else {
+<span class="cstat-no" title="statement not covered" >                  history.push(</span>
+                    resolvers.integration.edit.index({
+                      integration: updatedIntegration,
+                    })
+                  );
+                }
+              };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              return (</span>
+                &lt;WithConfigurationForm
+                  connection={connection}
+                  actionId={actionId}
+                  configurationStep={stepAsNumber}
+                  initialValue={stepObject.configuredProperties}
+                  onUpdatedIntegration={onUpdatedIntegration}
+                &gt;
+                  {<span class="fstat-no" title="function not covered" >({</span> form, submitForm, isSubmitting }) =&gt; (
+<span class="cstat-no" title="statement not covered" >                    &lt;&gt;</span>
+                      &lt;PageTitle title={'Configure the action'} /&gt;
+                      &lt;IntegrationEditorLayout
+                        header={&lt;IntegrationEditorBreadcrumbs step={1} /&gt;}
+                        sidebar={
+                          &lt;IntegrationEditorSidebar
+                            steps={getSteps(
+                              updatedIntegration || integration,
+                              0
+                            )}
+                            addAtIndex={
+                              stepAsNumber === 0 ? positionAsNumber : undefined
+                            }
+                            addIcon={
+                              &lt;img
+                                src={connection.icon}
+                                width={24}
+                                height={24}
+                              /&gt;
+                            }
+                            addI18nTitle={`${positionAsNumber + 1}. ${
+                              connection.connector!.name
+                            }`}
+                            addI18nTooltip={`${positionAsNumber + 1}. ${
+                              connection.name
+                            }`}
+                            addI18nDescription={'Configure the action'}
+                          /&gt;
+                        }
+                        content={form}
+                        cancelHref={resolvers.integration.edit.index({
+                          integration,
+                        })}
+                        backHref={resolvers.integration.edit.addConnection.selectAction(
+                          { position, integration, connection }
+                        )}
+                        onNext={submitForm}
+                        isNextLoading={isSubmitting}
+                      /&gt;
+                    &lt;/&gt;
+                  )}
+                &lt;/WithConfigurationForm&gt;
+              );
+            }}
+          &lt;/WithRouteData&gt;
+        )}
+      &lt;/WithIntegrationHelpers&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../sorter.js"></script>
+</body>
+</html>

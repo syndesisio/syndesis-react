@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/integrations/components/IntegrationEditorStepAdder.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/modules/integrations/components</a> IntegrationEditorStepAdder.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/4</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Step } from '@syndesis/models';
+<span class="cstat-no" title="statement not covered" >import {</span>
+  ButtonLink,
+  IntegrationEditorStepsList,
+  IntegrationEditorStepsListItem,
+  IntegrationFlowAddStep,
+} from '@syndesis/ui';
+import * as H from 'history';
+<span class="cstat-no" title="statement not covered" >import * as React from 'react';</span>
+&nbsp;
+export interface IIntegrationEditorStepAdderProps {
+  /**
+   * the list of steps to render.
+   */
+  steps: Step[];
+  /**
+   * a callback to get the `LocationDescriptor` that should be reached when
+   * clicking the Add Connection button
+   * @param idx - the zero-based index where a new connection should be added
+   */
+  addConnectionHref(idx: number): H.LocationDescriptor;
+  /**
+   * a callback to get the `LocationDescriptor` that should be reached when
+   * clicking the Add Step button
+   * @param idx - the zero-based index where a new step should be added
+   */
+  addStepHref(idx: number): H.LocationDescriptor;
+  /**
+   * a callback to get the `LocationDescriptor` that should be reached when
+   * clicking the Edit Connection button
+   * @param stepIdx - the zero-based index of the integration step that should
+   * be edited
+   * @param step - the integration step object that should be edited
+   */
+  configureConnectionHref(stepIdx: number, step: Step): H.LocationDescriptor;
+  /**
+   * a callback to get the `LocationDescriptor` that should be reached when
+   * clicking the Edit Step button
+   * @param stepIdx - the zero-based index of the integration step that should
+   * be edited
+   * @param step - the integration step object that should be edited
+   */
+  // tslint:disable-next-line:react-unused-props-and-state
+  configureStepHref(stepIdx: number, step: Step): H.LocationDescriptor;
+}
+&nbsp;
+/**
+ * A component to render the steps of an integration with the required action
+ * buttons to add a new step, edit an existing one, etc.
+ *
+ * @see [steps]{@link IIntegrationEditorStepAdderProps#steps}
+ * @see [addConnectionHref]{@link IIntegrationEditorStepAdderProps#addConnectionHref}
+ * @see [addStepHref]{@link IIntegrationEditorStepAdderProps#addStepHref}
+ * @see [configureConnectionHref]{@link IIntegrationEditorStepAdderProps#configureConnectionHref}
+ * @see [configureStepHref]{@link IIntegrationEditorStepAdderProps#configureStepHref}
+ *
+ * @todo add the delete step button
+ */
+export class IntegrationEditorStepAdder extends React.Component&lt;
+  IIntegrationEditorStepAdderProps
+&gt; {
+  public <span class="fstat-no" title="function not covered" >render() {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;IntegrationEditorStepsList&gt;
+        {this.props.steps.map(<span class="fstat-no" title="function not covered" >(s</span>, idx) =&gt; {
+<span class="cstat-no" title="statement not covered" >          return (</span>
+            &lt;React.Fragment key={idx}&gt;
+              &lt;IntegrationEditorStepsListItem
+                stepName={s.connection!.connector!.name}
+                stepDescription={s.action!.name}
+                icon={&lt;img src={s.connection!.icon} width={24} height={24} /&gt;}
+                actions={
+                  &lt;&gt;
+                    &lt;ButtonLink
+                      href={this.props.configureConnectionHref(idx, s)}
+                    &gt;
+                      Configure
+                    &lt;/ButtonLink&gt;
+                    &lt;ButtonLink href={'#'} as={'danger'}&gt;
+                      &lt;i className="fa fa-trash" /&gt;
+                    &lt;/ButtonLink&gt;
+                  &lt;/&gt;
+                }
+              /&gt;
+              {idx &lt; this.props.steps.length - 1 &amp;&amp; (
+                &lt;IntegrationFlowAddStep
+                  active={false}
+                  showDetails={false}
+                  addStepHref={this.props.addStepHref(idx + 1)}
+                  i18nAddStep={'Add a step'}
+                  addConnectionHref={this.props.addConnectionHref(idx + 1)}
+                  i18nAddConnection={'Add a connection'}
+                /&gt;
+              )}
+            &lt;/React.Fragment&gt;
+          );
+        })}
+      &lt;/IntegrationEditorStepsList&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

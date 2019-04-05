@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1554837486351" clover="3.2.0">
+  <project timestamp="1554837486351" name="All files">
+    <metrics statements="737" coveredstatements="507" conditionals="241" coveredconditionals="30" methods="182" coveredmethods="28" elements="1160" coveredelements="565" complexity="0" loc="737" ncloc="737" packages="10" files="98" classes="98"/>
+    <package name="src">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Connection">
+      <metrics statements="29" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <file name="ConnectionCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/ConnectionCard.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="ConnectionSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/ConnectionSkeleton.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="ConnectionsGrid.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/ConnectionsGrid.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="ConnectionsGridCell.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/ConnectionsGridCell.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="ConnectionsListView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/ConnectionsListView.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Connection/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Customization">
+      <metrics statements="143" coveredstatements="98" conditionals="46" coveredconditionals="13" methods="48" coveredmethods="14"/>
+      <file name="ApiConnectorDetail.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorDetail.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorDetailCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorDetailCard.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorInfo.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorInfo.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorListItem.tsx">
+        <metrics statements="11" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorListSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorListSkeleton.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorListView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorListView.tsx">
+        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+      </file>
+      <file name="ApiConnectorReview.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ApiConnectorReview.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionDetail.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionDetail.tsx">
+        <metrics statements="17" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="6"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="111" count="5" type="stmt"/>
+        <line num="116" count="2" type="stmt"/>
+        <line num="118" count="2" type="stmt"/>
+        <line num="122" count="2" type="stmt"/>
+        <line num="123" count="2" type="stmt"/>
+        <line num="124" count="2" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="134" count="1" type="stmt"/>
+        <line num="139" count="1" type="stmt"/>
+        <line num="143" count="4" type="stmt"/>
+        <line num="153" count="4" type="stmt"/>
+        <line num="163" count="1" type="stmt"/>
+        <line num="169" count="4" type="stmt"/>
+      </file>
+      <file name="ExtensionImportCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionImportCard.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="73" count="5" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionImportReview.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionImportReview.tsx">
+        <metrics statements="12" coveredstatements="11" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="5"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="112" count="2" type="stmt"/>
+        <line num="116" count="5" type="stmt"/>
+        <line num="147" count="2" type="stmt"/>
+        <line num="151" count="2" type="stmt"/>
+      </file>
+      <file name="ExtensionIntegrationsTable.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionIntegrationsTable.tsx">
+        <metrics statements="12" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionListItem.tsx">
+        <metrics statements="20" coveredstatements="5" conditionals="10" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionListSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionListSkeleton.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionListView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionListView.tsx">
+        <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+      <file name="ExtensionOverview.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionOverview.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="50" count="5" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+      </file>
+      <file name="ExtensionSupports.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/ExtensionSupports.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Customization/index.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Dashboard">
+      <metrics statements="52" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="1"/>
+      <file name="AggregatedMetricCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/AggregatedMetricCard.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+      </file>
+      <file name="ConnectionsMetric.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/ConnectionsMetric.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="Dashboard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/Dashboard.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationBoard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/IntegrationBoard.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+      </file>
+      <file name="RecentUpdatesCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/RecentUpdatesCard.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="RecentUpdatesItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/RecentUpdatesItem.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="RecentUpdatesSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/RecentUpdatesSkeleton.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="TopIntegrationsCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/TopIntegrationsCard.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="UptimeMetric.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/UptimeMetric.tsx">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Dashboard/index.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Data">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Data.Virtualizations">
+      <metrics statements="72" coveredstatements="33" conditionals="41" coveredconditionals="0" methods="18" coveredmethods="0"/>
+      <file name="VirtualizationList.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/VirtualizationList.tsx">
+        <metrics statements="11" coveredstatements="5" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+      <file name="VirtualizationListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/VirtualizationListItem.tsx">
+        <metrics statements="28" coveredstatements="8" conditionals="22" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="132" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="134" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="140" count="0" type="stmt"/>
+      </file>
+      <file name="VirtualizationListSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/VirtualizationListSkeleton.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="VirtualizationPublishStatus.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/VirtualizationPublishStatus.tsx">
+        <metrics statements="15" coveredstatements="4" conditionals="11" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+      <file name="VirtualizationPublishStatusDetail.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/VirtualizationPublishStatusDetail.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="models.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/models.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Data.Virtualizations.Views">
+      <metrics statements="25" coveredstatements="11" conditionals="14" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="ViewList.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/Views/ViewList.tsx">
+        <metrics statements="11" coveredstatements="5" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+      </file>
+      <file name="ViewListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/Views/ViewListItem.tsx">
+        <metrics statements="10" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+      </file>
+      <file name="ViewListSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Data/Virtualizations/Views/ViewListSkeleton.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Integration">
+      <metrics statements="241" coveredstatements="176" conditionals="67" coveredconditionals="9" methods="48" coveredmethods="2"/>
+      <file name="IntegrationActionSelectorCard.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationActionSelectorCard.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationDetailDescription.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationDetailDescription.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationDetailEditableName.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationDetailEditableName.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationDetailHistoryListView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationDetailHistoryListView.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationDetailHistoryListViewItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationDetailHistoryListViewItem.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationDetailInfo.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationDetailInfo.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorActionsListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorActionsListItem.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorChooseAction.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorChooseAction.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorChooseConnection.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorChooseConnection.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorConnectionsListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorConnectionsListItem.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorForm.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorForm.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorLayout.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorLayout.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorNothingToConfigure.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorNothingToConfigure.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorStepsList.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorStepsList.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationEditorStepsListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationEditorStepsListItem.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationFlowAddStep.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationFlowAddStep.tsx">
+        <metrics statements="16" coveredstatements="6" conditionals="10" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationFlowStep.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationFlowStep.tsx">
+        <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationFlowStepDetails.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationFlowStepDetails.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationFlowStepGeneric.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationFlowStepGeneric.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationFlowStepWithOverview.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationFlowStepWithOverview.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationIcon.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationIcon.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationProgress.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationProgress.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+      </file>
+      <file name="IntegrationStatus.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationStatus.tsx">
+        <metrics statements="13" coveredstatements="4" conditionals="9" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationStatusDetail.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationStatusDetail.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+      </file>
+      <file name="IntegrationStepsHorizontalView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationStepsHorizontalView.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationVerticalFlow.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationVerticalFlow.tsx">
+        <metrics statements="13" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsList.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsList.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsListItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsListItem.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsListItemActions.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsListItemActions.tsx">
+        <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsListItemUnreadable.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsListItemUnreadable.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsListSkeleton.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsListSkeleton.tsx">
+        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+      </file>
+      <file name="IntegrationsListView.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/IntegrationsListView.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/index.ts">
+        <metrics statements="32" coveredstatements="32" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+      </file>
+      <file name="models.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Integration/models.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Layout">
+      <metrics statements="84" coveredstatements="65" conditionals="51" coveredconditionals="5" methods="19" coveredmethods="5"/>
+      <file name="AppLayout.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/AppLayout.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+      </file>
+      <file name="AppTopMenu.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/AppTopMenu.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+      <file name="Breadcrumb.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/Breadcrumb.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="ButtonLink.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/ButtonLink.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+      </file>
+      <file name="Container.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/Container.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+      </file>
+      <file name="Loader.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/Loader.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="PfNavLink.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/PfNavLink.tsx">
+        <metrics statements="13" coveredstatements="4" conditionals="11" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+      </file>
+      <file name="PfVerticalNavItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/PfVerticalNavItem.tsx">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="31" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="69" count="5" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+        <line num="82" count="10" type="stmt"/>
+      </file>
+      <file name="TabBar.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/TabBar.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="TabBarItem.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/TabBarItem.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="WizardStep.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/WizardStep.tsx">
+        <metrics statements="5" coveredstatements="2" conditionals="22" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+      </file>
+      <file name="WizardSteps.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/WizardSteps.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Layout/index.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Shared">
+      <metrics statements="75" coveredstatements="40" conditionals="22" coveredconditionals="3" methods="23" coveredmethods="4"/>
+      <file name="DeleteConfirmationDialog.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/DeleteConfirmationDialog.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="52" count="10" type="stmt"/>
+        <line num="56" count="4" type="stmt"/>
+      </file>
+      <file name="DndFileChooser.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/DndFileChooser.tsx">
+        <metrics statements="24" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="95" count="10" type="stmt"/>
+        <line num="100" count="10" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="123" count="0" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="138" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="163" count="0" type="stmt"/>
+        <line num="171" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="180" count="0" type="stmt"/>
+        <line num="189" count="0" type="stmt"/>
+        <line num="197" count="0" type="stmt"/>
+        <line num="206" count="0" type="stmt"/>
+      </file>
+      <file name="ListViewToolbar.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/ListViewToolbar.tsx">
+        <metrics statements="11" coveredstatements="8" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="59" count="10" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+      </file>
+      <file name="LogViewer.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/LogViewer.tsx">
+        <metrics statements="16" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+      </file>
+      <file name="Notifications.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/Notifications.tsx">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="UnrecoverableError.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/UnrecoverableError.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/ui/src/Shared/index.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

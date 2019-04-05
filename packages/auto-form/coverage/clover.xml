@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1554837493835" clover="3.2.0">
+  <project timestamp="1554837493836" name="All files">
+    <metrics statements="77" coveredstatements="73" conditionals="50" coveredconditionals="41" methods="22" coveredmethods="21" elements="149" coveredelements="135" complexity="0" loc="77" ncloc="77" packages="2" files="10" classes="10"/>
+    <package name="src">
+      <metrics statements="46" coveredstatements="43" conditionals="29" coveredconditionals="25" methods="15" coveredmethods="15"/>
+      <file name="AutoForm.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/AutoForm.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="51" count="5" type="stmt"/>
+        <line num="56" count="18" type="stmt"/>
+        <line num="65" count="18" type="stmt"/>
+        <line num="81" count="26" type="stmt"/>
+        <line num="86" count="88" type="stmt"/>
+      </file>
+      <file name="FormBuilder.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/FormBuilder.tsx">
+        <metrics statements="37" coveredstatements="34" conditionals="27" coveredconditionals="24" methods="11" coveredmethods="11"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="46" count="18" type="stmt"/>
+        <line num="48" count="88" type="stmt"/>
+        <line num="55" count="88" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="24" type="stmt"/>
+        <line num="61" count="88" type="stmt"/>
+        <line num="74" count="18" type="stmt"/>
+        <line num="75" count="18" type="stmt"/>
+        <line num="79" count="18" type="stmt"/>
+        <line num="91" count="18" type="stmt"/>
+        <line num="92" count="40" type="stmt"/>
+        <line num="93" count="40" type="stmt"/>
+        <line num="95" count="40" type="stmt"/>
+        <line num="97" count="40" type="stmt"/>
+        <line num="105" count="18" type="stmt"/>
+        <line num="113" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="114" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="115" count="22" type="stmt"/>
+        <line num="125" count="128" type="cond" truecount="2" falsecount="0"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="133" count="11" type="stmt"/>
+        <line num="134" count="11" type="stmt"/>
+        <line num="136" count="4" type="stmt"/>
+        <line num="139" count="10" type="stmt"/>
+        <line num="142" count="6" type="stmt"/>
+        <line num="144" count="128" type="stmt"/>
+        <line num="159" count="4" type="stmt"/>
+        <line num="161" count="36" type="stmt"/>
+        <line num="175" count="61" type="stmt"/>
+        <line num="179" count="2" type="stmt"/>
+        <line num="182" count="4" type="stmt"/>
+        <line num="184" count="13" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets">
+      <metrics statements="31" coveredstatements="30" conditionals="21" coveredconditionals="16" methods="7" coveredmethods="6"/>
+      <file name="FormCheckboxComponent.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/FormCheckboxComponent.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+      </file>
+      <file name="FormHiddenComponent.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/FormHiddenComponent.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="FormInputComponent.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/FormInputComponent.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="74" type="stmt"/>
+      </file>
+      <file name="FormSelectComponent.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/FormSelectComponent.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="27" count="36" type="stmt"/>
+      </file>
+      <file name="FormTextAreaComponent.tsx" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/FormTextAreaComponent.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="helpers.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/helpers.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="88" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="index.ts" path="/Users/mspaxman/code/workingrepos/seanforyou23-syndesis-react-poc/packages/auto-form/src/widgets/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

@@ -1,0 +1,12 @@
+export declare const NOTFOUND = "NOTFOUND";
+export declare const SUBMITTED = "SUBMITTED";
+export declare const CONFIGURING = "CONFIGURING";
+export declare const BUILDING = "BUILDING";
+export declare const DEPLOYING = "DEPLOYING";
+export declare const RUNNING = "RUNNING";
+export declare const FAILED = "FAILED";
+export declare const CANCELLED = "CANCELLED";
+export declare type VirtualizationPublishState = 'NOTFOUND' | 'SUBMITTED' | 'CONFIGURING' | 'BUILDING' | 'DEPLOYING' | 'RUNNING' | 'FAILED' | 'CANCELLED';
+export declare const LOGS = "LOGS";
+export declare const EVENTS = "EVENTS";
+export declare type LinkType = 'LOGS' | 'EVENTS';

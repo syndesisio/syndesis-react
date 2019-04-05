@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/integrations/pages/IntegrationsPage.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/modules/integrations/pages</a> IntegrationsPage.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { WithConnections, WithMonitoredIntegrations } from '@syndesis/api';</span>
+import { Connection, IntegrationWithMonitoring } from '@syndesis/models';
+<span class="cstat-no" title="statement not covered" >import {</span>
+  IActiveFilter,
+  IFilterType,
+  IntegrationsListView,
+  ISortType,
+} from '@syndesis/ui';
+<span class="cstat-no" title="statement not covered" >import { WithListViewToolbarHelpers } from '@syndesis/utils';</span>
+<span class="cstat-no" title="statement not covered" >import * as React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import { Translation } from 'react-i18next';</span>
+<span class="cstat-no" title="statement not covered" >import i18n from '../../../i18n';</span>
+<span class="cstat-no" title="statement not covered" >import { PageTitle } from '../../../shared';</span>
+<span class="cstat-no" title="statement not covered" >import { Integrations } from '../components';</span>
+<span class="cstat-no" title="statement not covered" >import routes from '../routes';</span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getFilteredAndSortedIntegrations(</span>
+  integrations: IntegrationWithMonitoring[],
+  activeFilters: IActiveFilter[],
+  currentSortType: string,
+  isSortAscending: boolean
+) {
+  let filteredAndSortedIntegrations = <span class="cstat-no" title="statement not covered" >integrations;</span>
+<span class="cstat-no" title="statement not covered" >  activeFilters.forEach((<span class="fstat-no" title="function not covered" >filter: IActiveFilter) =&gt; {</span></span>
+    const valueToLower = <span class="cstat-no" title="statement not covered" >filter.value.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >    filteredAndSortedIntegrations = filteredAndSortedIntegrations.filter(</span>
+      (<span class="fstat-no" title="function not covered" >mi: IntegrationWithMonitoring) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (filter.title === 'Name') {</span>
+<span class="cstat-no" title="statement not covered" >          return mi.integration.name.toLowerCase().includes(valueToLower);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (filter.title === 'Connection') {</span>
+          const connectionNames = <span class="cstat-no" title="statement not covered" >mi.integration!.flows!.reduce(</span>
+<span class="fstat-no" title="function not covered" >            (a</span>cc, flow) =&gt; <span class="cstat-no" title="statement not covered" >[</span>
+              ...acc,
+              ...flow
+                .steps!.filter(<span class="fstat-no" title="function not covered" >s </span>=&gt; <span class="cstat-no" title="statement not covered" >s.connection)</span>
+                .map(<span class="fstat-no" title="function not covered" >s </span>=&gt; <span class="cstat-no" title="statement not covered" >s.connection!.name.toLowerCase()),</span>
+            ],
+            [] as string[]
+          );
+<span class="cstat-no" title="statement not covered" >          return connectionNames.reduce(</span>
+<span class="fstat-no" title="function not covered" >            (f</span>ound, n) =&gt; <span class="cstat-no" title="statement not covered" >found || n.includes(valueToLower),</span>
+            false
+          );
+        }
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+      }
+    );
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  filteredAndSortedIntegrations = filteredAndSortedIntegrations.sort(</span>
+<span class="fstat-no" title="function not covered" >    (m</span>iA, miB) =&gt; {
+      const left = <span class="cstat-no" title="statement not covered" >isSortAscending ? miA : miB;</span>
+      const right = <span class="cstat-no" title="statement not covered" >isSortAscending ? miB : miA;</span>
+<span class="cstat-no" title="statement not covered" >      if (currentSortType === 'Name') {</span>
+<span class="cstat-no" title="statement not covered" >        return left.integration.name.localeCompare(right.integration.name);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return left.integration!.currentState!.localeCompare(</span>
+        right.integration!.currentState!
+      );
+    }
+  );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return filteredAndSortedIntegrations;</span>
+}
+&nbsp;
+const filterByName = <span class="cstat-no" title="statement not covered" >{</span>
+  filterType: 'text',
+  id: 'name',
+  placeholder: i18n.t('shared:filterByNamePlaceholder'),
+  title: i18n.t('shared:Name'),
+} as IFilterType;
+&nbsp;
+const filterByConnection = <span class="cstat-no" title="statement not covered" >{</span>
+  filterType: 'select',
+  filterValues: [],
+  id: 'connection',
+  placeholder: i18n.t('filterByConnectionPlaceholder'),
+  title: i18n.t('shared:Connection'),
+};
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getFilterTypes(connections: Connection[]): IFilterType[] {</span>
+<span class="cstat-no" title="statement not covered" >  return [</span>
+    filterByName,
+    {
+      ...filterByConnection,
+      filterValues: connections.map(<span class="fstat-no" title="function not covered" >c </span>=&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+        id: c.id,
+        title: c.name,
+      })),
+    } as IFilterType,
+  ];
+}
+&nbsp;
+const sortByName = <span class="cstat-no" title="statement not covered" >{</span>
+  id: 'name',
+  isNumeric: false,
+  title: i18n.t('shared:Name'),
+} as ISortType;
+&nbsp;
+const sortByStatus = <span class="cstat-no" title="statement not covered" >{</span>
+  id: 'status',
+  isNumeric: false,
+  title: i18n.t('shared:Status'),
+} as ISortType;
+&nbsp;
+const sortTypes: ISortType[] = <span class="cstat-no" title="statement not covered" >[sortByName, sortByStatus];</span>
+&nbsp;
+export class IntegrationsPage extends React.Component {
+  public <span class="fstat-no" title="function not covered" >render() {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;WithMonitoredIntegrations&gt;
+        {<span class="fstat-no" title="function not covered" >({</span> data: integrationsData, hasData, error }) =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;WithConnections&gt;</span>
+            {<span class="fstat-no" title="function not covered" >({</span> data: connectionsData }) =&gt; (
+<span class="cstat-no" title="statement not covered" >              &lt;Translation ns={['integrations', 'shared']}&gt;</span>
+                {<span class="fstat-no" title="function not covered" >t </span>=&gt; (
+<span class="cstat-no" title="statement not covered" >                  &lt;WithListViewToolbarHelpers</span>
+                    defaultFilterType={filterByName}
+                    defaultSortType={sortByName}
+                  &gt;
+                    {<span class="fstat-no" title="function not covered" >helpers</span> =&gt; {
+                      const filteredAndSortedIntegrations = <span class="cstat-no" title="statement not covered" >getFilteredAndSortedIntegrations(</span>
+                        integrationsData.items,
+                        helpers.activeFilters,
+                        helpers.currentSortType,
+                        helpers.isSortAscending
+                      );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                      return (</span>
+                        &lt;&gt;
+                          &lt;PageTitle title={t('shared:Integrations')} /&gt;
+                          &lt;IntegrationsListView
+                            linkToIntegrationImport={'/integrations/import'}
+                            linkToIntegrationCreation={
+                              routes.create.start.selectConnection
+                            }
+                            filterTypes={getFilterTypes(
+                              connectionsData.connectionsForDisplay
+                            )}
+                            sortTypes={sortTypes}
+                            resultsCount={filteredAndSortedIntegrations.length}
+                            {...helpers}
+                            i18nImport={t('shared:Import')}
+                            i18nLinkCreateConnection={t(
+                              'shared:linkCreateIntegration'
+                            )}
+                            i18nResultsCount={t('shared:resultsCount', {
+                              count: filteredAndSortedIntegrations.length,
+                            })}
+                          &gt;
+                            &lt;Integrations
+                              error={error}
+                              loading={!hasData}
+                              integrations={filteredAndSortedIntegrations}
+                            /&gt;
+                          &lt;/IntegrationsListView&gt;
+                        &lt;/&gt;
+                      );
+                    }}
+                  &lt;/WithListViewToolbarHelpers&gt;
+                )}
+              &lt;/Translation&gt;
+            )}
+          &lt;/WithConnections&gt;
+        )}
+      &lt;/WithMonitoredIntegrations&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

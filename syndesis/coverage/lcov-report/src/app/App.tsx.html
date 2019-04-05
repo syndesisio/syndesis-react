@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/App.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/app</a> App.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.06% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.16% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.06% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  ApiContext,
+  ServerEventsContext,
+  WithServerEvents,
+} from '@syndesis/api';
+import { IntegrationMonitoring } from '@syndesis/models';
+import {
+  AppLayout,
+  AppTopMenu,
+  INotification,
+  INotificationType,
+  Loader,
+  Notifications,
+  PfNavLink,
+  PfVerticalNavItem,
+  UnrecoverableError,
+} from '@syndesis/ui';
+import { WithLoader, WithRouter } from '@syndesis/utils';
+import i18next from 'i18next';
+import * as React from 'react';
+import { Translation } from 'react-i18next';
+import { Route, RouteComponentProps, Switch } from 'react-router-dom';
+import { PageNotFound, WithErrorBoundary } from '../shared';
+import './App.css';
+import { AppContext } from './AppContext';
+import { IConfigFile, WithConfig } from './WithConfig';
+&nbsp;
+import pictogram from './glasses_logo_square.png';
+import typogram from './syndesis-logo-svg-white.svg';
+&nbsp;
+export interface IAppRoute {
+  component:
+    | React.ComponentType&lt;RouteComponentProps&lt;any&gt;&gt;
+    | React.ComponentType&lt;any&gt;;
+  exact?: boolean;
+  icon: string;
+  label: string;
+  to: string;
+}
+&nbsp;
+export interface IAppBaseProps {
+  routes: IAppRoute[];
+}
+&nbsp;
+export interface IAppBaseState {
+  showNavigation: boolean;
+  notifications: INotification[];
+}
+&nbsp;
+export class App extends React.Component&lt;IAppBaseProps, IAppBaseState&gt; {
+  public state = {
+    notifications: [],
+    showNavigation: true,
+  };
+&nbsp;
+  constructor(props: IAppBaseProps) {
+    super(props);
+    this.logout = this.logout.bind(this);
+    this.getPodLogUrl = this.getPodLogUrl.bind(this);
+    this.hideNavigation = this.hideNavigation.bind(this);
+    this.showNavigation = this.showNavigation.bind(this);
+    this.pushNotification = this.pushNotification.bind(this);
+    this.removeNotificationAction = this.removeNotificationAction.bind(this);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic removeNotificationAction(notifToRemove: INotification) {
+    const notifications = <span class="cstat-no" title="statement not covered" >this.state.notifications.filter(</span>
+<span class="fstat-no" title="function not covered" >      (n</span>: INotification) =&gt; <span class="cstat-no" title="statement not covered" >n.key !== notifToRemove.key</span>
+    );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      notifications,
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic pushNotification(msg: string, type: INotificationType) {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      notifications: [
+        ...this.state.notifications,
+        {
+          key: Date.now().toString(),
+          message: msg,
+          type,
+        },
+      ],
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic logout() {
+    // do nothing
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic getPodLogUrl(
+    config: IConfigFile,
+    monitoring: IntegrationMonitoring | undefined
+  ): string | undefined {
+<span class="cstat-no" title="statement not covered" >    if (</span>
+      !config ||
+      !monitoring ||
+      !monitoring.linkType ||
+      !monitoring.namespace ||
+      !monitoring.podName
+    ) {
+<span class="cstat-no" title="statement not covered" >      return undefined;</span>
+    }
+    const baseUrl = <span class="cstat-no" title="statement not covered" >`${config.consoleUrl}/project/${</span>
+      monitoring.namespace
+    }/browse/pods/${monitoring.podName}?tab=`;
+<span class="cstat-no" title="statement not covered" >    switch (monitoring.linkType) {</span>
+      case 'LOGS':
+<span class="cstat-no" title="statement not covered" >        return baseUrl + 'logs';</span>
+      case 'EVENTS':
+<span class="cstat-no" title="statement not covered" >        return baseUrl + 'events';</span>
+      default:
+<span class="cstat-no" title="statement not covered" >        return undefined;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic hideNavigation(): void {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      showNavigation: false,
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pu</span>blic showNavigation(): void {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      showNavigation: true,
+    });
+  }
+&nbsp;
+  public renderAppNav(t: i18next.TFunction) {
+    return (
+      &lt;AppTopMenu username={'developer'}&gt;
+        &lt;PfNavLink to={'/logout'} label={t('Logout')} /&gt;
+      &lt;/AppTopMenu&gt;
+    );
+  }
+&nbsp;
+  public renderVerticalNav() {
+    return this.props.routes.map(({ exact, icon, label, to }, index) =&gt; (
+      &lt;PfVerticalNavItem
+        exact={exact}
+        icon={icon}
+        label={label}
+        to={to}
+        key={index}
+        data-testid={`navbar-link-${to}`}
+      /&gt;
+    ));
+  }
+&nbsp;
+  public render() {
+    return (
+      &lt;Translation ns={['app', 'shared']}&gt;
+        {t =&gt; (
+          &lt;WithConfig&gt;
+            {({ config, loading, error }) =&gt; (
+              &lt;WithLoader
+                loading={loading}
+                error={error}
+                loaderChildren={&lt;Loader /&gt;}
+                errorChildren={
+                  &lt;UnrecoverableError
+                    i18nTitle={t('shared:error.title')}
+                    i18nInfo={t('shared:error.info')}
+                    i18nHelp={t('shared:error.help')}
+                    i18nRefreshLabel={t('shared:error.refreshButton')}
+                    i18nReportIssue={t('shared:error.reportIssueButton')}
+                    i18nShowErrorInfoLabel={t(
+                      'shared:error.showErrorInfoButton'
+                    )}
+                  /&gt;
+                }
+                minWait={1000}
+              &gt;
+                {() =&gt; (
+                  &lt;AppContext.Provider
+                    value={{
+                      config: config!,
+                      getPodLogUrl: this.getPodLogUrl,
+                      hideNavigation: this.hideNavigation,
+                      logout: this.logout,
+                      pushNotification: this.pushNotification,
+                      showNavigation: this.showNavigation,
+                    }}
+                  &gt;
+                    &lt;ApiContext.Provider
+                      value={{
+                        apiUri: `${config!.apiBase}${config!.apiEndpoint}`,
+                        dvApiUri: `${config!.apiBase}${config!.datavirt.dvUrl}`,
+                        headers: { 'SYNDESIS-XSRF-TOKEN': 'awesome' },
+                      }}
+                    &gt;
+                      &lt;ApiContext.Consumer&gt;
+                        {({ apiUri, headers }) =&gt; (
+                          &lt;WithServerEvents apiUri={apiUri} headers={headers}&gt;
+                            {functions =&gt; (
+                              &lt;ServerEventsContext.Provider value={functions}&gt;
+                                &lt;AppLayout
+                                  appTitle={'Syndesis'}
+                                  appNav={this.renderAppNav(t)}
+                                  verticalNav={this.renderVerticalNav()}
+                                  pictograph={pictogram}
+                                  typogram={typogram}
+                                  logoHref={'/'}
+                                  showNavigation={this.state.showNavigation}
+                                  onNavigationCollapse={this.hideNavigation}
+                                  onNavigationExpand={this.showNavigation}
+                                &gt;
+                                  &lt;Notifications
+                                    notifications={this.state.notifications}
+                                    notificationTimerDelay={8000}
+                                    removeNotificationAction={
+                                      this.removeNotificationAction
+                                    }
+                                  /&gt;
+                                  &lt;WithRouter&gt;
+                                    {({ match }) =&gt; (
+                                      &lt;WithErrorBoundary key={match.url}&gt;
+                                        &lt;Switch&gt;
+                                          {this.props.routes.map(
+                                            (
+                                              { to, exact, component },
+                                              index
+                                            ) =&gt; (
+                                              &lt;Route
+                                                path={to}
+                                                exact={exact}
+                                                component={component}
+                                                key={index}
+                                              /&gt;
+                                            )
+                                          )}
+                                          &lt;Route component={PageNotFound} /&gt;
+                                        &lt;/Switch&gt;
+                                      &lt;/WithErrorBoundary&gt;
+                                    )}
+                                  &lt;/WithRouter&gt;
+                                &lt;/AppLayout&gt;
+                              &lt;/ServerEventsContext.Provider&gt;
+                            )}
+                          &lt;/WithServerEvents&gt;
+                        )}
+                      &lt;/ApiContext.Consumer&gt;
+                    &lt;/ApiContext.Provider&gt;
+                  &lt;/AppContext.Provider&gt;
+                )}
+              &lt;/WithLoader&gt;
+            )}
+          &lt;/WithConfig&gt;
+        )}
+      &lt;/Translation&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

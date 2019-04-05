@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/integrations/components/IntegrationEditorSidebar.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/modules/integrations/components</a> IntegrationEditorSidebar.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/10</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Step } from '@syndesis/models';
+<span class="cstat-no" title="statement not covered" >import {</span>
+  IntegrationFlowStepGeneric,
+  IntegrationFlowStepWithOverview,
+  IntegrationVerticalFlow,
+} from '@syndesis/ui';
+<span class="cstat-no" title="statement not covered" >import * as React from 'react';</span>
+&nbsp;
+export interface IIntegrationEditorSidebarProps {
+  /**
+   * the list of steps to render.
+   */
+  steps: Step[];
+  /**
+   * the zero-based index of a configured step that should be highlighted as
+   * active.
+   * This should not be set in conjunction with [addAtIndex]{@link IIntegrationEditorSidebarProps#addAtIndex}
+   */
+  activeIndex?: number;
+  /**
+   * the zero-based index where a new step is being added.
+   * This should not be set in conjunction with [activeIndex]{@link IIntegrationEditorSidebarProps#activeIndex}
+   */
+  addAtIndex?: number;
+  /**
+   * the icon to show in the circle of the step that is being added.
+   */
+  addIcon?: any;
+  /**
+   * The title of the information table shown for the step that is being added,
+   * in the extended view.
+   */
+  addI18nTitle?: string;
+  /**
+   * The text to show on the tooltip that opens when hovering with the mouse on
+   * the icon.
+   */
+  addI18nTooltip?: string;
+  /**
+   * The description of the information table shown for the step that is being
+   * added, in the extended view.
+   */
+  addI18nDescription?: string;
+}
+&nbsp;
+/**
+ * This component shows the steps of an integration in a vertical fashion. It's
+ * meant to be used as the sidebar of the `IntegrationEditorLayout` component.
+ * Steps are rendered as circles, showing the step's connection icon.
+ *
+ * It offers two visualization, a compact one where just the icons are shown,
+ * and an expanded one where additional information about the step are shown in
+ * a table next to the step's circle.
+ *
+ * It can also show a step that is being added to the integration by providing
+ * its position and some information about the configuration step.
+ *
+ * @see [steps]{@link IIntegrationEditorSidebarProps#steps}
+ * @see [activeIndex]{@link IIntegrationEditorSidebarProps#activeIndex}
+ * @see [addAtIndex]{@link IIntegrationEditorSidebarProps#addAtIndex}
+ * @see [addIcon]{@link IIntegrationEditorSidebarProps#addIcon}
+ * @see [addI18nTitle]{@link IIntegrationEditorSidebarProps#addI18nTitle}
+ * @see [addI18nTooltip]{@link IIntegrationEditorSidebarProps#addI18nTooltip}
+ * @see [addI18nDescription]{@link IIntegrationEditorSidebarProps#addI18nDescription}
+ */
+export class IntegrationEditorSidebar extends React.Component&lt;
+  IIntegrationEditorSidebarProps
+&gt; {
+  public <span class="fstat-no" title="function not covered" >render() {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;IntegrationVerticalFlow&gt;
+        {<span class="fstat-no" title="function not covered" >({</span> expanded }) =&gt;
+<span class="cstat-no" title="statement not covered" >          this.props.steps.map(<span class="fstat-no" title="function not covered" >(s</span>, idx) =&gt; {</span>
+            const isActive = <span class="cstat-no" title="statement not covered" >idx === this.props.activeIndex;</span>
+            const hasAddStep =
+<span class="cstat-no" title="statement not covered" >              this.props.addAtIndex &amp;&amp; idx &lt; this.props.steps.length - 1;</span>
+            const isAfterActiveAddStep = <span class="cstat-no" title="statement not covered" >this.props.addAtIndex! - 1 &lt; idx;</span>
+            const position = <span class="cstat-no" title="statement not covered" >isAfterActiveAddStep ? idx + 2 : idx + 1;</span>
+&nbsp;
+            const activeAddStep = (
+<span class="cstat-no" title="statement not covered" >              &lt;IntegrationFlowStepGeneric</span>
+                icon={this.props.addIcon || &lt;i className={'fa fa-plus'} /&gt;}
+                i18nTitle={this.props.addI18nTitle!}
+                i18nTooltip={this.props.addI18nTooltip!}
+                active={true}
+                showDetails={expanded}
+                description={this.props.addI18nDescription!}
+              /&gt;
+            );
+<span class="cstat-no" title="statement not covered" >            return (</span>
+              &lt;React.Fragment key={idx}&gt;
+                {s.stepKind === 'endpoint' &amp;&amp; (
+                  &lt;IntegrationFlowStepWithOverview
+                    icon={
+                      &lt;img src={s.connection!.icon} width={24} height={24} /&gt;
+                    }
+                    i18nTitle={`${position}. ${s.action!.name}`}
+                    i18nTooltip={`${position}. ${s.action!.name}`}
+                    active={isActive}
+                    showDetails={expanded}
+                    name={s.connection!.connector!.name}
+                    action={s.action!.name}
+                    dataType={'TODO'}
+                  /&gt;
+                )}
+                {hasAddStep ? activeAddStep : null}
+              &lt;/React.Fragment&gt;
+            );
+          })
+        }
+      &lt;/IntegrationVerticalFlow&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 09 2019 15:18:24 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
