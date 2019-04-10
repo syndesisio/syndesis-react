@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://syndesisio.github.io/syndesis-react-poc/app/precache-manifest.1b9e03bbd7a3de2145e942a4e620c2ad.js"
+  "https://syndesisio.github.io/syndesis-react/app/precache-manifest.886e3b878efd2eebc8f7d663d6c2f324.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("https://syndesisio.github.io/syndesis-react-poc/app/index.html", {
+workbox.routing.registerNavigationRoute("https://syndesisio.github.io/syndesis-react/app/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
