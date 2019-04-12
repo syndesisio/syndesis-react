@@ -72,6 +72,7 @@
     "react-router-dom": "^4.3.1"
   },
   "dependencies": {
+    "@patternfly/react-core": "^2.10.9",
     "classnames": "^2.2.6",
     "history": "^4.7.2",
     "react-dropzone": "^10.0.0",

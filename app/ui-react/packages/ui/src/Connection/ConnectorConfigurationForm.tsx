@@ -1,10 +1,10 @@
-import { Alert } from 'patternfly-react';
+import { Alert, AlertVariant, OneOf } from '@patternfly/react-core';
 import * as React from 'react';
 import { Container } from '../Layout';
 
 export interface IConnectorConfigurationFormValidationResult {
   message: string;
-  type: 'error' | 'success';
+  type: OneOf<typeof AlertVariant, keyof typeof AlertVariant>;
 }
 
 export interface IConnectorConfigurationFormProps {
@@ -52,7 +52,7 @@ export class ConnectorConfigurationForm extends React.Component<
               )}
               <div className="card-pf-body">
                 {this.props.validationResults!.map((e, idx) => (
-                  <Alert key={idx} type={e.type}>
+                  <Alert key={idx} title={'wtf'} variant={e.type}>
                     {e.message}
                   </Alert>
                 ))}

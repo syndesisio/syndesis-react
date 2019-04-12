@@ -126,7 +126,7 @@ export class WithConfigurationForm extends React.Component<
                 obj =>
                   ({
                     message: obj.description,
-                    type: 'error',
+                    type: 'danger',
                   } as IConnectorConfigurationFormValidationResult)
               );
               if (Object.keys(errors).length) {
