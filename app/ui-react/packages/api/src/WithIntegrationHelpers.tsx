@@ -3,8 +3,8 @@ import {
   ActionDescriptor,
   Connection,
   Integration,
-  Step,
   PUBLISHED,
+  Step,
   UNPUBLISHED,
 } from '@syndesis/models';
 import { key } from '@syndesis/utils';
@@ -38,26 +38,6 @@ export interface IWithIntegrationHelpersChildrenProps {
    * @todo perhaps rename it with a better name
    */
   addConnection: UpdateOrAddConnection;
-
-  /**
-   * Deploy the integration with the specified ID and version.
-   *
-   * @param id
-   * @param version
-   * @param isIntegrationDeployment
-   */
-  deploy(
-    id: string,
-    version: string | number,
-    isIntegrationDeployment: boolean
-  ): Promise<{}>;
-
-  /**
-   * Request that the given integration ID at the given version be deactivated
-   * @param id
-   * @param version
-   */
-  undeploy(id: string, version: string | number): Promise<{}>;
   /**
    * updates a step of type connection to the provided integration object.
    *
@@ -91,6 +71,18 @@ export interface IWithIntegrationHelpersChildrenProps {
    */
   updateOrAddConnection: UpdateOrAddConnection;
   /**
+   * Deploy the integration with the specified ID and version.
+   *
+   * @param id
+   * @param version
+   * @param isIntegrationDeployment
+   */
+  deploy(
+    id: string,
+    version: string | number,
+    isIntegrationDeployment: boolean
+  ): Promise<{}>;
+  /**
    * asynchronously saves the provided integration, returning the saved
    * integration in case of success.
    *
@@ -99,6 +91,12 @@ export interface IWithIntegrationHelpersChildrenProps {
    * @todo make the returned object immutable to avoid uncontrolled changes
    */
   saveIntegration(integration: Integration): Promise<Integration>;
+  /**
+   * Request that the given integration ID at the given version be deactivated
+   * @param id
+   * @param version
+   */
+  undeploy(id: string, version: string | number): Promise<{}>;
 }
 
 export interface IWithIntegrationHelpersProps {
@@ -189,23 +187,23 @@ export class WithIntegrationHelpersWrapped extends React.Component<
     isIntegrationDeployment = false
   ) {
     return callFetch({
+      body: isIntegrationDeployment ? { targetState: PUBLISHED } : {},
+      method: isIntegrationDeployment ? 'POST' : 'PUT',
       url: isIntegrationDeployment
         ? `${
             this.props.apiUri
           }/integrations/${id}/deployments/${version}/targetState`
         : `${this.props.apiUri}/integrations/${id}/deployments`,
-      body: isIntegrationDeployment ? { targetState: PUBLISHED } : {},
-      method: isIntegrationDeployment ? 'POST' : 'PUT',
     });
   }
 
   public async undeploy(id: string, version: string | number) {
     return callFetch({
+      body: { targetState: UNPUBLISHED },
+      method: 'POST',
       url: `${
         this.props.apiUri
       }/integrations/${id}/deployments/${version}/targetState`,
-      body: { targetState: UNPUBLISHED },
-      method: 'POST',
     });
   }
 

@@ -3,14 +3,11 @@ import {
   ConfigurationProperty,
   IntegrationMetricsSummary,
   IntegrationOverview,
+  WithId,
 } from './models';
 
 export interface StringMap<T> {
   [key: string]: T;
-}
-
-export interface WithId {
-  id?: string;
 }
 
 export interface BaseEntity extends WithId {
