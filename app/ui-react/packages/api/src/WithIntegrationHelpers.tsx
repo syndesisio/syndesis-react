@@ -4,6 +4,8 @@ import {
   Connection,
   Integration,
   Step,
+  PUBLISHED,
+  UNPUBLISHED,
 } from '@syndesis/models';
 import { key } from '@syndesis/utils';
 import produce from 'immer';
@@ -36,6 +38,26 @@ export interface IWithIntegrationHelpersChildrenProps {
    * @todo perhaps rename it with a better name
    */
   addConnection: UpdateOrAddConnection;
+
+  /**
+   * Deploy the integration with the specified ID and version.
+   *
+   * @param id
+   * @param version
+   * @param isIntegrationDeployment
+   */
+  deploy(
+    id: string,
+    version: string | number,
+    isIntegrationDeployment: boolean
+  ): Promise<{}>;
+
+  /**
+   * Request that the given integration ID at the given version be deactivated
+   * @param id
+   * @param version
+   */
+  undeploy(id: string, version: string | number): Promise<{}>;
   /**
    * updates a step of type connection to the provided integration object.
    *
@@ -89,7 +111,9 @@ export class WithIntegrationHelpersWrapped extends React.Component<
   constructor(props: IWithIntegrationHelpersProps & IApiContext) {
     super(props);
     this.addConnection = this.addConnection.bind(this);
+    this.deploy = this.deploy.bind(this);
     this.saveIntegration = this.saveIntegration.bind(this);
+    this.undeploy = this.undeploy.bind(this);
     this.updateConnection = this.updateConnection.bind(this);
     this.updateOrAddConnection = this.updateOrAddConnection.bind(this);
   }
@@ -156,6 +180,32 @@ export class WithIntegrationHelpersWrapped extends React.Component<
       step.stepKind = 'endpoint';
       draft.flows[flow].steps!.splice(position, 0, step);
       draft.tags = Array.from(new Set([...(draft.tags || []), connection.id!]));
+    });
+  }
+
+  public async deploy(
+    id: string,
+    version: string | number,
+    isIntegrationDeployment = false
+  ) {
+    return callFetch({
+      url: isIntegrationDeployment
+        ? `${
+            this.props.apiUri
+          }/integrations/${id}/deployments/${version}/targetState`
+        : `${this.props.apiUri}/integrations/${id}/deployments`,
+      body: isIntegrationDeployment ? { targetState: PUBLISHED } : {},
+      method: isIntegrationDeployment ? 'POST' : 'PUT',
+    });
+  }
+
+  public async undeploy(id: string, version: string | number) {
+    return callFetch({
+      url: `${
+        this.props.apiUri
+      }/integrations/${id}/deployments/${version}/targetState`,
+      body: { targetState: UNPUBLISHED },
+      method: 'POST',
     });
   }
 
@@ -267,7 +317,9 @@ export class WithIntegrationHelpersWrapped extends React.Component<
   public render() {
     return this.props.children({
       addConnection: this.addConnection,
+      deploy: this.deploy,
       saveIntegration: this.saveIntegration,
+      undeploy: this.undeploy,
       updateConnection: this.updateConnection,
       updateOrAddConnection: this.updateOrAddConnection,
     });
