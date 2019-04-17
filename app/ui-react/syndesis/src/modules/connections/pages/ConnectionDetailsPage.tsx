@@ -16,7 +16,7 @@ export interface IConnectionDetailsRouteState {
   connection?: Connection;
 }
 
-export default class ConnectionDetailsPage extends React.Component {
+export class ConnectionDetailsPage extends React.Component {
   public getUsedByMessage(connection: Connection): string {
     // TODO: Schema is currently wrong as it has 'uses' as an OptionalInt. Remove cast when schema is fixed.
     const numUsedBy = connection.uses as number;
