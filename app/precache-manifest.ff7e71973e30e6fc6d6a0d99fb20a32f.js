@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/js/Dashboard.2726b8cd.chunk.js"
   },
   {
-    "revision": "d1a531753b4cb1d655a3",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/js/main.d1a53175.chunk.js"
+    "revision": "d2ad14d2fab33286a77d",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/js/main.d2ad14d2.chunk.js"
   },
   {
     "revision": "0fed7c6a2a7a6931c1c6",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBold-webfont.c13d9e6d.svg"
   },
   {
-    "revision": "7350876ed9eaf44d9555c8d5674d2790",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-SemiboldItalic-webfont.7350876e.svg"
+    "revision": "6be75e80b3b60ec7e673921a73771514",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBoldItalic-webfont.6be75e80.svg"
   },
   {
     "revision": "62f9e65df4020b7226526d1da43f0e3e",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
-    "revision": "f4769f9bdb7466be65088239c12046d1",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/glyphicons-halflings-regular.f4769f9b.eot"
-  },
-  {
     "revision": "19515f0d8c1206e0608595f205bb434d",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/bg-modal-about-pf.19515f0d.png"
+  },
+  {
+    "revision": "f4769f9bdb7466be65088239c12046d1",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
     "revision": "3b3cbaef084e27f7fa05d9fe31afb287",
@@ -116,12 +116,12 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.8642dbfe.woff"
   },
   {
-    "revision": "d09461e773d7a194502246db31c3c1df",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.d09461e7.eot"
-  },
-  {
     "revision": "957287ebc80dcf9381c25b1c0d0ae51e",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBoldItalic-webfont.957287eb.eot"
+  },
+  {
+    "revision": "d09461e773d7a194502246db31c3c1df",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.d09461e7.eot"
   },
   {
     "revision": "51c4ab203f9003ce49cc9e66b05c4968",
@@ -148,6 +148,10 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Semibold-webfont.2418db91.woff"
   },
   {
+    "revision": "60449ee63020f7a26f19a5454ee34c47",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Bold-webfont.60449ee6.eot"
+  },
+  {
     "revision": "0d8fa9d9810a6543e922ee3d90abac25",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Bold-webfont.0d8fa9d9.woff"
   },
@@ -156,20 +160,16 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBold-webfont.2291980b.eot"
   },
   {
-    "revision": "b646968142468fa97e019c606703d731",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/PatternFlyIcons-webfont.b6469681.ttf"
-  },
-  {
-    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
+    "revision": "7350876ed9eaf44d9555c8d5674d2790",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-SemiboldItalic-webfont.7350876e.svg"
   },
   {
     "revision": "ffbe377ef337bc40ea7ead376d677f5c",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/PatternFlyIcons-webfont.ffbe377e.woff"
   },
   {
-    "revision": "60449ee63020f7a26f19a5454ee34c47",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Bold-webfont.60449ee6.eot"
+    "revision": "b646968142468fa97e019c606703d731",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/PatternFlyIcons-webfont.b6469681.ttf"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
@@ -216,16 +216,16 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-LightItalic-webfont.6943fb6f.ttf"
   },
   {
-    "revision": "78b08a68d05d5fabb0b8effd51bf6ade",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.78b08a68.ttf"
-  },
-  {
     "revision": "9042f8099784ee1a5e6af3017f72c962",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/PatternFlyIcons-webfont.9042f809.svg"
   },
   {
     "revision": "73d6bb0d4f596a91992e6be32e82e3bc",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBoldItalic-webfont.73d6bb0d.ttf"
+  },
+  {
+    "revision": "78b08a68d05d5fabb0b8effd51bf6ade",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.78b08a68.ttf"
   },
   {
     "revision": "1bf71be111189e76987a4bb9b3115cb7",
@@ -268,31 +268,31 @@ self.__precacheManifest = [
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Italic-webfont.3e2b2e91.svg"
   },
   {
-    "revision": "6be75e80b3b60ec7e673921a73771514",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-ExtraBoldItalic-webfont.6be75e80.svg"
+    "revision": "99c9f24dd717e50a36d02452c1b33c56",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Bold-webfont.99c9f24d.svg"
   },
   {
     "revision": "400ab808e8b3ba053d41d8dc72ea3aff",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Semibold-webfont.400ab808.svg"
   },
   {
-    "revision": "99c9f24dd717e50a36d02452c1b33c56",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-Bold-webfont.99c9f24d.svg"
+    "revision": "04b273bca14cbdba6b0bf4d721d16ead",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/media/OpenSans-BoldItalic-webfont.04b273bc.svg"
   },
   {
     "revision": "4539c85c004056610dde",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/js/3.4539c85c.chunk.js"
   },
   {
-    "revision": "d1a531753b4cb1d655a3",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/css/main.c24b09cf.chunk.css"
+    "revision": "d2ad14d2fab33286a77d",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/css/main.916adbcc.chunk.css"
   },
   {
     "revision": "4539c85c004056610dde",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/css/3.d7fc7e58.chunk.css"
   },
   {
-    "revision": "e98da50aa2d08f3cd56ad53748a981f2",
+    "revision": "abcb3ca41e1054590a391f6fd4ba6cbf",
     "url": "https://syndesisio.github.io/syndesis-react/app/index.html"
   },
   {

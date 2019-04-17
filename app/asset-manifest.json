@@ -1,9 +1,9 @@
 {
   "Dashboard.js": "https://syndesisio.github.io/syndesis-react/app/static/js/Dashboard.2726b8cd.chunk.js",
   "Dashboard.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/Dashboard.2726b8cd.chunk.js.map",
-  "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.c24b09cf.chunk.css",
+  "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.916adbcc.chunk.css",
   "main.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-main.js",
-  "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.d1a53175.chunk.js.map",
+  "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.d2ad14d2.chunk.js.map",
   "runtime~main.js": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.0fed7c6a.js",
   "runtime~main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.0fed7c6a.js.map",
   "static/css/3.d7fc7e58.chunk.css": "https://syndesisio.github.io/syndesis-react/app/static/css/3.d7fc7e58.chunk.css",
@@ -15,10 +15,10 @@
   "styles.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-styles.js",
   "vendor.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js",
   "index.html": "https://syndesisio.github.io/syndesis-react/app/index.html",
-  "precache-manifest.e56f098bb696c11fae0ffd90d7c619be.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.e56f098bb696c11fae0ffd90d7c619be.js",
+  "precache-manifest.ff7e71973e30e6fc6d6a0d99fb20a32f.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.ff7e71973e30e6fc6d6a0d99fb20a32f.js",
   "service-worker.js": "https://syndesisio.github.io/syndesis-react/app/service-worker.js",
   "static/css/3.d7fc7e58.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/3.d7fc7e58.chunk.css.map",
-  "static/css/main.c24b09cf.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.c24b09cf.chunk.css.map",
+  "static/css/main.916adbcc.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.916adbcc.chunk.css.map",
   "static/media/App.css": "https://syndesisio.github.io/syndesis-react/app/static/media/glyphicons-halflings-regular.fa277232.woff",
   "static/media/syndesis-logo-svg-white.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/syndesis-logo-svg-white.62f9e65d.svg"
 }
