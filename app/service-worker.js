@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://syndesisio.github.io/syndesis-react/app/precache-manifest.1fb62240430bbee6e9cf6fc81f68d5d6.js"
+  "https://syndesisio.github.io/syndesis-react/app/precache-manifest.d85e5030482f3fa705c889b318f4c6cb.js"
 );
 
 workbox.clientsClaim();
