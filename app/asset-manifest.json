@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.78bf7284.chunk.css",
+    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.602b5f4c.chunk.css",
     "main.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-main.js",
     "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.0094ef7d.chunk.js.map",
     "runtime~main.js": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js",
@@ -14,10 +14,10 @@
     "styles.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-styles.js",
     "vendor.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js",
     "index.html": "https://syndesisio.github.io/syndesis-react/app/index.html",
-    "precache-manifest.6cd4f86edbc9d5b131c272b194e03b60.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.6cd4f86edbc9d5b131c272b194e03b60.js",
+    "precache-manifest.d3e951c4af46791d23981cfd9fc51b89.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.d3e951c4af46791d23981cfd9fc51b89.js",
     "service-worker.js": "https://syndesisio.github.io/syndesis-react/app/service-worker.js",
     "static/css/2.5b7efd63.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/2.5b7efd63.chunk.css.map",
-    "static/css/main.78bf7284.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.78bf7284.chunk.css.map",
+    "static/css/main.602b5f4c.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.602b5f4c.chunk.css.map",
     "static/media/App.css": "https://syndesisio.github.io/syndesis-react/app/static/media/pfbg_992@2x.1423e11e.jpg",
     "static/media/syndesis_logo_full_darkbkg.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/syndesis_logo_full_darkbkg.9c467d96.svg"
   }
