@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.01a55282.chunk.css",
+    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.608688e2.chunk.css",
     "main.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-main.js",
-    "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.a4238009.chunk.js.map",
+    "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.4ba3c5ea.chunk.js.map",
     "runtime~main.js": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js",
     "runtime~main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js.map",
     "static/css/2.f679f95b.chunk.css": "https://syndesisio.github.io/syndesis-react/app/static/css/2.f679f95b.chunk.css",
@@ -14,10 +14,10 @@
     "styles.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-styles.js",
     "vendor.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js",
     "index.html": "https://syndesisio.github.io/syndesis-react/app/index.html",
-    "precache-manifest.b6a2944e6b256c50ea8865f51d41a6b2.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.b6a2944e6b256c50ea8865f51d41a6b2.js",
+    "precache-manifest.cbcdbb48911bf86f47595defe1b72806.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.cbcdbb48911bf86f47595defe1b72806.js",
     "service-worker.js": "https://syndesisio.github.io/syndesis-react/app/service-worker.js",
     "static/css/2.f679f95b.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/2.f679f95b.chunk.css.map",
-    "static/css/main.01a55282.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.01a55282.chunk.css.map",
+    "static/css/main.608688e2.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.608688e2.chunk.css.map",
     "static/media/App.css": "https://syndesisio.github.io/syndesis-react/app/static/media/pfbg_992@2x.1423e11e.jpg",
     "static/media/syndesis_logo_full_darkbkg.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/syndesis_logo_full_darkbkg.9c467d96.svg"
   }
