@@ -46,7 +46,7 @@
           }
         });
       }, e.prototype.onUpdateMessage = function (e) {
-        this.loading = !1, this.documentId = e.documentId, this.inputName = e.inputName, this.inputDescription = e.inputDescription, this.inputDocumentType = e.inputDocumentType, this.inputInspectionType = e.inputInspectionType, this.inputDataShape = e.inputDataShape, this.outputName = e.outputName, this.outputDescription = e.outputDescription, this.outputDocumentType = e.outputDocumentType, this.outputInspectionType = e.outputInspectionType, this.outputDataShape = e.outputDataShape, this.mappings = e.mappings;
+        this.loading = !1, this.documentId = e.documentId, this.inputDocuments = e.inputDocuments, this.outputDocument = e.outputDocument, this.initialMappings = e.initialMappings, this.baseJavaInspectionServiceUrl = e.baseJavaInspectionServiceUrl, this.baseXMLInspectionServiceUrl = e.baseXMLInspectionServiceUrl, this.baseJSONInspectionServiceUrl = e.baseJSONInspectionServiceUrl, this.baseMappingServiceUrl = e.baseMappingServiceUrl;
       }, e.prototype.onMappings = function (e) {
         this.messagePort && this.messagePort.postMessage({
           message: "mappings",
@@ -61,8 +61,8 @@
         f = t("Xg1U"),
         c = t("iutN"),
         d = t("MdoF"),
-        p = t("hz2B"),
-        b = t("0xPY"),
+        b = t("hz2B"),
+        p = t("0xPY"),
         s = t("t/Na"),
         g = function () {
       function e(e) {
@@ -72,23 +72,24 @@
       return e.prototype.ngOnInit = function () {
         this.reset();
       }, e.prototype.ngOnChanges = function (e) {
-        1 === Object.keys(e).length && e.mappings && e.mappings.previousValue !== this.modifiedMappings || this.reset();
+        1 === Object.keys(e).length && e.initialMappings && e.initialMappings.previousValue !== this.modifiedMappings || this.reset();
       }, e.prototype.reset = function () {
         var e = this;
         this.saveMappingSubscription && this.saveMappingSubscription.unsubscribe(), this.initializationService.resetConfig();
         var o = this.initializationService.cfg;
-        o.initCfg.baseJavaInspectionServiceUrl = "/api/v1/atlas/java/", o.initCfg.baseXMLInspectionServiceUrl = "/api/v1/atlas/xml/", o.initCfg.baseJSONInspectionServiceUrl = "/api/v1/atlas/json/", o.initCfg.baseMappingServiceUrl = "/api/v1/atlas/", o.initCfg.disableNavbar = !0, o.initCfg.disableMappingPreviewMode = !1, o.initCfg.discardNonMockSources = !1, o.initCfg.addMockJSONMappings = !1, o.initCfg.addMockJavaSingleSource = !1, o.initCfg.addMockJavaSources = !1, o.initCfg.addMockXMLInstanceSources = !1, o.initCfg.addMockXMLSchemaSources = !1, o.initCfg.addMockJSONSources = !1, o.initCfg.addMockJavaTarget = !1, o.initCfg.addMockXMLInstanceTarget = !1, o.initCfg.addMockXMLSchemaTarget = !1, o.initCfg.addMockJSONTarget = !1, o.initCfg.debugDocumentServiceCalls = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugDocumentServiceCalls = !0, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1;
-        var t = new b.c();
-        t.type = this.inputDocumentType, t.inspectionType = this.inputInspectionType, t.inspectionSource = this.inputDataShape, t.id = this.documentId, t.name = this.inputName, t.description = this.inputDescription, t.isSource = !0, t.showFields = !0, o.addDocument(t);
-        var n = new b.c();
-        n.type = this.outputDocumentType, n.inspectionType = this.outputInspectionType, n.inspectionSource = this.outputDataShape, n.id = this.documentId, n.name = this.outputName, n.description = this.outputDescription, n.isSource = !1, n.showFields = !0, o.addDocument(n);
-        var a = new b.g();
-        if (this.mappings) try {
-          b.i.deserializeMappingServiceJSON(JSON.parse(this.mappings), a, o);
-        } catch (r) {
-          console.error(r);
+        o.initCfg.xsrfCookieName = "SYNDESIS-XSRF-COOKIE", o.initCfg.xsrfDefaultTokenValue = "awesome", o.initCfg.xsrfHeaderName = "SYNDESIS-XSRF-TOKEN", console.log(o.initCfg), o.initCfg.baseJavaInspectionServiceUrl = this.baseJavaInspectionServiceUrl, o.initCfg.baseXMLInspectionServiceUrl = this.baseXMLInspectionServiceUrl, o.initCfg.baseJSONInspectionServiceUrl = this.baseJSONInspectionServiceUrl, o.initCfg.baseMappingServiceUrl = this.baseMappingServiceUrl, o.initCfg.disableNavbar = !0, o.initCfg.disableMappingPreviewMode = !1, o.initCfg.discardNonMockSources = !1, o.initCfg.addMockJSONMappings = !1, o.initCfg.addMockJavaSingleSource = !1, o.initCfg.addMockJavaSources = !1, o.initCfg.addMockXMLInstanceSources = !1, o.initCfg.addMockXMLSchemaSources = !1, o.initCfg.addMockJSONSources = !1, o.initCfg.addMockJavaTarget = !1, o.initCfg.addMockXMLInstanceTarget = !1, o.initCfg.addMockXMLSchemaTarget = !1, o.initCfg.addMockJSONTarget = !1, o.initCfg.debugDocumentServiceCalls = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugDocumentServiceCalls = !0, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, this.inputDocuments.forEach(function (e) {
+          var t = new p.e();
+          t.type = e.documentType, t.inspectionType = e.inspectionType, t.inspectionSource = e.inspectionSource, t.inspectionResult = e.inspectionResult, t.id = e.id, t.name = e.name, t.description = e.description, t.isSource = !0, t.showFields = e.showFields, o.addDocument(t);
+        });
+        var t = new p.e();
+        t.type = this.outputDocument.documentType, t.inspectionType = this.outputDocument.inspectionType, t.inspectionSource = this.outputDocument.inspectionSource, t.id = this.outputDocument.id, t.name = this.outputDocument.name, t.description = this.outputDocument.description, t.isSource = !1, t.showFields = this.outputDocument.showFields, o.addDocument(t);
+        var n = new p.i();
+        if (this.initialMappings) try {
+          p.k.deserializeMappingServiceJSON(JSON.parse(this.initialMappings), n, o);
+        } catch (a) {
+          console.error(a);
         }
-        o.mappings = a, this.saveMappingSubscription = o.mappingService.saveMappingOutput$.subscribe(function (t) {
+        o.mappings = n, this.saveMappingSubscription = o.mappingService.saveMappingOutput$.subscribe(function (t) {
           var n = o.mappingService.serializeMappingsToJSON();
           e.modifiedMappings = JSON.stringify(n), e.outputMappings.emit(e.modifiedMappings), o.mappingService.handleMappingSaveSuccess(t);
         }), this.initializationService.initialize();
@@ -105,7 +106,7 @@
     function h(e) {
       return n.Ib(0, [n.Eb(402653184, 1, {
         dataMapperComponent: 0
-      }), (e()(), n.pb(1, 0, null, null, 1, "data-mapper", [], null, null, null, p.b, p.a)), n.ob(2, 245760, [[1, 4], ["dataMapperComponent", 4]], 0, b.a, [n.h], null, null)], function (e, o) {
+      }), (e()(), n.pb(1, 0, null, null, 1, "data-mapper", [], null, null, null, b.b, b.a)), n.ob(2, 245760, [[1, 4], ["dataMapperComponent", 4]], 0, p.c, [n.h], null, null)], function (e, o) {
         e(o, 2, 0);
       }, null);
     }
@@ -127,24 +128,20 @@
       return n.Ib(0, [(e()(), n.pb(0, 0, null, null, 4, "app-data-mapper-host", [], null, [[null, "outputMappings"]], function (e, o, t) {
         var n = !0;
         return "outputMappings" === o && (n = !1 !== e.component.onMappings(t) && n), n;
-      }, h, u)), n.Db(4608, null, b.h, b.h, [s.c]), n.Db(4608, null, b.e, b.e, []), n.Db(135680, null, b.d, b.d, [s.c]), n.ob(4, 770048, null, 0, g, [b.f], {
+      }, h, u)), n.Db(4608, null, p.j, p.j, [s.c]), n.Db(4608, null, p.g, p.g, []), n.Db(135680, null, p.f, p.f, [s.c]), n.ob(4, 770048, null, 0, g, [p.h], {
         documentId: [0, "documentId"],
-        inputName: [1, "inputName"],
-        inputDescription: [2, "inputDescription"],
-        inputDocumentType: [3, "inputDocumentType"],
-        inputInspectionType: [4, "inputInspectionType"],
-        inputDataShape: [5, "inputDataShape"],
-        outputName: [6, "outputName"],
-        outputDescription: [7, "outputDescription"],
-        outputDocumentType: [8, "outputDocumentType"],
-        outputInspectionType: [9, "outputInspectionType"],
-        outputDataShape: [10, "outputDataShape"],
-        mappings: [11, "mappings"]
+        inputDocuments: [1, "inputDocuments"],
+        outputDocument: [2, "outputDocument"],
+        initialMappings: [3, "initialMappings"],
+        baseJavaInspectionServiceUrl: [4, "baseJavaInspectionServiceUrl"],
+        baseXMLInspectionServiceUrl: [5, "baseXMLInspectionServiceUrl"],
+        baseJSONInspectionServiceUrl: [6, "baseJSONInspectionServiceUrl"],
+        baseMappingServiceUrl: [7, "baseMappingServiceUrl"]
       }, {
         outputMappings: "outputMappings"
       })], function (e, o) {
         var t = o.component;
-        e(o, 4, 1, [t.documentId, t.inputName, t.inputDescription, t.inputDocumentType, t.inputInspectionType, t.inputDataShape, t.outputName, t.outputDescription, t.outputDocumentType, t.outputInspectionType, t.outputDataShape, t.mappings]);
+        e(o, 4, 0, t.documentId, t.inputDocuments, t.outputDocument, t.initialMappings, t.baseJavaInspectionServiceUrl, t.baseXMLInspectionServiceUrl, t.baseJSONInspectionServiceUrl, t.baseMappingServiceUrl);
       }, null);
     }
 
@@ -158,40 +155,40 @@
     }
 
     function k(e) {
-      return n.Ib(0, [(e()(), n.pb(0, 0, null, null, 5, "app-root", [], null, null, null, y, v)), n.Db(135680, null, b.d, b.d, [s.c]), n.Db(4608, null, b.h, b.h, [s.c]), n.Db(4608, null, b.e, b.e, []), n.Db(4608, null, b.f, b.f, [b.d, b.h, b.e]), n.ob(5, 245760, null, 0, r, [n.z], null, null)], function (e, o) {
+      return n.Ib(0, [(e()(), n.pb(0, 0, null, null, 5, "app-root", [], null, null, null, y, v)), n.Db(135680, null, p.f, p.f, [s.c]), n.Db(4608, null, p.j, p.j, [s.c]), n.Db(4608, null, p.g, p.g, []), n.Db(4608, null, p.h, p.h, [p.f, p.j, p.g]), n.ob(5, 245760, null, 0, r, [n.z], null, null)], function (e, o) {
         e(o, 5, 0);
       }, null);
     }
 
-    var z = n.lb("app-root", r, k, {}, {}, []),
-        S = t("ZYjt"),
+    var S = n.lb("app-root", r, k, {}, {}, []),
+        z = t("ZYjt"),
         O = t("gIcY"),
-        I = t("NJnL"),
-        q = t("lqqz"),
+        M = t("NJnL"),
+        I = t("lqqz"),
         j = t("t1w2"),
-        M = t("eajB"),
+        q = t("eajB"),
         C = t("xtZt"),
         D = t("lTVp"),
         T = t("ZYCi"),
-        B = n.mb(a, [r], function (e) {
-      return n.wb([n.xb(512, n.j, n.bb, [[8, [i.a, l.a, f.a, c.a, d.a, p.g, p.h, p.e, p.i, p.j, p.k, p.c, p.l, p.d, p.f, z]], [3, n.j], n.x]), n.xb(5120, n.u, n.kb, [[3, n.u]]), n.xb(4608, m.l, m.k, [n.u, [2, m.s]]), n.xb(5120, n.c, n.hb, []), n.xb(5120, n.s, n.ib, []), n.xb(5120, n.t, n.jb, []), n.xb(4608, S.b, S.k, [m.c]), n.xb(6144, n.G, null, [S.b]), n.xb(4608, S.e, S.g, []), n.xb(5120, S.c, function (e, o, t, n, a, r, i, l) {
-        return [new S.i(e, o, t), new S.n(n), new S.m(a, r, i, l)];
-      }, [m.c, n.z, n.B, m.c, m.c, S.e, n.cb, [2, S.f]]), n.xb(4608, S.d, S.d, [S.c, n.z]), n.xb(135680, S.l, S.l, [m.c]), n.xb(4608, S.j, S.j, [S.d, S.l]), n.xb(6144, n.E, null, [S.j]), n.xb(6144, S.o, null, [S.l]), n.xb(4608, n.M, n.M, [n.z]), n.xb(4608, O.w, O.w, []), n.xb(4608, s.i, s.o, [m.c, n.B, s.m]), n.xb(4608, s.p, s.p, [s.i, s.n]), n.xb(5120, s.a, function (e) {
+        U = n.mb(a, [r], function (e) {
+      return n.wb([n.xb(512, n.j, n.bb, [[8, [i.a, l.a, f.a, c.a, d.a, b.g, b.h, b.e, b.i, b.j, b.k, b.c, b.l, b.d, b.f, S]], [3, n.j], n.x]), n.xb(5120, n.u, n.kb, [[3, n.u]]), n.xb(4608, m.l, m.k, [n.u, [2, m.s]]), n.xb(5120, n.c, n.hb, []), n.xb(5120, n.s, n.ib, []), n.xb(5120, n.t, n.jb, []), n.xb(4608, z.b, z.k, [m.c]), n.xb(6144, n.G, null, [z.b]), n.xb(4608, z.e, z.g, []), n.xb(5120, z.c, function (e, o, t, n, a, r, i, l) {
+        return [new z.i(e, o, t), new z.n(n), new z.m(a, r, i, l)];
+      }, [m.c, n.z, n.B, m.c, m.c, z.e, n.cb, [2, z.f]]), n.xb(4608, z.d, z.d, [z.c, n.z]), n.xb(135680, z.l, z.l, [m.c]), n.xb(4608, z.j, z.j, [z.d, z.l]), n.xb(6144, n.E, null, [z.j]), n.xb(6144, z.o, null, [z.l]), n.xb(4608, n.M, n.M, [n.z]), n.xb(4608, O.w, O.w, []), n.xb(4608, s.i, p.a, []), n.xb(4608, s.p, s.p, [s.i, s.n]), n.xb(5120, s.a, function (e) {
+        return [e, new p.b()];
+      }, [s.p]), n.xb(4608, s.l, s.l, []), n.xb(6144, s.j, null, [s.l]), n.xb(4608, s.h, s.h, [s.j]), n.xb(6144, s.b, null, [s.h]), n.xb(4608, s.f, s.k, [s.b, n.q]), n.xb(4608, s.c, s.c, [s.f]), n.xb(4608, O.e, O.e, []), n.xb(4608, M.a, M.a, []), n.xb(4608, I.a, I.a, [n.j, n.z, n.q, M.a, n.g]), n.xb(4608, j.a, j.a, []), n.xb(4608, q.a, q.a, []), n.xb(4608, C.f, C.f, []), n.xb(4608, D.b, D.b, []), n.xb(135680, p.f, p.f, [s.c]), n.xb(4608, p.j, p.j, [s.c]), n.xb(4608, p.g, p.g, []), n.xb(4608, p.h, p.h, [p.f, p.j, p.g]), n.xb(5120, T.a, T.x, [T.k]), n.xb(4608, T.d, T.d, []), n.xb(6144, T.f, null, [T.d]), n.xb(135680, T.n, T.n, [T.k, n.w, n.i, n.q, T.f]), n.xb(4608, T.e, T.e, []), n.xb(5120, T.B, T.t, [T.k, m.p, T.g]), n.xb(5120, T.h, T.A, [T.y]), n.xb(5120, n.b, function (e) {
         return [e];
-      }, [s.p]), n.xb(4608, s.l, s.l, []), n.xb(6144, s.j, null, [s.l]), n.xb(4608, s.h, s.h, [s.j]), n.xb(6144, s.b, null, [s.h]), n.xb(4608, s.f, s.k, [s.b, n.q]), n.xb(4608, s.c, s.c, [s.f]), n.xb(4608, O.e, O.e, []), n.xb(4608, I.a, I.a, []), n.xb(4608, q.a, q.a, [n.j, n.z, n.q, I.a, n.g]), n.xb(4608, j.a, j.a, []), n.xb(4608, M.a, M.a, []), n.xb(4608, C.f, C.f, []), n.xb(4608, D.b, D.b, []), n.xb(135680, b.d, b.d, [s.c]), n.xb(4608, b.h, b.h, [s.c]), n.xb(4608, b.e, b.e, []), n.xb(4608, b.f, b.f, [b.d, b.h, b.e]), n.xb(5120, T.a, T.x, [T.k]), n.xb(4608, T.d, T.d, []), n.xb(6144, T.f, null, [T.d]), n.xb(135680, T.n, T.n, [T.k, n.w, n.i, n.q, T.f]), n.xb(4608, T.e, T.e, []), n.xb(5120, T.B, T.t, [T.k, m.p, T.g]), n.xb(5120, T.h, T.A, [T.y]), n.xb(5120, n.b, function (e) {
-        return [e];
-      }, [T.h]), n.xb(1073742336, m.b, m.b, []), n.xb(1024, n.l, S.p, []), n.xb(1024, n.y, function () {
+      }, [T.h]), n.xb(1073742336, m.b, m.b, []), n.xb(1024, n.l, z.p, []), n.xb(1024, n.y, function () {
         return [T.s()];
       }, []), n.xb(512, T.y, T.y, [n.q]), n.xb(1024, n.d, function (e, o) {
-        return [S.q(e), T.z(o)];
-      }, [[2, n.y], T.y]), n.xb(512, n.e, n.e, [[2, n.d]]), n.xb(131584, n.g, n.g, [n.z, n.cb, n.q, n.l, n.j, n.e]), n.xb(1073742336, n.f, n.f, [n.g]), n.xb(1073742336, S.a, S.a, [[3, S.a]]), n.xb(1073742336, O.u, O.u, []), n.xb(1073742336, O.j, O.j, []), n.xb(1073742336, s.e, s.e, []), n.xb(1073742336, s.d, s.d, []), n.xb(1024, T.r, T.v, [[3, T.k]]), n.xb(512, T.p, T.c, []), n.xb(512, T.b, T.b, []), n.xb(256, T.g, {}, []), n.xb(1024, m.g, T.u, [m.o, [2, m.a], T.g]), n.xb(512, m.f, m.f, [m.g]), n.xb(512, n.i, n.i, []), n.xb(512, n.w, n.J, [n.i, [2, n.K]]), n.xb(1024, T.i, function () {
+        return [z.q(e), T.z(o)];
+      }, [[2, n.y], T.y]), n.xb(512, n.e, n.e, [[2, n.d]]), n.xb(131584, n.g, n.g, [n.z, n.cb, n.q, n.l, n.j, n.e]), n.xb(1073742336, n.f, n.f, [n.g]), n.xb(1073742336, z.a, z.a, [[3, z.a]]), n.xb(1073742336, O.u, O.u, []), n.xb(1073742336, O.j, O.j, []), n.xb(1024, T.r, T.v, [[3, T.k]]), n.xb(512, T.p, T.c, []), n.xb(512, T.b, T.b, []), n.xb(256, T.g, {}, []), n.xb(1024, m.g, T.u, [m.o, [2, m.a], T.g]), n.xb(512, m.f, m.f, [m.g]), n.xb(512, n.i, n.i, []), n.xb(512, n.w, n.J, [n.i, [2, n.K]]), n.xb(1024, T.i, function () {
         return [[]];
-      }, []), n.xb(1024, T.k, T.w, [n.g, T.p, T.b, m.f, n.q, n.w, n.i, T.i, T.g, [2, T.o], [2, T.j]]), n.xb(1073742336, T.l, T.l, [[2, T.r], [2, T.k]]), n.xb(1073742336, O.r, O.r, []), n.xb(1073742336, j.d, j.d, []), n.xb(1073742336, M.d, M.d, []), n.xb(1073742336, C.e, C.e, []), n.xb(1073742336, D.c, D.c, []), n.xb(1073742336, b.b, b.b, []), n.xb(1073742336, a, a, []), n.xb(256, n.ab, !0, []), n.xb(256, s.m, "ATLASMAP-XSRF-COOKIE", []), n.xb(256, s.n, "ATLASMAP-XSRF-TOKEN", []), n.xb(256, C.a, {
+      }, []), n.xb(1024, T.k, T.w, [n.g, T.p, T.b, m.f, n.q, n.w, n.i, T.i, T.g, [2, T.o], [2, T.j]]), n.xb(1073742336, T.l, T.l, [[2, T.r], [2, T.k]]), n.xb(1073742336, s.e, s.e, []), n.xb(1073742336, s.d, s.d, []), n.xb(1073742336, O.r, O.r, []), n.xb(1073742336, j.d, j.d, []), n.xb(1073742336, q.d, q.d, []), n.xb(1073742336, C.e, C.e, []), n.xb(1073742336, D.c, D.c, []), n.xb(1073742336, p.d, p.d, []), n.xb(1073742336, a, a, []), n.xb(256, n.ab, !0, []), n.xb(256, s.n, "ATLASMAP-XSRF-TOKEN", []), n.xb(256, s.m, "ATLASMAP-XSRF-COOKIE", []), n.xb(256, C.a, {
         autoClose: !0,
         insideClick: !1
       }, [])]);
     });
-    Object(n.T)(), S.h().bootstrapModuleFactory(B).catch(function (e) {
+    Object(n.T)(), z.h().bootstrapModuleFactory(U).catch(function (e) {
       return console.error(e);
     });
   }
