@@ -125,7 +125,7 @@
     }
 
     function w(e) {
-      return n.Ib(0, [(e()(), n.pb(0, 0, null, null, 4, "app-data-mapper-host", [], null, [[null, "outputMappings"]], function (e, o, t) {
+      return n.Ib(0, [(e()(), n.pb(0, 0, null, null, 4, "app-apicurio-host", [], null, [[null, "outputMappings"]], function (e, o, t) {
         var n = !0;
         return "outputMappings" === o && (n = !1 !== e.component.onMappings(t) && n), n;
       }, h, u)), n.Db(4608, null, p.j, p.j, [s.c]), n.Db(4608, null, p.g, p.g, []), n.Db(135680, null, p.f, p.f, [s.c]), n.ob(4, 770048, null, 0, g, [p.h], {

@@ -21237,7 +21237,7 @@
 
     var h = function () {
       return function () {
-        this.placement = "top", this.triggers = "hover focus", this.delay = 0;
+        this.placement = "top", this.triggers = "hover focus";
       };
     }(),
         g = function () {
@@ -29786,10 +29786,10 @@
         null != t && t.trim().length >= this.typeaheadMinLength ? (this.typeaheadLoading.emit(!0), this.keyUpEventEmitter.emit(e.target.value)) : (this.typeaheadLoading.emit(!1), this.typeaheadNoResults.emit(!1), this.hide());
       }, e.prototype.onChange = function (e) {
         if (this._container) {
-          if (27 === e.keyCode || "Escape" === e.key) return void this.hide();
-          if (38 === e.keyCode || "ArrowUp" === e.key) return void this._container.prevActiveMatch();
-          if (40 === e.keyCode || "ArrowDown" === e.key) return void this._container.nextActiveMatch();
-          if (13 === e.keyCode || "Enter" === e.key) return void this._container.selectActiveMatch();
+          if (27 === e.keyCode) return void this.hide();
+          if (38 === e.keyCode) return void this._container.prevActiveMatch();
+          if (40 === e.keyCode) return void this._container.nextActiveMatch();
+          if (13 === e.keyCode) return void this._container.selectActiveMatch();
         }
       }, e.prototype.onFocus = function () {
         0 === this.typeaheadMinLength && (this.typeaheadLoading.emit(!0), this.keyUpEventEmitter.emit(this.element.nativeElement.value || ""));
@@ -29797,7 +29797,7 @@
         this._container && !this._container.isFocused && this.typeaheadOnBlur.emit(this._container.active);
       }, e.prototype.onKeydown = function (e) {
         if (this._container) {
-          if (13 !== e.keyCode && "Enter" !== e.key) return 9 === e.keyCode || "Tab" === e.key ? (e.preventDefault(), void this._container.selectActiveMatch()) : void 0;
+          if (13 !== e.keyCode) return 9 === e.keyCode ? (e.preventDefault(), void this._container.selectActiveMatch()) : void 0;
           e.preventDefault();
         }
       }, e.prototype.changeModel = function (e) {
