@@ -77,19 +77,25 @@
         var e = this;
         this.saveMappingSubscription && this.saveMappingSubscription.unsubscribe(), this.initializationService.resetConfig();
         var o = this.initializationService.cfg;
-        o.initCfg.xsrfCookieName = "SYNDESIS-XSRF-COOKIE", o.initCfg.xsrfDefaultTokenValue = "awesome", o.initCfg.xsrfHeaderName = "SYNDESIS-XSRF-TOKEN", console.log(o.initCfg), o.initCfg.baseJavaInspectionServiceUrl = this.baseJavaInspectionServiceUrl, o.initCfg.baseXMLInspectionServiceUrl = this.baseXMLInspectionServiceUrl, o.initCfg.baseJSONInspectionServiceUrl = this.baseJSONInspectionServiceUrl, o.initCfg.baseMappingServiceUrl = this.baseMappingServiceUrl, o.initCfg.disableNavbar = !0, o.initCfg.disableMappingPreviewMode = !1, o.initCfg.discardNonMockSources = !1, o.initCfg.addMockJSONMappings = !1, o.initCfg.addMockJavaSingleSource = !1, o.initCfg.addMockJavaSources = !1, o.initCfg.addMockXMLInstanceSources = !1, o.initCfg.addMockXMLSchemaSources = !1, o.initCfg.addMockJSONSources = !1, o.initCfg.addMockJavaTarget = !1, o.initCfg.addMockXMLInstanceTarget = !1, o.initCfg.addMockXMLSchemaTarget = !1, o.initCfg.addMockJSONTarget = !1, o.initCfg.debugDocumentServiceCalls = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugDocumentServiceCalls = !0, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, this.inputDocuments.forEach(function (e) {
+        o.initCfg.xsrfCookieName = "SYNDESIS-XSRF-COOKIE", o.initCfg.xsrfDefaultTokenValue = "awesome", o.initCfg.xsrfHeaderName = "SYNDESIS-XSRF-TOKEN";
+
+        var t = function t(o) {
+          return o.startsWith("http") || o.startsWith(e.baseMappingServiceUrl) ? o : e.baseMappingServiceUrl + o;
+        };
+
+        o.initCfg.baseMappingServiceUrl = this.baseMappingServiceUrl, o.initCfg.baseJavaInspectionServiceUrl = t(this.baseJavaInspectionServiceUrl), o.initCfg.baseXMLInspectionServiceUrl = t(this.baseXMLInspectionServiceUrl), o.initCfg.baseJSONInspectionServiceUrl = t(this.baseJSONInspectionServiceUrl), o.initCfg.disableNavbar = !0, o.initCfg.disableMappingPreviewMode = !1, o.initCfg.discardNonMockSources = !1, o.initCfg.addMockJSONMappings = !1, o.initCfg.addMockJavaSingleSource = !1, o.initCfg.addMockJavaSources = !1, o.initCfg.addMockXMLInstanceSources = !1, o.initCfg.addMockXMLSchemaSources = !1, o.initCfg.addMockJSONSources = !1, o.initCfg.addMockJavaTarget = !1, o.initCfg.addMockXMLInstanceTarget = !1, o.initCfg.addMockXMLSchemaTarget = !1, o.initCfg.addMockJSONTarget = !1, o.initCfg.debugDocumentServiceCalls = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugDocumentServiceCalls = !0, o.initCfg.debugDocumentParsing = !1, o.initCfg.debugMappingServiceCalls = !1, o.initCfg.debugClassPathServiceCalls = !1, o.initCfg.debugValidationServiceCalls = !1, o.initCfg.debugFieldActionServiceCalls = !1, this.inputDocuments.forEach(function (e) {
           var t = new p.e();
           t.type = e.documentType, t.inspectionType = e.inspectionType, t.inspectionSource = e.inspectionSource, t.inspectionResult = e.inspectionResult, t.id = e.id, t.name = e.name, t.description = e.description, t.isSource = !0, t.showFields = e.showFields, o.addDocument(t);
         });
-        var t = new p.e();
-        t.type = this.outputDocument.documentType, t.inspectionType = this.outputDocument.inspectionType, t.inspectionSource = this.outputDocument.inspectionSource, t.id = this.outputDocument.id, t.name = this.outputDocument.name, t.description = this.outputDocument.description, t.isSource = !1, t.showFields = this.outputDocument.showFields, o.addDocument(t);
-        var n = new p.i();
+        var n = new p.e();
+        n.type = this.outputDocument.documentType, n.inspectionType = this.outputDocument.inspectionType, n.inspectionSource = this.outputDocument.inspectionSource, n.id = this.outputDocument.id, n.name = this.outputDocument.name, n.description = this.outputDocument.description, n.isSource = !1, n.showFields = this.outputDocument.showFields, o.addDocument(n);
+        var a = new p.i();
         if (this.initialMappings) try {
-          p.k.deserializeMappingServiceJSON(JSON.parse(this.initialMappings), n, o);
-        } catch (a) {
-          console.error(a);
+          p.k.deserializeMappingServiceJSON(JSON.parse(this.initialMappings), a, o);
+        } catch (r) {
+          console.error(r);
         }
-        o.mappings = n, this.saveMappingSubscription = o.mappingService.saveMappingOutput$.subscribe(function (t) {
+        o.mappings = a, this.saveMappingSubscription = o.mappingService.saveMappingOutput$.subscribe(function (t) {
           var n = o.mappingService.serializeMappingsToJSON();
           e.modifiedMappings = JSON.stringify(n), e.outputMappings.emit(e.modifiedMappings), o.mappingService.handleMappingSaveSuccess(t);
         }), this.initializationService.initialize();
