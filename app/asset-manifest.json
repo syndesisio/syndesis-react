@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.2969e04e.chunk.css",
+    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.a48bf11b.chunk.css",
     "main.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-main.js",
     "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.28f60771.chunk.js.map",
     "runtime~main.js": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js",
@@ -14,10 +14,10 @@
     "styles.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-styles.js",
     "vendor.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js",
     "index.html": "https://syndesisio.github.io/syndesis-react/app/index.html",
-    "precache-manifest.d6452fb9b8ee0f649b3efb8e26a55498.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.d6452fb9b8ee0f649b3efb8e26a55498.js",
+    "precache-manifest.d97b885489b86f461131583570d2ba1d.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.d97b885489b86f461131583570d2ba1d.js",
     "service-worker.js": "https://syndesisio.github.io/syndesis-react/app/service-worker.js",
     "static/css/2.9e2c42c8.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/2.9e2c42c8.chunk.css.map",
-    "static/css/main.2969e04e.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.2969e04e.chunk.css.map",
+    "static/css/main.a48bf11b.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.a48bf11b.chunk.css.map",
     "static/media/FuseOnlineLogo_White.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/FuseOnlineLogo_White.681eebe0.svg",
     "static/media/App.css": "https://syndesisio.github.io/syndesis-react/app/static/media/pfbg_992@2x.1423e11e.jpg",
     "static/media/pf4-downstream-bg.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/pf4-downstream-bg.5a6958f1.svg",
