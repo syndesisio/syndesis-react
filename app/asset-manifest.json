@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.61e40073.chunk.css",
+    "main.css": "https://syndesisio.github.io/syndesis-react/app/static/css/main.40781f6d.chunk.css",
     "main.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-main.js",
-    "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.4fd0c437.chunk.js.map",
+    "main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/main.68e7a498.chunk.js.map",
     "runtime~main.js": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js",
     "runtime~main.js.map": "https://syndesisio.github.io/syndesis-react/app/static/js/runtime~main.617aa659.js.map",
     "static/css/2.9f08dc6e.chunk.css": "https://syndesisio.github.io/syndesis-react/app/static/css/2.9f08dc6e.chunk.css",
@@ -14,10 +14,10 @@
     "styles.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-styles.js",
     "vendor.js": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js",
     "index.html": "https://syndesisio.github.io/syndesis-react/app/index.html",
-    "precache-manifest.f0743610d222eb0860e72ca318807dc1.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.f0743610d222eb0860e72ca318807dc1.js",
+    "precache-manifest.c4e24b46a303a4a718a41932484c4c8f.js": "https://syndesisio.github.io/syndesis-react/app/precache-manifest.c4e24b46a303a4a718a41932484c4c8f.js",
     "service-worker.js": "https://syndesisio.github.io/syndesis-react/app/service-worker.js",
     "static/css/2.9f08dc6e.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/2.9f08dc6e.chunk.css.map",
-    "static/css/main.61e40073.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.61e40073.chunk.css.map",
+    "static/css/main.40781f6d.chunk.css.map": "https://syndesisio.github.io/syndesis-react/app/static/css/main.40781f6d.chunk.css.map",
     "static/media/FuseOnlineLogo_White.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/FuseOnlineLogo_White.681eebe0.svg",
     "static/media/App.css": "https://syndesisio.github.io/syndesis-react/app/static/media/pficon.f907e666.ttf",
     "static/media/pf4-downstream-bg.svg": "https://syndesisio.github.io/syndesis-react/app/static/media/pf4-downstream-bg.5a6958f1.svg",
