@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://syndesisio.github.io/syndesis-react/app/atlasmap-vendor.js"
   },
   {
-    "revision": "312e0db3d62ee4dc988b20d3b7966431",
+    "revision": "5e29a146e4acd478f6496d3b73e0af4c",
     "url": "https://syndesisio.github.io/syndesis-react/app/index.html"
   },
   {
@@ -56,16 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://syndesisio.github.io/syndesis-react/app/static/css/2.99850a64.chunk.css"
   },
   {
-    "revision": "497e48cc4180608c0932",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/css/main.7dd883f5.chunk.css"
+    "revision": "0ad5df7f83f838b34ade",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/css/main.6c635230.chunk.css"
   },
   {
     "revision": "61e61505fe949ee3fb7b",
     "url": "https://syndesisio.github.io/syndesis-react/app/static/js/2.f96eb827.chunk.js"
   },
   {
-    "revision": "497e48cc4180608c0932",
-    "url": "https://syndesisio.github.io/syndesis-react/app/static/js/main.f601b8da.chunk.js"
+    "revision": "0ad5df7f83f838b34ade",
+    "url": "https://syndesisio.github.io/syndesis-react/app/static/js/main.7de0d8c9.chunk.js"
   },
   {
     "revision": "c589942c68ad8a792257",
