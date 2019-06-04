@@ -100,30 +100,25 @@ export interface IExtensionImportReviewProps {
 }
 
 /**
- * A component that displays the extension import review information.
+ * A function component that displays the extension import review information.
  */
-export class ExtensionImportReview extends React.Component<
+export const ExtensionImportReview: React.FunctionComponent<
   IExtensionImportReviewProps
-> {
-  public constructor(props: IExtensionImportReviewProps) {
-    super(props);
-    this.handleImport = this.handleImport.bind(this);
-  }
-
-  public getActions(): JSX.Element {
-    if (!this.props.actions) {
+> = props => {
+  const getActions = (): JSX.Element => {
+    if (!props.actions) {
       return <Grid.Col />;
     }
 
     return (
       <Container>
-        {this.props.actions
-          ? this.props.actions.map((action, index) =>
+        {props.actions
+          ? props.actions.map((action, index) =>
               index === 0 ? (
                 <Grid.Col
                   key={0}
                   dangerouslySetInnerHTML={{
-                    __html: this.props.i18nActionText(
+                    __html: props.i18nActionText(
                       action.name,
                       action.description
                     ),
@@ -135,7 +130,7 @@ export class ExtensionImportReview extends React.Component<
                   <Grid.Col
                     key={1}
                     dangerouslySetInnerHTML={{
-                      __html: this.props.i18nActionText(
+                      __html: props.i18nActionText(
                         action.name,
                         action.description
                       ),
@@ -147,80 +142,76 @@ export class ExtensionImportReview extends React.Component<
           : null}
       </Container>
     );
-  }
+  };
 
-  public handleImport() {
-    return this.props.onImport(this.props.extensionUid);
-  }
+  const handleImport = () => {
+    return props.onImport(props.extensionUid);
+  };
 
-  public render() {
-    return (
-      <Grid className="extension-import-review__container">
-        <Grid.Row className="extension-import-review__title">
-          {this.props.i18nTitle}
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xs={2} className="extension-import-review__propertyLabel">
-            {this.props.i18nIdLabel}
-          </Grid.Col>
-          <Grid.Col className="extension-import-review__propertyValue">
-            {this.props.extensionId}
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xs={2} className="extension-import-review__propertyLabel">
-            {this.props.i18nNameLabel}
-          </Grid.Col>
-          <Grid.Col className="extension-import-review__propertyValue">
-            {this.props.extensionName}
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xs={2} className="extension-import-review__propertyLabel">
-            {this.props.i18nDescriptionLabel}
-          </Grid.Col>
-          <Grid.Col className="extension-import-review__propertyValue">
-            {this.props.extensionDescription
-              ? this.props.extensionDescription
-              : null}
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xs={2} className="extension-import-review__propertyLabel">
-            {this.props.i18nTypeLabel}
-          </Grid.Col>
-          <Grid.Col className="extension-import-review__propertyValue">
-            {this.props.i18nExtensionTypeMessage}
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xs={2} className="extension-import-review__propertyLabel">
-            {this.props.i18nActionsLabel}
-          </Grid.Col>
-          {this.getActions()}
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Col xsOffset={2}>
-            <Grid.Row>
-              <Grid.Col>
-                <Container className="extension-import-review__buttonBar">
-                  <Button bsStyle="primary" onClick={this.handleImport}>
-                    {this.props.i18nImport}
-                  </Button>
-                  <ButtonLink
-                    data-testid={'extension-import-review-cancel-button'}
-                    className="extension-import-review__cancelButton"
-                    href={this.props.cancelLink}
-                    as={'default'}
-                  >
-                    {this.props.i18nCancel}
-                  </ButtonLink>
-                </Container>
-              </Grid.Col>
-            </Grid.Row>
-          </Grid.Col>
-        </Grid.Row>
-      </Grid>
-    );
-  }
-}
+  return (
+    <Grid className="extension-import-review__container">
+      <Grid.Row className="extension-import-review__title">
+        {props.i18nTitle}
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xs={2} className="extension-import-review__propertyLabel">
+          {props.i18nIdLabel}
+        </Grid.Col>
+        <Grid.Col className="extension-import-review__propertyValue">
+          {props.extensionId}
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xs={2} className="extension-import-review__propertyLabel">
+          {props.i18nNameLabel}
+        </Grid.Col>
+        <Grid.Col className="extension-import-review__propertyValue">
+          {props.extensionName}
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xs={2} className="extension-import-review__propertyLabel">
+          {props.i18nDescriptionLabel}
+        </Grid.Col>
+        <Grid.Col className="extension-import-review__propertyValue">
+          {props.extensionDescription ? props.extensionDescription : null}
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xs={2} className="extension-import-review__propertyLabel">
+          {props.i18nTypeLabel}
+        </Grid.Col>
+        <Grid.Col className="extension-import-review__propertyValue">
+          {props.i18nExtensionTypeMessage}
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xs={2} className="extension-import-review__propertyLabel">
+          {props.i18nActionsLabel}
+        </Grid.Col>
+        {getActions()}
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Col xsOffset={2}>
+          <Grid.Row>
+            <Grid.Col>
+              <Container className="extension-import-review__buttonBar">
+                <Button bsStyle="primary" onClick={handleImport}>
+                  {props.i18nImport}
+                </Button>
+                <ButtonLink
+                  data-testid={'extension-import-review-cancel-button'}
+                  className="extension-import-review__cancelButton"
+                  href={props.cancelLink}
+                  as={'default'}
+                >
+                  {props.i18nCancel}
+                </ButtonLink>
+              </Container>
+            </Grid.Col>
+          </Grid.Row>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid>
+  );
+};
