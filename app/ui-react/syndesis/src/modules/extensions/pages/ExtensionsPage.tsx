@@ -1,4 +1,4 @@
-import { WithExtensionHelpers, WithExtensions } from '@syndesis/api';
+import { useExtensionHelpers, WithExtensions } from '@syndesis/api';
 import { Extension } from '@syndesis/models';
 import {
   ExtensionListItem,
@@ -12,6 +12,7 @@ import {
 import { WithListViewToolbarHelpers, WithLoader } from '@syndesis/utils';
 import * as React from 'react';
 import { Translation } from 'react-i18next';
+import { UIContext } from '../../../app';
 import i18n from '../../../i18n';
 import { ApiError } from '../../../shared';
 import resolvers from '../resolvers';
@@ -60,12 +61,14 @@ const sortByName = {
 
 const sortTypes: ISortType[] = [sortByName];
 
-export default class ExtensionsPage extends React.Component {
-  public filterUndefinedId(extension: Extension): boolean {
-    return extension.id !== undefined;
-  }
+export const ExtensionsPage: React.FunctionComponent = () => {
+  const { deleteExtension } = useExtensionHelpers();
 
-  public getUsedByMessage(extension: Extension): string {
+  const filterUndefinedId = (extension: Extension): boolean => {
+    return extension.id !== undefined;
+  };
+
+  const getUsedByMessage = (extension: Extension): string => {
     // TODO: Schema is currently wrong as it has 'uses` as an OptionalInt. Remove cast when schema is fixed.
     const numUsedBy = extension.uses as number;
 
@@ -74,34 +77,47 @@ export default class ExtensionsPage extends React.Component {
     }
 
     return i18n.t('extensions:usedByMulti', { count: numUsedBy });
-  }
+  };
 
-  public render() {
-    return (
-      <WithExtensionHelpers>
-        {({ deleteExtension }) => {
-          const handleDelete = async (extensionId: string) => {
-            await deleteExtension(extensionId);
-            // TODO: post toast notification
-          };
-          return (
-            <WithExtensions>
-              {({ data, hasData, error }) => (
-                <WithListViewToolbarHelpers
-                  defaultFilterType={filterByName}
-                  defaultSortType={sortByName}
-                >
-                  {helpers => {
-                    const filteredAndSorted = getFilteredAndSortedExtensions(
-                      data.items,
-                      helpers.activeFilters,
-                      helpers.currentSortType,
-                      helpers.isSortAscending
-                    );
+  return (
+    <UIContext.Consumer>
+      {({ pushNotification }) => {
+        return (
+          <Translation ns={['extensions', 'shared']}>
+            {t => (
+              <WithExtensions>
+                {({ data, hasData, error }) => {
+                  const handleDelete = async (extensionId: string) => {
+                    try {
+                      await deleteExtension(extensionId);
+                      pushNotification(
+                        t('extension.extensionDeletedMessage'),
+                        'success'
+                      );
+                    } catch {
+                      pushNotification(
+                        t('extension.errorDeletingExtension', {
+                          extensionId,
+                        }),
+                        'error'
+                      );
+                    }
+                  };
 
-                    return (
-                      <Translation ns={['extensions', 'shared']}>
-                        {t => (
+                  return (
+                    <WithListViewToolbarHelpers
+                      defaultFilterType={filterByName}
+                      defaultSortType={sortByName}
+                    >
+                      {helpers => {
+                        const filteredAndSorted = getFilteredAndSortedExtensions(
+                          data.items,
+                          helpers.activeFilters,
+                          helpers.currentSortType,
+                          helpers.isSortAscending
+                        );
+
+                        return (
                           <>
                             <SimplePageHeader
                               i18nTitle={t('extension.extensionsPageTitle')}
@@ -154,7 +170,7 @@ export default class ExtensionsPage extends React.Component {
                                 {() =>
                                   filteredAndSorted
                                     .filter((extension: Extension) =>
-                                      this.filterUndefinedId(extension)
+                                      filterUndefinedId(extension)
                                     )
                                     .map(
                                       (extension: Extension, index: number) => (
@@ -192,7 +208,7 @@ export default class ExtensionsPage extends React.Component {
                                           i18nUpdateTip={t(
                                             'extension.updateExtensionTip'
                                           )}
-                                          i18nUsedByMessage={this.getUsedByMessage(
+                                          i18nUsedByMessage={getUsedByMessage(
                                             extension
                                           )}
                                           linkUpdateExtension={resolvers.extension.update(
@@ -210,16 +226,16 @@ export default class ExtensionsPage extends React.Component {
                               </WithLoader>
                             </ExtensionListView>
                           </>
-                        )}
-                      </Translation>
-                    );
-                  }}
-                </WithListViewToolbarHelpers>
-              )}
-            </WithExtensions>
-          );
-        }}
-      </WithExtensionHelpers>
-    );
-  }
-}
+                        );
+                      }}
+                    </WithListViewToolbarHelpers>
+                  );
+                }}
+              </WithExtensions>
+            )}
+          </Translation>
+        );
+      }}
+    </UIContext.Consumer>
+  );
+};
