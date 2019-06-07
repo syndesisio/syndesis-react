@@ -77,7 +77,7 @@
         var e = this;
         this.saveMappingSubscription && this.saveMappingSubscription.unsubscribe(), this.initializationService.resetConfig();
         var o = this.initializationService.cfg;
-        o.initCfg.xsrfCookieName = "SYNDESIS-XSRF-COOKIE", o.initCfg.xsrfDefaultTokenValue = "awesome", o.initCfg.xsrfHeaderName = "SYNDESIS-XSRF-TOKEN";
+        o.initCfg.classPath = " ", o.initCfg.xsrfCookieName = "SYNDESIS-XSRF-COOKIE", o.initCfg.xsrfDefaultTokenValue = "awesome", o.initCfg.xsrfHeaderName = "SYNDESIS-XSRF-TOKEN";
 
         var t = function t(o) {
           return o.startsWith("http") || o.startsWith(e.baseMappingServiceUrl) ? o : e.baseMappingServiceUrl + o;
