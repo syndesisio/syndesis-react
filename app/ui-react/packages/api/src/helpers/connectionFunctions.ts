@@ -4,6 +4,7 @@ import {
   ActionDescriptorStep,
   ConfigurationProperty,
   Connection,
+  ConnectionBulletinBoard,
   ConnectionOverview,
   Connector,
 } from '@syndesis/models';
@@ -80,6 +81,12 @@ export function getActionStepDefinition(
     throw Error(`FATAL: Step ${step} does not have valid properties`);
   }
   return step.properties;
+}
+
+export function isConfigurationRequired(
+  board: ConnectionBulletinBoard
+): boolean {
+  return (board!.notices || board!.warnings || board!.errors)! > 0;
 }
 
 /**
