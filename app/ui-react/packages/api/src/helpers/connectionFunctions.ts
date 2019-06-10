@@ -83,6 +83,10 @@ export function getActionStepDefinition(
   return step.properties;
 }
 
+/**
+ * Checks whether the ConnectionBulletinBoard provided
+ * @param board
+ */
 export function isConfigurationRequired(
   board: ConnectionBulletinBoard
 ): boolean {
