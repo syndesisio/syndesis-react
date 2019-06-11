@@ -8,6 +8,7 @@ import {
   ConnectionOverview,
   Connector,
 } from '@syndesis/models';
+import { getMetadataValue } from './integrationFunctions';
 
 export function getActionsWithFrom(actions: Action[] = []) {
   return actions.filter(a => a.pattern === 'From');
@@ -91,6 +92,19 @@ export function isConfigurationRequired(
   board: ConnectionBulletinBoard
 ): boolean {
   return (board!.notices || board!.warnings || board!.errors)! > 0;
+}
+
+/**
+ * Checks whether or not the provided object is a technical preview.
+ * Accepts a Connector.
+ * Returns a boolean for whether or not the metadata `tech-preview` key
+ * returns a string value of 'true'
+ * @param connector
+ */
+export function isTechPreview(connector: Connector): boolean {
+  return (
+    getMetadataValue<string>('tech-preview', connector.metadata) === 'true'
+  );
 }
 
 /**
