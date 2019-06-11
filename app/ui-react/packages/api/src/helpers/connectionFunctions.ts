@@ -91,7 +91,7 @@ export function getActionStepDefinition(
 export function isConfigurationRequired(
   board: ConnectionBulletinBoard
 ): boolean {
-  return (board!.notices || board!.warnings || board!.errors)! > 0;
+  return (board.notices || board.warnings || board.errors)! > 0;
 }
 
 /**
