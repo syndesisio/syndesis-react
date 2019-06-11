@@ -95,9 +95,9 @@
         } catch (r) {
           console.error(r);
         }
-        o.mappings = a, this.saveMappingSubscription = o.mappingService.saveMappingOutput$.subscribe(function (t) {
-          var n = o.mappingService.serializeMappingsToJSON();
-          e.modifiedMappings = JSON.stringify(n), e.outputMappings.emit(e.modifiedMappings), o.mappingService.handleMappingSaveSuccess(t);
+        o.mappings = a, this.saveMappingSubscription = o.mappingService.mappingUpdated$.subscribe(function () {
+          var t = o.mappingService.serializeMappingsToJSON();
+          e.modifiedMappings = JSON.stringify(t), e.outputMappings.emit(e.modifiedMappings);
         }), this.initializationService.initialize();
       }, e.prototype.ngOnDestroy = function () {
         this.saveMappingSubscription && this.saveMappingSubscription.unsubscribe();
@@ -179,17 +179,17 @@
         U = n.mb(a, [r], function (e) {
       return n.wb([n.xb(512, n.j, n.bb, [[8, [i.a, l.a, f.a, c.a, d.a, b.g, b.h, b.e, b.i, b.j, b.k, b.c, b.l, b.d, b.f, S]], [3, n.j], n.x]), n.xb(5120, n.u, n.kb, [[3, n.u]]), n.xb(4608, m.l, m.k, [n.u, [2, m.s]]), n.xb(5120, n.c, n.hb, []), n.xb(5120, n.s, n.ib, []), n.xb(5120, n.t, n.jb, []), n.xb(4608, z.b, z.k, [m.c]), n.xb(6144, n.G, null, [z.b]), n.xb(4608, z.e, z.g, []), n.xb(5120, z.c, function (e, o, t, n, a, r, i, l) {
         return [new z.i(e, o, t), new z.n(n), new z.m(a, r, i, l)];
-      }, [m.c, n.z, n.B, m.c, m.c, z.e, n.cb, [2, z.f]]), n.xb(4608, z.d, z.d, [z.c, n.z]), n.xb(135680, z.l, z.l, [m.c]), n.xb(4608, z.j, z.j, [z.d, z.l]), n.xb(6144, n.E, null, [z.j]), n.xb(6144, z.o, null, [z.l]), n.xb(4608, n.M, n.M, [n.z]), n.xb(4608, O.w, O.w, []), n.xb(4608, s.i, p.a, []), n.xb(4608, s.p, s.p, [s.i, s.n]), n.xb(5120, s.a, function (e) {
+      }, [m.c, n.z, n.B, m.c, m.c, z.e, n.cb, [2, z.f]]), n.xb(4608, z.d, z.d, [z.c, n.z]), n.xb(135680, z.l, z.l, [m.c]), n.xb(4608, z.j, z.j, [z.d, z.l]), n.xb(6144, n.E, null, [z.j]), n.xb(6144, z.o, null, [z.l]), n.xb(4608, n.M, n.M, [n.z]), n.xb(4608, O.p, O.p, []), n.xb(4608, s.i, p.a, []), n.xb(4608, s.p, s.p, [s.i, s.n]), n.xb(5120, s.a, function (e) {
         return [e, new p.b()];
-      }, [s.p]), n.xb(4608, s.l, s.l, []), n.xb(6144, s.j, null, [s.l]), n.xb(4608, s.h, s.h, [s.j]), n.xb(6144, s.b, null, [s.h]), n.xb(4608, s.f, s.k, [s.b, n.q]), n.xb(4608, s.c, s.c, [s.f]), n.xb(4608, O.e, O.e, []), n.xb(4608, M.a, M.a, []), n.xb(4608, I.a, I.a, [n.j, n.z, n.q, M.a, n.g]), n.xb(4608, j.a, j.a, []), n.xb(4608, q.a, q.a, []), n.xb(4608, C.f, C.f, []), n.xb(4608, D.b, D.b, []), n.xb(135680, p.f, p.f, [s.c]), n.xb(4608, p.j, p.j, [s.c]), n.xb(4608, p.g, p.g, []), n.xb(4608, p.h, p.h, [p.f, p.j, p.g]), n.xb(5120, T.a, T.x, [T.k]), n.xb(4608, T.d, T.d, []), n.xb(6144, T.f, null, [T.d]), n.xb(135680, T.n, T.n, [T.k, n.w, n.i, n.q, T.f]), n.xb(4608, T.e, T.e, []), n.xb(5120, T.B, T.t, [T.k, m.p, T.g]), n.xb(5120, T.h, T.A, [T.y]), n.xb(5120, n.b, function (e) {
+      }, [s.p]), n.xb(4608, s.l, s.l, []), n.xb(6144, s.j, null, [s.l]), n.xb(4608, s.h, s.h, [s.j]), n.xb(6144, s.b, null, [s.h]), n.xb(4608, s.f, s.k, [s.b, n.q]), n.xb(4608, s.c, s.c, [s.f]), n.xb(4608, O.d, O.d, []), n.xb(4608, M.a, M.a, []), n.xb(4608, I.a, I.a, [n.j, n.z, n.q, M.a, n.g]), n.xb(4608, j.a, j.a, []), n.xb(4608, q.a, q.a, []), n.xb(4608, C.f, C.f, []), n.xb(4608, D.b, D.b, []), n.xb(135680, p.f, p.f, [s.c]), n.xb(4608, p.j, p.j, [s.c]), n.xb(4608, p.g, p.g, []), n.xb(4608, p.h, p.h, [p.f, p.j, p.g]), n.xb(5120, T.a, T.x, [T.k]), n.xb(4608, T.d, T.d, []), n.xb(6144, T.f, null, [T.d]), n.xb(135680, T.n, T.n, [T.k, n.w, n.i, n.q, T.f]), n.xb(4608, T.e, T.e, []), n.xb(5120, T.B, T.t, [T.k, m.p, T.g]), n.xb(5120, T.h, T.A, [T.y]), n.xb(5120, n.b, function (e) {
         return [e];
       }, [T.h]), n.xb(1073742336, m.b, m.b, []), n.xb(1024, n.l, z.p, []), n.xb(1024, n.y, function () {
         return [T.s()];
       }, []), n.xb(512, T.y, T.y, [n.q]), n.xb(1024, n.d, function (e, o) {
         return [z.q(e), T.z(o)];
-      }, [[2, n.y], T.y]), n.xb(512, n.e, n.e, [[2, n.d]]), n.xb(131584, n.g, n.g, [n.z, n.cb, n.q, n.l, n.j, n.e]), n.xb(1073742336, n.f, n.f, [n.g]), n.xb(1073742336, z.a, z.a, [[3, z.a]]), n.xb(1073742336, O.u, O.u, []), n.xb(1073742336, O.j, O.j, []), n.xb(1024, T.r, T.v, [[3, T.k]]), n.xb(512, T.p, T.c, []), n.xb(512, T.b, T.b, []), n.xb(256, T.g, {}, []), n.xb(1024, m.g, T.u, [m.o, [2, m.a], T.g]), n.xb(512, m.f, m.f, [m.g]), n.xb(512, n.i, n.i, []), n.xb(512, n.w, n.J, [n.i, [2, n.K]]), n.xb(1024, T.i, function () {
+      }, [[2, n.y], T.y]), n.xb(512, n.e, n.e, [[2, n.d]]), n.xb(131584, n.g, n.g, [n.z, n.cb, n.q, n.l, n.j, n.e]), n.xb(1073742336, n.f, n.f, [n.g]), n.xb(1073742336, z.a, z.a, [[3, z.a]]), n.xb(1073742336, O.o, O.o, []), n.xb(1073742336, O.e, O.e, []), n.xb(1024, T.r, T.v, [[3, T.k]]), n.xb(512, T.p, T.c, []), n.xb(512, T.b, T.b, []), n.xb(256, T.g, {}, []), n.xb(1024, m.g, T.u, [m.o, [2, m.a], T.g]), n.xb(512, m.f, m.f, [m.g]), n.xb(512, n.i, n.i, []), n.xb(512, n.w, n.J, [n.i, [2, n.K]]), n.xb(1024, T.i, function () {
         return [[]];
-      }, []), n.xb(1024, T.k, T.w, [n.g, T.p, T.b, m.f, n.q, n.w, n.i, T.i, T.g, [2, T.o], [2, T.j]]), n.xb(1073742336, T.l, T.l, [[2, T.r], [2, T.k]]), n.xb(1073742336, s.e, s.e, []), n.xb(1073742336, s.d, s.d, []), n.xb(1073742336, O.r, O.r, []), n.xb(1073742336, j.d, j.d, []), n.xb(1073742336, q.d, q.d, []), n.xb(1073742336, C.e, C.e, []), n.xb(1073742336, D.c, D.c, []), n.xb(1073742336, p.d, p.d, []), n.xb(1073742336, a, a, []), n.xb(256, n.ab, !0, []), n.xb(256, s.n, "ATLASMAP-XSRF-TOKEN", []), n.xb(256, s.m, "ATLASMAP-XSRF-COOKIE", []), n.xb(256, C.a, {
+      }, []), n.xb(1024, T.k, T.w, [n.g, T.p, T.b, m.f, n.q, n.w, n.i, T.i, T.g, [2, T.o], [2, T.j]]), n.xb(1073742336, T.l, T.l, [[2, T.r], [2, T.k]]), n.xb(1073742336, s.e, s.e, []), n.xb(1073742336, s.d, s.d, []), n.xb(1073742336, O.l, O.l, []), n.xb(1073742336, j.d, j.d, []), n.xb(1073742336, q.d, q.d, []), n.xb(1073742336, C.e, C.e, []), n.xb(1073742336, D.c, D.c, []), n.xb(1073742336, p.d, p.d, []), n.xb(1073742336, a, a, []), n.xb(256, n.ab, !0, []), n.xb(256, s.n, "ATLASMAP-XSRF-TOKEN", []), n.xb(256, s.m, "ATLASMAP-XSRF-COOKIE", []), n.xb(256, C.a, {
         autoClose: !0,
         insideClick: !1
       }, [])]);
