@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://syndesisio.github.io/syndesis-react/app/precache-manifest.e438d99aebec9a9efc69540d46ad83c3.js"
+  "https://syndesisio.github.io/syndesis-react/app/precache-manifest.71d4ae4317c9d263c346d6c564f400c9.js"
 );
 
 self.addEventListener('message', (event) => {
