@@ -4,9 +4,11 @@ import {
   ActionDescriptorStep,
   ConfigurationProperty,
   Connection,
-  ConnectionOverview,
-  Connector,
+  ConnectionBulletinBoard,
+  IConnectionOverview,
+  IConnector,
 } from '@syndesis/models';
+import { getMetadataValue } from './integrationFunctions';
 
 export function getActionsWithFrom(actions: Action[] = []) {
   return actions.filter(a => a.pattern === 'From');
@@ -25,15 +27,15 @@ export function getConnectionMetadataValue(
 }
 
 export function getConnectionConnector(
-  connection: ConnectionOverview
-): Connector {
+  connection: IConnectionOverview
+): IConnector {
   if (!connection.connector) {
     throw Error(`FATAL: Connection ${connection.id} doesn't have a connector`);
   }
   return connection.connector;
 }
 
-export function getConnectorActions(connector: Connector): Action[] {
+export function getConnectorActions(connector: IConnector): Action[] {
   return connector.actions;
 }
 
@@ -80,6 +82,27 @@ export function getActionStepDefinition(
     throw Error(`FATAL: Step ${step} does not have valid properties`);
   }
   return step.properties;
+}
+
+/**
+ * Checks whether the ConnectionBulletinBoard provided
+ * @param board
+ */
+export function isConfigRequired(board: ConnectionBulletinBoard): boolean {
+  return (board.notices || board.warnings || board.errors)! > 0;
+}
+
+/**
+ * Checks whether or not the provided object is a technical preview.
+ * Accepts a Connector.
+ * Returns a boolean for whether or not the metadata `tech-preview` key
+ * returns a string value of 'true'
+ * @param connector
+ */
+export function isTechPreview(connector: IConnector): boolean {
+  return (
+    getMetadataValue<string>('tech-preview', connector.metadata) === 'true'
+  );
 }
 
 /**
